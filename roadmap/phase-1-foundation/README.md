@@ -127,6 +127,18 @@ You should consider Phase 1 successful only if most of these are true:
 - you can explain your code and architecture simply
 - you finish one live milestone app with a clean README
 
+## Current Workspace Status
+
+Phase 1 is partially implemented as a hands-on workspace and partially still in planning form.
+
+Current status:
+
+- Week 01 includes full exercises, projects, notes, and commented source code
+- Week 02 includes full exercises, a refactored project, tests, notes, and commented source code
+- Weeks 03-08 currently remain planning-first modules and can be expanded into hands-on workspaces next
+
+This matters because you should treat Weeks 01-02 as active coding modules, not only as reading material.
+
 ## How To Use The Weekly Modules
 
 Each weekly folder in this phase should be treated as a hands-on engineering build module.

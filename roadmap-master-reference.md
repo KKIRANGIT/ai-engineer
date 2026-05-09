@@ -31,6 +31,19 @@ The roadmap should be detailed enough that you can follow it with minimal ambigu
 
 These are the top-level documents and their roles.
 
+### `README.md`
+
+Purpose:
+
+- repository entry point
+- quick orientation document
+- explains how to use the workspace and the course agent
+
+Rule:
+
+- keep this as the best starting point for someone opening the repository fresh
+- it should summarize structure without trying to replace the full roadmap
+
 ### `AI_Guide.md`
 
 Purpose:
@@ -66,6 +79,19 @@ Rule:
 
 - detailed day-to-day or week-level execution belongs here
 
+### `.agents/`
+
+Purpose:
+
+- reusable agent prompts for this workspace
+- supports guided study sessions and repository-aware assistance
+
+Rule:
+
+- agent prompts should be repository-aware, phase-aware, and consistent with this master reference
+- do not store generic prompts here that ignore the local roadmap structure
+- keep a practical prompt guide there when the workspace needs reusable prompt templates
+
 ### `roadmap-master-reference.md`
 
 Purpose:
@@ -80,9 +106,11 @@ Current structure:
 
 ```text
 ai-engineer/
+|-- README.md
 |-- AI_Guide.md
 |-- ai-detailed-preparation-guide.md
 |-- roadmap-master-reference.md
+|-- .agents/
 `-- roadmap/
     |-- README.md
     |-- 00-overview/
@@ -194,6 +222,79 @@ At minimum, each phase README should include:
 - success criteria
 - how to use the weekly modules
 - links to all week folders
+
+## Documentation Sync Standard
+
+This repository depends on README-driven clarity. That means documentation sync is not optional maintenance. It is part of the actual work.
+
+Whenever a meaningful change is made, the related documentation must be updated in the same change set.
+
+### Sync Rules By Scope
+
+If a week folder changes, update the week `README.md`.
+
+Examples:
+
+- new exercises added
+- new project folder added
+- new notes added
+- code structure changed
+- learning sequence changed
+- deliverables or exit criteria changed
+
+If a phase structure or week status changes, update the phase `README.md`.
+
+Examples:
+
+- a week becomes a full hands-on workspace
+- the phase sequencing changes
+- phase-level expectations change
+
+If roadmap-level navigation changes, update `roadmap/README.md`.
+
+Examples:
+
+- new folders added
+- phase status materially changes
+- reference sections expand or move
+
+If repository-level structure or usage changes, update the root `README.md`.
+
+Examples:
+
+- new top-level files added
+- new reusable agent added
+- new standard workflow introduced
+
+If repository rules, maintenance expectations, or update discipline change, update `roadmap-master-reference.md`.
+
+Examples:
+
+- new documentation standards
+- new source policies
+- new structure rules
+- new sync requirements
+
+If agent behavior or workflow expectations change, update the related files in `.agents/`.
+
+Examples:
+
+- course agent responsibilities change
+- new default context order
+- new repository maintenance rules
+
+### Completion Rule
+
+A repository update is not fully complete until the affected documentation layers are synchronized.
+
+At minimum, check:
+
+- local week `README.md`
+- parent phase `README.md` when relevant
+- `roadmap/README.md` when navigation or status changes
+- root `README.md` when repository entry guidance changes
+- `roadmap-master-reference.md` when standards or structure rules change
+- `.agents/` files when the agent's operating behavior changes
 
 ## Content Quality Standard
 
@@ -317,7 +418,21 @@ Location:
 
 - `roadmap/phase-1-foundation/week-01-python-core-and-problem-solving/`
 
-### 6. Phase 2 planning layer expanded
+### 6. Phase 1 Week 02 hands-on workspace created
+
+Completed:
+
+- engineering exercises
+- refactored multi-module todo app
+- tests
+- `.env.example`
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-1-foundation/week-02-python-engineering-basics/`
+
+### 7. Phase 2 planning layer expanded
 
 Completed:
 
@@ -328,28 +443,28 @@ Status:
 
 - rewritten into detailed expert-level planning documents
 
-### 7. Phase 3 planning layer expanded
+### 8. Phase 3 planning layer expanded
 
 Completed:
 
 - `roadmap/phase-3-full-stack-ai-product-engineering/README.md`
 - Week 19 through Week 28 READMEs
 
-### 8. Phase 4 planning layer expanded
+### 9. Phase 4 planning layer expanded
 
 Completed:
 
 - `roadmap/phase-4-build-3-real-products/README.md`
 - product-track READMEs for Weeks 29 through 38
 
-### 9. Phase 5 planning layer expanded
+### 10. Phase 5 planning layer expanded
 
 Completed:
 
 - `roadmap/phase-5-career-monetization-and-positioning/README.md`
 - Week 39 through Week 48 READMEs
 
-### 10. `90-reference` expanded
+### 11. `90-reference` expanded
 
 Completed:
 
@@ -359,7 +474,7 @@ Status:
 
 - now functions as a full companion operating handbook rather than a short appendix
 
-### 11. Week 01 Python guide deepened further
+### 12. Week 01 Python guide deepened further
 
 Completed:
 
@@ -369,13 +484,35 @@ Status:
 
 - strengthened with stricter learning boundaries, no-doubt study order, stronger source strategy, and better official references
 
+### 13. Repository entry README and course agent created
+
+Completed:
+
+- `README.md`
+- `.agents/README.md`
+- `.agents/ai-engineer-course-agent.md`
+
+Status:
+
+- repository now has a clear entry point and a reusable workspace-specific learning agent prompt
+
+### 14. Workspace prompt guide created
+
+Completed:
+
+- `.agents/workspace-prompt-guide.md`
+
+Status:
+
+- repository now includes reusable prompt templates for learning, code explanation, debugging, repository updates, and documentation-sync-aware agent usage
+
 ## Current Completion State
 
 At this point:
 
 - all major phase planning layers are expanded
 - all overview and reference layers are expanded
-- Week 01 has both planning and implementation artifacts
+- Week 01 and Week 02 have both planning and implementation artifacts
 - later weeks mostly have planning layers but not yet full source-code workspaces
 
 This means the roadmap is structurally strong, but implementation depth is still uneven across weeks.
@@ -388,7 +525,6 @@ The highest-value next steps usually fall into one of these categories:
 
 Examples:
 
-- Week 02 source code and notes
 - Week 03 hands-on API exercises
 - later Phase 2 and Phase 3 project folders
 
@@ -432,6 +568,7 @@ Example request:
 
 - preserve existing structure unless there is a clear upgrade path
 - keep week-specific content inside week folders
+- keep documentation synchronized with structural and content changes
 - do not replace detailed execution guidance with generic summaries
 - keep explanations beginner-readable even when the content is expert-level
 - prefer official references for technical accuracy

@@ -16,6 +16,17 @@ This folder contains the decomposed version of [ai-detailed-preparation-guide.md
 - [Phase 4: Build 3 Real Products](phase-4-build-3-real-products/README.md)
 - [Phase 5: Career, Monetization, and Positioning](phase-5-career-monetization-and-positioning/README.md)
 
+## Current Hands-On Status
+
+The roadmap is fully expanded at the planning layer, but hands-on implementation depth is still being built week by week.
+
+Current implemented study workspaces:
+
+- Phase 1 Week 01
+- Phase 1 Week 02
+
+Most later weeks currently remain detailed planning modules rather than full code workspaces.
+
 ## Shared References
 
 - [Execution System](90-reference/01-daily-and-weekly-execution-system.md)
@@ -24,3 +35,15 @@ This folder contains the decomposed version of [ai-detailed-preparation-guide.md
 - [Freelance and Consulting Track](90-reference/04-freelance-and-consulting-track.md)
 - [Resource Stack](90-reference/06-suggested-resource-stack.md)
 - [Official Reference Links](90-reference/12-official-reference-links.md)
+
+## Documentation Sync
+
+This roadmap is structured so each phase and week can be used directly as a study module.
+
+Because of that, when a roadmap section changes, the related README layer should also be updated:
+
+- week content changes -> update that week `README.md`
+- phase structure or expectations change -> update that phase `README.md`
+- roadmap navigation or visible status changes -> update this file
+
+This keeps the roadmap usable as a coherent learning system instead of a partially updated folder tree.
