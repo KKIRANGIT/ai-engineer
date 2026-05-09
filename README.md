@@ -142,15 +142,15 @@ This means the roadmap is structurally mature, but implementation depth is still
 
 If you are new to this workspace, use this order:
 
-1. [roadmap-master-reference.md](/d:/Tutorials/InterviewPraparation/ai-engineer/roadmap-master-reference.md)
-2. [roadmap/README.md](/d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/README.md)
-3. [roadmap/00-overview/05-how-to-use-this-guide.md](/d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/00-overview/05-how-to-use-this-guide.md)
-4. [roadmap/phase-1-foundation/README.md](/d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/README.md)
+1. [roadmap-master-reference.md](roadmap-master-reference.md)
+2. [roadmap/README.md](roadmap/README.md)
+3. [roadmap/00-overview/05-how-to-use-this-guide.md](roadmap/00-overview/05-how-to-use-this-guide.md)
+4. [roadmap/phase-1-foundation/README.md](roadmap/phase-1-foundation/README.md)
 5. the current week you are actively studying
 
 If you are starting the course from the beginning:
 
-1. read [week-01-python-core-and-problem-solving/README.md](/d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-01-python-core-and-problem-solving/README.md)
+1. read [week-01-python-core-and-problem-solving/README.md](roadmap/phase-1-foundation/week-01-python-core-and-problem-solving/README.md)
 2. work through its `exercises/`
 3. build and inspect its `projects/`
 4. move to Week 02 only after the Week 01 exit criteria are actually true
@@ -177,7 +177,7 @@ Do not treat the roadmap as a passive reading list.
 
 Location:
 
-- [week-01-python-core-and-problem-solving](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-01-python-core-and-problem-solving>)
+- [week-01-python-core-and-problem-solving](roadmap/phase-1-foundation/week-01-python-core-and-problem-solving/)
 
 Includes:
 
@@ -191,7 +191,7 @@ Includes:
 
 Location:
 
-- [week-02-python-engineering-basics](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-02-python-engineering-basics>)
+- [week-02-python-engineering-basics](roadmap/phase-1-foundation/week-02-python-engineering-basics/)
 
 Includes:
 
@@ -206,7 +206,7 @@ Includes:
 
 Location:
 
-- [week-03-http-apis-and-integration-thinking](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-03-http-apis-and-integration-thinking>)
+- [week-03-http-apis-and-integration-thinking](roadmap/phase-1-foundation/week-03-http-apis-and-integration-thinking/)
 
 Includes:
 
@@ -220,7 +220,7 @@ Includes:
 
 Location:
 
-- [week-04-git-github-linux-cli-and-developer-workflow](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-04-git-github-linux-cli-and-developer-workflow>)
+- [week-04-git-github-linux-cli-and-developer-workflow](roadmap/phase-1-foundation/week-04-git-github-linux-cli-and-developer-workflow/)
 
 Includes:
 
@@ -234,7 +234,7 @@ Includes:
 
 Location:
 
-- [week-05-sql-postgres-and-data-modeling](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-05-sql-postgres-and-data-modeling>)
+- [week-05-sql-postgres-and-data-modeling](roadmap/phase-1-foundation/week-05-sql-postgres-and-data-modeling/)
 
 Includes:
 
@@ -248,7 +248,7 @@ Includes:
 
 Location:
 
-- [week-06-async-python-data-pipelines-and-docker](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-06-async-python-data-pipelines-and-docker>)
+- [week-06-async-python-data-pipelines-and-docker](roadmap/phase-1-foundation/week-06-async-python-data-pipelines-and-docker/)
 
 Includes:
 
@@ -262,7 +262,7 @@ Includes:
 
 Location:
 
-- [week-07-javascript-typescript-nodejs-and-backend-basics](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-07-javascript-typescript-nodejs-and-backend-basics>)
+- [week-07-javascript-typescript-nodejs-and-backend-basics](roadmap/phase-1-foundation/week-07-javascript-typescript-nodejs-and-backend-basics/)
 
 Includes:
 
@@ -276,7 +276,7 @@ Includes:
 
 Location:
 
-- [week-08-foundation-milestone-project](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-08-foundation-milestone-project>)
+- [week-08-foundation-milestone-project](roadmap/phase-1-foundation/week-08-foundation-milestone-project/)
 
 Includes:
 
@@ -297,7 +297,7 @@ This workspace follows a few important rules:
 - source code should be readable and teach good habits
 - comments should explain intent, not narrate every line
 
-These standards are formalized in [roadmap-master-reference.md](/d:/Tutorials/InterviewPraparation/ai-engineer/roadmap-master-reference.md).
+These standards are formalized in [roadmap-master-reference.md](roadmap-master-reference.md).
 
 ## Documentation Sync Rule
 
@@ -307,10 +307,10 @@ The expected sync pattern is:
 
 - week-level changes -> update that week `README.md`
 - phase-level changes -> update that phase `README.md`
-- roadmap navigation or status changes -> update [roadmap/README.md](/d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/README.md)
+- roadmap navigation or status changes -> update [roadmap/README.md](roadmap/README.md)
 - repository-level usage or structure changes -> update this root `README.md`
-- repository rules or maintenance standards changes -> update [roadmap-master-reference.md](/d:/Tutorials/InterviewPraparation/ai-engineer/roadmap-master-reference.md)
-- agent behavior changes -> update the relevant files in [.agents](</d:/Tutorials/InterviewPraparation/ai-engineer/.agents>)
+- repository rules or maintenance standards changes -> update [roadmap-master-reference.md](roadmap-master-reference.md)
+- agent behavior changes -> update the relevant files in [.agents](.agents/)
 
 In this repository, documentation sync is part of the implementation standard, not optional cleanup.
 
@@ -318,8 +318,8 @@ In this repository, documentation sync is part of the implementation standard, n
 
 This repository includes a reusable course agent prompt:
 
-- [.agents/ai-engineer-course-agent.md](/d:/Tutorials/InterviewPraparation/ai-engineer/.agents/ai-engineer-course-agent.md)
-- [.agents/workspace-prompt-guide.md](/d:/Tutorials/InterviewPraparation/ai-engineer/.agents/workspace-prompt-guide.md)
+- [.agents/ai-engineer-course-agent.md](.agents/ai-engineer-course-agent.md)
+- [.agents/workspace-prompt-guide.md](.agents/workspace-prompt-guide.md)
 
 Use that file when you want an AI assistant to act as:
 
@@ -331,14 +331,14 @@ Use that file when you want an AI assistant to act as:
 
 Recommended usage:
 
-1. provide [roadmap-master-reference.md](/d:/Tutorials/InterviewPraparation/ai-engineer/roadmap-master-reference.md)
+1. provide [roadmap-master-reference.md](roadmap-master-reference.md)
 2. provide the relevant week folder or README
 3. tell the agent your current goal
 4. ask it to stay aligned with the workspace rules and documentation sync requirements
 
-See [.agents/README.md](/d:/Tutorials/InterviewPraparation/ai-engineer/.agents/README.md) for usage guidance.
+See [.agents/README.md](.agents/README.md) for usage guidance.
 
-If you want copy-paste prompt templates for study sessions, code explanation, repository updates, debugging, and readiness review, start with [.agents/workspace-prompt-guide.md](/d:/Tutorials/InterviewPraparation/ai-engineer/.agents/workspace-prompt-guide.md).
+If you want copy-paste prompt templates for study sessions, code explanation, repository updates, debugging, and readiness review, start with [.agents/workspace-prompt-guide.md](.agents/workspace-prompt-guide.md).
 
 ## Suggested Update Workflow
 

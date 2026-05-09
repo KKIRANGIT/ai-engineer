@@ -169,7 +169,7 @@ Supported environment variables:
 - `PORT`
 - `APP_DB_PATH`
 
-See [.env.example](/d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-08-foundation-milestone-project/projects/study-session-tracker/.env.example)
+See [.env.example](.env.example)
 
 ## Testing
 

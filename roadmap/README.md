@@ -1,6 +1,6 @@
 # AI Engineer Roadmap Index
 
-This folder contains the decomposed version of [ai-detailed-preparation-guide.md](/d:/Tutorials/InterviewPraparation/ai-engineer/ai-detailed-preparation-guide.md).
+This folder contains the decomposed version of [ai-detailed-preparation-guide.md](../ai-detailed-preparation-guide.md).
 
 ## Start Here
 
