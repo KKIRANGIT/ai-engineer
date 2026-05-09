@@ -134,6 +134,16 @@ At the current stage of the repository:
 - Phase 1 Week 06 has a full hands-on workspace
 - Phase 1 Week 07 has a full hands-on workspace
 - Phase 1 Week 08 has a full hands-on workspace
+- Phase 2 Week 09 has a full hands-on workspace
+- Phase 2 Week 10 has a full hands-on workspace
+- Phase 2 Week 11 has a full hands-on workspace
+- Phase 2 Week 12 has a full hands-on workspace
+- Phase 2 Week 13 has a full hands-on workspace
+- Phase 2 Week 14 has a full hands-on workspace
+- Phase 2 Week 15 has a full hands-on workspace
+- Phase 2 Week 16 has a full hands-on workspace
+- Phase 2 Week 17 has a full hands-on workspace
+- Phase 2 Week 18 has a full hands-on workspace
 - later weeks mostly have detailed planning but not yet full implementation workspaces
 
 This means the roadmap is structurally mature, but implementation depth is still growing week by week.
@@ -286,6 +296,136 @@ Includes:
 - unit tests for repository and service logic
 - notes for architecture, demo framing, and portfolio discussion
 
+### Week 09
+
+Location:
+
+- [week-09-llm-fundamentals-and-api-literacy](roadmap/phase-2-ai-core/week-09-llm-fundamentals-and-api-literacy/)
+
+Includes:
+
+- LLM concepts, payload, and debugging exercises
+- a provider-aware API playground with mock and live modes
+- tests for payload building, cost estimation, and trace logging
+- notes for provider comparison and API debugging
+
+### Week 10
+
+Location:
+
+- [week-10-prompt-engineering-and-structured-outputs](roadmap/phase-2-ai-core/week-10-prompt-engineering-and-structured-outputs/)
+
+Includes:
+
+- prompt clarity, decomposition, structure, and schema exercises
+- a structured-output support-ticket triage lab
+- tests for schema validation, prompt rendering, regression behavior, and request payloads
+- notes for prompt design and structured-output review
+
+### Week 11
+
+Location:
+
+- [week-11-embeddings-semantic-search-and-retrieval-basics](roadmap/phase-2-ai-core/week-11-embeddings-semantic-search-and-retrieval-basics/)
+
+Includes:
+
+- embeddings, chunking, filtering, and search-mode exercises
+- a semantic search playground with keyword, semantic, and hybrid retrieval
+- tests for chunking, similarity, retrieval behavior, and evaluation
+- notes for retrieval debugging and hosted-vs-self-managed reasoning
+
+### Week 12
+
+Location:
+
+- [week-12-rag-done-properly](roadmap/phase-2-ai-core/week-12-rag-done-properly/)
+
+Includes:
+
+- RAG pipeline, query rewrite, context packing, and failure-analysis exercises
+- a grounded policy assistant with retrieval inspection and citations
+- tests for query rewriting, context assembly, grounded answer generation, and evaluation
+- notes for RAG debugging and grounded UX
+
+### Week 13
+
+Location:
+
+- [week-13-tool-use-and-function-calling](roadmap/phase-2-ai-core/week-13-tool-use-and-function-calling/)
+
+Includes:
+
+- tool-loop, schema-design, validation, and provider-payload exercises
+- a local operations assistant with multiple tools and execution traces
+- tests for validation, tool execution, and end-to-end orchestration
+- notes for tool design, provider differences, and study flow
+
+### Week 14
+
+Location:
+
+- [week-14-agents-and-workflow-orchestration](roadmap/phase-2-ai-core/week-14-agents-and-workflow-orchestration/)
+
+Includes:
+
+- workflow-vs-agent, ReAct, state, retry, and framework-positioning exercises
+- a research brief orchestrator implemented in direct, graph, and agent-loop styles
+- tests for workflow behavior and orchestration modes
+- notes for orchestration judgment, review checkpoints, and framework choice
+
+### Week 15
+
+Location:
+
+- [week-15-evals-prompt-optimization-and-fine-tuning-decisions](roadmap/phase-2-ai-core/week-15-evals-prompt-optimization-and-fine-tuning-decisions/)
+
+Includes:
+
+- success-criteria, dataset-design, grader, regression, and fine-tuning-decision exercises
+- a ticket triage eval lab with multiple system variants and comparison reports
+- tests for graders, variant analysis, and decision memo generation
+- notes for eval design, optimization discipline, and fine-tuning judgment
+
+### Week 16
+
+Location:
+
+- [week-16-multimodal-and-realtime-ai](roadmap/phase-2-ai-core/week-16-multimodal-and-realtime-ai/)
+
+Includes:
+
+- multimodal, voice, vision, streaming, and session-design exercises
+- an incident assistant multimodal lab with text-only, multimodal, and session modes
+- tests for session behavior and streaming chunk generation
+- notes for modality design, latency, and realtime tradeoffs
+
+### Week 17
+
+Location:
+
+- [week-17-safety-observability-and-cost-control](roadmap/phase-2-ai-core/week-17-safety-observability-and-cost-control/)
+
+Includes:
+
+- trust-boundary, guardrail, observability, retry, and cost-control exercises
+- a guarded support assistant lab with trace logging, safety screening, retries, and budget checks
+- tests for guardrails, budget estimation, and guarded request processing
+- notes for failure-mode review, hardening logic, and safety-cost design
+
+### Week 18
+
+Location:
+
+- [week-18-ai-milestone-product](roadmap/phase-2-ai-core/week-18-ai-milestone-product/)
+
+Includes:
+
+- capstone exercises for scope control, pattern selection, retrieval design, evaluation, and case-study framing
+- a support-ops copilot milestone product with retrieval, structured output, tools, traces, guardrails, and evals
+- tests for retrieval, integrated ticket analysis, and the milestone eval suite
+- notes for architecture framing, scope discipline, and portfolio storytelling
+
 ## Repository Standards
 
 This workspace follows a few important rules:
@@ -363,7 +503,7 @@ Testing support exists for Week 02, but `pytest` is not currently installed in t
 
 The highest-value next repository upgrades are:
 
-- begin building Phase 2 hands-on workspaces
+- continue building the remaining Phase 2 hands-on workspaces from Week 13 onward
 - add a progress tracker across all 48 weeks
 - add review templates and project case-study templates
 - keep the top-level roadmap index synchronized with detailed content

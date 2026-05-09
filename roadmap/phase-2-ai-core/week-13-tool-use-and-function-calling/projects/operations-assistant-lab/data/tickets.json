@@ -1,0 +1,34 @@
+[
+  {
+    "ticket_id": "T-1001",
+    "summary": "Customer asked for a refund after duplicate billing.",
+    "status": "open",
+    "priority": "high",
+    "owner": "Asha",
+    "customer_tier": "standard"
+  },
+  {
+    "ticket_id": "T-1002",
+    "summary": "Employee requested clarification on travel reimbursement rules.",
+    "status": "waiting_for_customer",
+    "priority": "medium",
+    "owner": "Rahul",
+    "customer_tier": "internal"
+  },
+  {
+    "ticket_id": "T-1003",
+    "summary": "User cannot reset password after enabling MFA.",
+    "status": "in_progress",
+    "priority": "high",
+    "owner": "Meera",
+    "customer_tier": "enterprise"
+  },
+  {
+    "ticket_id": "T-1004",
+    "summary": "New joiner needs approval for a replacement laptop.",
+    "status": "pending_approval",
+    "priority": "medium",
+    "owner": "Karan",
+    "customer_tier": "internal"
+  }
+]

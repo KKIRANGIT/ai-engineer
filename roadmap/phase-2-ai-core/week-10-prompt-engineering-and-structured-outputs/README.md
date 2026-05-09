@@ -13,7 +13,7 @@ This week is about moving from prompt experimentation to prompt engineering.
 Prompting is often taught too casually. Real prompt engineering is not:
 
 - adding random instructions
-- trying ten prompt tricks without measurement
+- trying isolated prompt tricks without measurement
 - treating output formatting as a matter of luck
 
 Real prompt engineering means:
@@ -23,8 +23,82 @@ Real prompt engineering means:
 - controlled context
 - schema-aware outputs
 - known failure modes
+- validation and regression habits
 
-Structured outputs are now one of the most important practical skills in AI application development because downstream systems often need valid data, not just nice prose.
+Structured outputs are one of the most practical AI engineering skills because downstream systems usually need valid data, not just nice prose.
+
+## What This Week Is Really Training
+
+At a deeper level, this week trains six important habits.
+
+### 1. Prompting as specification design
+
+You should learn to treat prompts as behavioral specifications:
+
+- what the task is
+- what the model should and should not do
+- what the output must contain
+- how ambiguity should be handled
+
+### 2. Output contract thinking
+
+The moment model output becomes application input, structure matters.
+
+That means:
+
+- stable fields
+- typed values
+- validation paths
+- refusal handling
+
+### 3. Decomposition discipline
+
+Many weak prompts ask the model to do too much in one loose step.
+
+This week should train you to separate:
+
+- extraction from summarization
+- classification from explanation
+- evidence identification from conclusion generation
+
+### 4. Regression mindset
+
+Prompt changes should not be judged by vibes. You should start building the reflex of:
+
+- keeping cases
+- comparing variants
+- recording failures
+
+### 5. Failure-aware design
+
+You must think beyond "best-case output." Real systems need to handle:
+
+- missing fields
+- unsupported inputs
+- low-confidence cases
+- safe refusals
+
+### 6. Prompt library organization
+
+Prompts should be stored, named, versioned, and compared like real engineering artifacts.
+
+## Scope Boundary
+
+This week is not for:
+
+- full agent workflows
+- external retrieval systems
+- tool calling
+- advanced eval automation
+- production UI polish
+
+This week is for:
+
+- clear task prompts
+- structured JSON outputs
+- local validation
+- prompt template organization
+- small regression sets
 
 ## Week 10 Outcomes
 
@@ -35,8 +109,61 @@ By the end of this week, you should be able to:
 - distinguish plain text generation from schema-constrained generation
 - design JSON-schema outputs for real application tasks
 - detect refusals and validation failures programmatically
-- build a prompt library with testable templates
+- build a prompt library with reusable templates
 - create a small regression set for prompt quality
+- explain why structured outputs reduce downstream complexity
+
+## Workspace Structure
+
+This week now includes a full hands-on workspace:
+
+```text
+week-10-prompt-engineering-and-structured-outputs/
+|-- README.md
+|-- exercises/
+|   |-- README.md
+|   |-- prompt-clarity/
+|   |   `-- 01_rewrite_vague_prompts.py
+|   |-- decomposition-and-examples/
+|   |   `-- 01_task_decomposition.py
+|   |-- prompt-organization/
+|   |   `-- 01_xml_and_sections.py
+|   `-- structured-output-thinking/
+|       |-- 01_schema_design_patterns.py
+|       `-- 02_refusal_and_validation_review.py
+|-- projects/
+|   `-- support-ticket-triage-lab/
+|       |-- README.md
+|       |-- .env.example
+|       |-- data/
+|       |   |-- regression_cases.json
+|       |   `-- sample_tickets.json
+|       |-- prompt_library/
+|       |   |-- classify_ticket_v1.md
+|       |   |-- classify_ticket_v2_few_shot.md
+|       |   `-- classify_ticket_v3_xml.md
+|       |-- schemas/
+|       |   `-- ticket_triage_schema.json
+|       |-- src/
+|       |   |-- __init__.py
+|       |   |-- config.py
+|       |   |-- main.py
+|       |   |-- mock_engine.py
+|       |   |-- models.py
+|       |   |-- openai_structured_client.py
+|       |   |-- prompt_library.py
+|       |   |-- regression.py
+|       |   `-- validators.py
+|       `-- tests/
+|           |-- test_openai_structured_client.py
+|           |-- test_regression.py
+|           |-- test_validators.py
+|           `-- test_prompt_library.py
+`-- notes/
+    |-- 01-week-plan.md
+    |-- 02-prompt-design-principles.md
+    `-- 03-structured-output-checklist.md
+```
 
 ## What To Learn
 
@@ -65,24 +192,27 @@ Strong prompt design says:
 
 ## 2. Clear instructions first
 
-Anthropic's guidance emphasizes clarity and directness before more specialized techniques. That is the right starting point.
+Anthropic’s prompt guidance emphasizes clarity and directness before more specialized techniques. That is the right default.
 
 You should learn to write:
 
 - short but precise instructions
 - explicit behavioral boundaries
 - output requirements
-- ambiguity handling rules
+- ambiguity-handling rules
+
+Clarity usually beats decoration.
 
 ## 3. Few-shot prompting
 
-Examples are often more powerful than stronger wording.
+Examples are often more powerful than more intense wording.
 
 Use few-shot examples when:
 
 - output shape matters
-- subtle task distinctions matter
-- edge-case behavior matters
+- subtle distinctions matter
+- borderline cases matter
+- you want to show the model what "good" looks like
 
 Important rule:
 
@@ -90,31 +220,31 @@ Examples should be representative, not decorative.
 
 ## 4. Task decomposition
 
-Many prompt failures come from asking the model to do too much in one unstructured step.
+Many prompt failures come from asking the model to do too much in one loose step.
 
 Learn when to:
 
-- separate classification from generation
+- classify before explaining
 - extract before summarizing
-- identify evidence before drafting a conclusion
+- identify evidence before writing a conclusion
 
-This matters because structure often improves both reliability and debuggability.
+This matters because structured tasks are usually easier to debug than blended tasks.
 
 ## 5. Roles, XML tags, and context organization
 
 You should understand:
 
 - when role framing helps
-- when XML or tagged sections help organize complex prompts
+- when XML-like tags help separate context, examples, and instructions
 - when excessive prompt decoration stops helping
 
 Use tags when they improve clarity for:
 
 - examples
-- reference material
+- references
 - required response sections
 
-Do not use tags just because they look advanced.
+Do not use tags only because they look advanced.
 
 ## 6. Structured outputs and JSON schema
 
@@ -129,19 +259,21 @@ You should learn:
 
 Current practical direction:
 
-- OpenAI supports structured outputs against JSON schema
-- SDK helpers can make schema handling easier using typed models
+- OpenAI supports structured outputs against JSON schema in the Responses API
+- structured outputs are preferred over older JSON mode when supported
+- even with schema support, application validation still matters
 
 ## 7. Validation and application safety
 
 Even with structured outputs, your application should still think about:
 
-- field presence
+- required field presence
 - enum correctness
+- supported ranges
 - missing information
 - user-visible error handling
 
-Structured generation reduces risk. It does not eliminate engineering responsibility.
+Structured generation reduces risk. It does not remove engineering responsibility.
 
 ## 8. Prompt regression testing
 
@@ -153,18 +285,20 @@ Create a small regression set containing:
 - ambiguous cases
 - malformed input
 - edge cases
-- refusal-worthy cases where appropriate
+- refusal-worthy or unsupported cases when appropriate
 
-This is the first step toward the eval mindset of Week 15.
+This is an early version of the eval mindset you will need later.
 
 ## Best Learning Sequence For This Week
 
-1. clear instructions
+Use this order:
+
+1. clear instruction design
 2. examples and decomposition
 3. tagged prompt organization
-4. structured outputs
+4. structured outputs and schema design
 5. validation logic
-6. regression test set
+6. regression testing
 
 ## Recommended Daily Breakdown
 
@@ -187,18 +321,18 @@ Focus:
 Focus:
 
 - organize long prompts cleanly
-- compare readability and performance
+- compare readability across prompt styles
 
 ### Day 4: Structured outputs
 
 Focus:
 
 - JSON schema thinking
-- provider-specific structured generation support
+- OpenAI structured output request shape
 
 Build:
 
-- one extraction task with schema-constrained output
+- one extraction or classification task with schema-constrained output
 
 ### Day 5: Validation and failure handling
 
@@ -208,98 +342,118 @@ Focus:
 - missing fields
 - refusals
 
-### Day 6: Prompt library
+### Day 6: Prompt library organization
 
 Focus:
 
 - reusable template structure
-- prompt naming and organization
+- version naming
+- prompt comparison
 
 ### Day 7: Regression set
 
 Focus:
 
-- define 15-20 cases
-- compare prompt variants
+- define and run prompt cases
+- compare output stability
 
-## Build Plan
+## Main Project
 
-Build three artifacts:
+The main project for this week is:
 
-### 1. Prompt template library
+- [projects/support-ticket-triage-lab](projects/support-ticket-triage-lab/README.md)
 
-Organize by task type:
+It is intentionally practical:
 
-- extraction
-- classification
-- summarization
-- transformation
-- tool-routing or decision support
+- input is messy text from support tickets
+- output must be structured and application-safe
+- prompt variants can be compared
+- regression cases can be run repeatedly
 
-### 2. Structured extraction tool
+The project teaches:
 
-Choose one task such as:
+- prompt template organization
+- schema-driven output design
+- structured output request construction
+- local validation
+- regression harness thinking
 
-- meeting note extraction
-- resume parsing
-- support ticket labeling
-- invoice field extraction
+## Build Quality Standard
 
-Use schema-constrained output rather than naive JSON prompting.
+For this week, "the model returned JSON once" is not enough.
 
-### 3. Prompt regression set
+Minimum quality bar:
 
-Create:
-
-- test inputs
-- expected properties
-- failure notes
+- prompts are named and reusable
+- schema constraints are explicit
+- outputs are validated
+- failures are visible
+- a regression set exists
+- the README explains how prompt variants and structured outputs fit together
 
 ## Deliverables
 
-- prompt template library
-- one structured-output tool
-- 15-20 prompt regression cases
+By the end of this week, you should have:
+
+- prompt clarity and decomposition exercises
+- one prompt library with named variants
+- one structured-output project
+- a regression set
 - notes on failure modes and prompt revisions
 
 ## Exit Criteria
 
+You are ready to move on only if:
+
 - you can write prompts with explicit constraints
-- you can choose when examples are needed
+- you can explain when examples help
 - you can design a useful JSON schema for output
-- your outputs are stable enough to drive code
-- you have at least a minimal regression set
+- you can validate structured outputs instead of trusting them blindly
+- you have at least a minimal regression harness
 
 ## Common Mistakes To Avoid
 
 - using formatting instructions instead of real schema support
 - overcomplicating prompts before clarifying the task
 - assuming a pretty response is a good response
-- skipping edge-case cases in prompt testing
+- skipping unsupported or edge cases in prompt testing
+- treating "respond in JSON" as equivalent to structured outputs
 
 ## Expert Notes That Matter Early
 
 ### Prompting is systems work
 
-The prompt, the context, the schema, and the validation logic are one system.
+The prompt, the context, the schema, and the validation logic form one system.
 
 ### Structured outputs reduce downstream complexity
 
-They are often worth more than small gains in prose quality.
+They are often more valuable than small gains in prose quality.
 
 ### Measure prompt changes
 
-Without a regression set, prompt iteration becomes guesswork.
+Without regression cases, prompt iteration becomes guesswork.
 
 ## Suggested Official References
 
-- OpenAI structured outputs guide
-- Anthropic prompt engineering overview
+Prioritize these official sources:
+
+1. OpenAI Structured Outputs guide  
+   https://platform.openai.com/docs/guides/structured-outputs?lang=javascript
+2. OpenAI Responses API text format reference  
+   https://platform.openai.com/docs/api-reference/responses
+3. Anthropic prompting best practices  
+   https://platform.claude.com/docs/en/docs/build-with-claude/prompt-engineering/system-prompts
+4. Anthropic XML tag guidance  
+   https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/use-xml-tags
+
+Use the official docs for correctness, but use this workspace as the place where the ideas become operational.
 
 ## Final Standard For This Week
 
-The correct outcome of Week 10 is not "I know prompt tricks."
+The correct outcome of Week 10 is not:
+
+"I know some prompt tricks."
 
 The correct outcome is:
 
-"I can specify tasks clearly, generate reliable structured outputs, and test prompt behavior like part of a real application."
+"I can specify tasks clearly, organize prompts deliberately, generate structured outputs against a schema, and test prompt behavior like part of a real application."

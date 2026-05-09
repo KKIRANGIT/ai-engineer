@@ -1,0 +1,37 @@
+[
+  {
+    "doc_id": "DOC-REFUND-01",
+    "topic": "refund",
+    "title": "Refund Policy for Billing Errors",
+    "summary": "Refunds are allowed for duplicate billing, confirmed service failure, and approved enterprise exceptions.",
+    "details": "Support agents should document evidence and escalate larger exceptions for manager review."
+  },
+  {
+    "doc_id": "DOC-REFUND-02",
+    "topic": "refund",
+    "title": "Enterprise Refund Exception Note",
+    "summary": "Enterprise customers may qualify for broader refund exceptions when contractual service levels are missed.",
+    "details": "Contract-linked exceptions should reference SLA impact and involve finance approval."
+  },
+  {
+    "doc_id": "DOC-TRAVEL-01",
+    "topic": "travel",
+    "title": "Travel Reimbursement Summary",
+    "summary": "Employees should submit approved travel receipts within 15 days for transport, lodging, and meals inside policy limits.",
+    "details": "Missing receipts require manager confirmation before reimbursement can be processed."
+  },
+  {
+    "doc_id": "DOC-SECURITY-01",
+    "topic": "security",
+    "title": "Password and MFA Requirements",
+    "summary": "All users must keep MFA enabled and use the guided password reset flow for account recovery.",
+    "details": "Support should avoid manual bypasses and escalate unusual reset requests to security operations."
+  },
+  {
+    "doc_id": "DOC-EQUIPMENT-01",
+    "topic": "equipment",
+    "title": "Laptop and Equipment Request Process",
+    "summary": "Replacement laptop requests require business justification, manager approval, and inventory confirmation.",
+    "details": "Urgent replacement cases should include device failure details and expected working impact."
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "ticket_id": "T-1001",
+    "expected_category": "refund",
+    "expected_priority": "high",
+    "expected_escalation": false
+  },
+  {
+    "ticket_id": "T-1002",
+    "expected_category": "billing",
+    "expected_priority": "medium",
+    "expected_escalation": false
+  },
+  {
+    "ticket_id": "T-1003",
+    "expected_category": "security",
+    "expected_priority": "high",
+    "expected_escalation": true
+  },
+  {
+    "ticket_id": "T-1004",
+    "expected_category": "manual_review",
+    "expected_priority": "high",
+    "expected_escalation": true
+  }
+]

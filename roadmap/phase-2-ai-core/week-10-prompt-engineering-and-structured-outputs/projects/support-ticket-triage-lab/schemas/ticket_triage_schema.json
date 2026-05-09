@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": ["billing", "bug", "account_access", "feature_request", "unclear"]
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "needs_human_follow_up": {
+      "type": "boolean"
+    },
+    "confidence_note": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "category",
+    "priority",
+    "summary",
+    "needs_human_follow_up",
+    "confidence_note"
+  ]
+}

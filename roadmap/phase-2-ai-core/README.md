@@ -165,6 +165,25 @@ You should consider Phase 2 successful only if most of these are true:
 - you can discuss failure modes honestly
 - you can ship one meaningful AI-powered application that is more than a toy chatbot
 
+## Current Workspace Status
+
+Phase 2 is now starting to move from planning-only material into hands-on implementation workspaces.
+
+Current status:
+
+- Week 09 includes exercises, a provider-aware API playground, tests, and notes
+- Week 10 includes prompt exercises, a structured-output project, tests, and notes
+- Week 11 includes embeddings exercises, a semantic search playground, tests, and notes
+- Week 12 includes RAG pipeline exercises, a grounded policy assistant, tests, and notes
+- Week 13 includes tool-loop exercises, a local operations assistant lab, tests, and notes
+- Week 14 includes orchestration exercises, a research brief orchestrator, tests, and notes
+- Week 15 includes eval-design exercises, a ticket triage eval lab, tests, and notes
+- Week 16 includes multimodal exercises, an incident assistant multimodal lab, tests, and notes
+- Week 17 includes safety exercises, a guarded support assistant lab, tests, and notes
+- Week 18 includes capstone exercises, a support ops copilot milestone project, tests, and notes
+
+This matters because Weeks 09-18 should now be treated as active implementation modules, not only as reading material.
+
 ## How To Use The Weekly Modules
 
 Each weekly folder in this phase should be treated as an execution module.

@@ -6,3 +6,10 @@ venv/
 node_modules/
 roadmap/phase-1-foundation/week-07-javascript-typescript-nodejs-and-backend-basics/projects/reading-list-api/data/reading-list.json
 roadmap/phase-1-foundation/week-08-foundation-milestone-project/projects/study-session-tracker/data/study_tracker.db
+roadmap/phase-2-ai-core/week-09-llm-fundamentals-and-api-literacy/projects/llm-api-playground/logs/traces.jsonl
+roadmap/phase-2-ai-core/week-13-tool-use-and-function-calling/projects/operations-assistant-lab/artifacts/
+roadmap/phase-2-ai-core/week-14-agents-and-workflow-orchestration/projects/research-brief-orchestrator/artifacts/
+roadmap/phase-2-ai-core/week-15-evals-prompt-optimization-and-fine-tuning-decisions/projects/ticket-triage-eval-lab/artifacts/
+roadmap/phase-2-ai-core/week-16-multimodal-and-realtime-ai/projects/incident-assistant-multimodal-lab/artifacts/
+roadmap/phase-2-ai-core/week-17-safety-observability-and-cost-control/projects/guarded-support-assistant-lab/artifacts/
+roadmap/phase-2-ai-core/week-18-ai-milestone-product/projects/support-ops-copilot/artifacts/

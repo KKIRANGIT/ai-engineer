@@ -6,6 +6,8 @@ Back to [Phase 2](../README.md)
 
 Learn the production concerns that separate real AI systems from persuasive demos: safety boundaries, traces, failure handling, and cost visibility.
 
+This week is where the system stops being judged only by output quality and starts being judged by whether it is inspectable, constrained, and economically sane.
+
 ## Why This Week Matters
 
 An AI app is not production-ready just because it produces good answers on happy-path examples.
@@ -16,8 +18,41 @@ Production-worthy AI systems need:
 - visibility into what happened during each request
 - clear error and retry paths
 - rough unit economics
+- budget boundaries
 
 This week matters because many later failures are not about model intelligence. They are about engineering blind spots.
+
+## What This Week Is Actually Training
+
+Week 17 is training five deeper skills:
+
+1. identifying trust boundaries across user input, retrieved content, tools, and system prompts
+2. designing simple guardrails against injection-like or unsafe behavior
+3. instrumenting traces, latency, and failures
+4. simulating retries, fallbacks, and degraded behavior
+5. estimating per-request cost and enforcing budget controls
+
+The real outcome is not "I know safety matters." The real outcome is "I can harden an AI workflow enough to reason about operating it."
+
+## Scope Boundary For This Week
+
+This week focuses on:
+
+- trust boundaries
+- prompt injection awareness
+- tool-risk boundaries
+- observability and traces
+- retries and timeouts
+- token and cost accounting
+
+This week does not require:
+
+- a full red-team program
+- production-grade security infrastructure
+- external monitoring stacks
+- real provider billing integration
+
+The correct first goal is not "solve AI safety in general." The correct first goal is "add practical controls and visibility to one concrete workflow."
 
 ## Week 17 Outcomes
 
@@ -30,9 +65,32 @@ By the end of this week, you should be able to:
 - design retry and timeout behavior intentionally
 - create a failure-mode checklist for an AI application
 
-## What To Learn
+## Best Source Strategy For This Week
 
-## 1. Trust boundaries
+Use sources in this order:
+
+1. the local Week 17 workspace
+2. official provider docs for safety, tracing, and data controls
+3. your own trace logs and failure-mode notes
+
+Do not turn this week into vague philosophy. Keep it grounded in one inspectable workflow.
+
+## Recommended Official References
+
+Primary sources:
+
+- OpenAI Usage policies: <https://platform.openai.com/docs/usage-guidelines>
+- OpenAI Trace grading: <https://platform.openai.com/docs/guides/trace-grading>
+- OpenAI Agents SDK overview: <https://platform.openai.com/docs/guides/agents-sdk/>
+- OpenAI Safety in building agents: <https://platform.openai.com/docs/guides/agent-builder-safety>
+- OpenAI Data controls: <https://platform.openai.com/docs/guides/your-data>
+- Anthropic prompt leak guidance: <https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/reduce-prompt-leak>
+
+These references were chosen because safety, tracing, and data-control guidance changes over time and should be read from primary sources.
+
+## Core Mental Models
+
+## 1. Trust boundaries come first
 
 AI systems often combine:
 
@@ -50,7 +108,7 @@ The first safety skill is learning to ask:
 - what content is untrusted
 - what content can influence tool behavior
 
-## 2. Prompt injection basics
+## 2. Prompt injection is a boundary problem
 
 Once models consume external content, prompt injection becomes relevant.
 
@@ -59,9 +117,9 @@ You should understand the basic risk:
 - retrieved or user-provided content may attempt to manipulate the model
 - tool-enabled systems can amplify the impact
 
-You do not need a full security program this week, but you do need engineering awareness.
+You do not need a full security program this week, but you do need engineering awareness and simple guardrail patterns.
 
-## 3. Tool abuse and action risk
+## 3. Tools raise the stakes
 
 Tools create higher stakes than plain chat.
 
@@ -72,21 +130,22 @@ You should think about:
 - parameter validation
 - least privilege
 
-If a model can trigger side effects, the application must constrain what "success" even means.
+If a model can trigger side effects, the application must constrain what success even means.
 
-## 4. Observability and traces
+## 4. Observability is part of reliability
 
 AI systems are hard to debug without traces.
 
 Track:
 
 - request inputs at a safe abstraction level
-- model choice
-- token usage
+- model or variant choice
+- token usage estimates
 - latency
 - retrieval results
 - tool calls
-- errors
+- guardrail outcomes
+- errors and fallback behavior
 
 Good observability lets you answer:
 
@@ -94,48 +153,19 @@ Good observability lets you answer:
 - where it failed
 - what it cost
 
-## 5. Retries, timeouts, and degraded behavior
+## 5. Cost is a system property
 
-Learn to think about operational failure modes:
-
-- provider timeout
-- malformed model output
-- tool failure
-- retrieval miss
-- rate limits
-
-Ask:
-
-- should this be retried
-- should the user see partial results
-- should the app fall back to a safer mode
-
-## 6. Cost accounting
-
-Current AI systems can become expensive in hidden ways.
+AI systems can become expensive in hidden ways.
 
 Track:
 
-- input token cost
-- output token cost
-- retrieval or file-search costs where relevant
-- tool-related costs
-- cost per user task
+- estimated input token cost
+- estimated output token cost
+- retrieval or tool-related costs where relevant
+- cost per request
+- budget alarms or per-request thresholds
 
-This is one of the biggest differentiators in client and product conversations.
-
-## 7. Failure-mode inventory
-
-Create a structured list of:
-
-- bad user input cases
-- grounding failures
-- schema failures
-- tool misfires
-- rate-limit conditions
-- latency spikes
-
-This list becomes the seed of real production hardening.
+This is one of the clearest differences between a demo and a product-ready system.
 
 ## Best Learning Sequence For This Week
 
@@ -155,18 +185,18 @@ Focus:
 
 - identify trusted vs untrusted context
 
-### Day 2: Tool and action risk review
+### Day 2: Guardrails
 
 Focus:
 
-- read-only vs side-effecting operations
-- approval points
+- prompt injection awareness
+- read-only vs risky operations
 
 ### Day 3: Add instrumentation
 
 Focus:
 
-- log requests, latency, and outputs
+- log requests, latency, costs, and outputs
 
 ### Day 4: Add failure handling
 
@@ -180,8 +210,8 @@ Focus:
 
 Focus:
 
-- per-request cost notes
-- simple per-user estimate
+- per-request cost estimates
+- simple per-user budget logic
 
 ### Day 6: Failure-mode checklist
 
@@ -195,29 +225,105 @@ Focus:
 
 - what is still unsafe or invisible
 
+## Hands-On Workspace Structure
+
+```text
+week-17-safety-observability-and-cost-control/
+|-- README.md
+|-- exercises/
+|   |-- README.md
+|   |-- cost-and-budget-controls/
+|   |-- observability-and-retries/
+|   |-- prompt-injection-and-guardrails/
+|   `-- trust-boundaries/
+|-- notes/
+|   |-- 01-week-plan.md
+|   |-- 02-failure-mode-checklist.md
+|   `-- 03-safety-and-cost-design-notes.md
+`-- projects/
+    `-- guarded-support-assistant-lab/
+```
+
+## Exercises
+
+The exercises isolate the main hardening concepts before the larger project combines them.
+
+You will practice:
+
+- mapping trust boundaries
+- identifying prompt-injection risk
+- thinking about retries and timeout behavior
+- estimating request cost and budget pressure
+
+Start here:
+
+- [Exercises README](exercises/README.md)
+
+## Main Project
+
+Project:
+
+- [guarded-support-assistant-lab](projects/guarded-support-assistant-lab/README.md)
+
+This project is a local guarded support assistant that:
+
+- classifies request trust boundaries
+- screens for suspicious or injection-like text
+- logs a full request trace
+- simulates retries and fallbacks
+- estimates token and request cost
+- blocks or warns on budget thresholds
+
+It stays local and deterministic on purpose so the hardening logic is easy to inspect.
+
 ## Build Plan
 
-Take one AI project from Weeks 12-16 and improve it with:
+Build and study one guarded AI workflow that can:
 
-- request logging or trace capture
-- token and cost tracking
-- retry/timeout handling
-- documented guardrails
-- failure-mode checklist
+- inspect user input and retrieved notes
+- apply simple guardrails
+- simulate a support response path
+- log trace events and failure points
+- estimate request cost
+- warn or block when a request exceeds a budget rule
+
+Required qualities:
+
+- explicit trust boundaries
+- readable trace logging
+- retry and timeout simulation
+- cost estimation
+- failure-mode documentation
+
+## Suggested Study Order Inside This Week
+
+1. read this README fully
+2. complete the exercises
+3. read the project README
+4. run a safe request
+5. run a suspicious or risky request
+6. inspect the trace and cost output
+7. read the notes after you have seen the behavior
 
 ## Deliverables
 
-- instrumented AI app
-- cost estimate worksheet
-- failure-mode checklist
-- short note on trust boundaries and remaining risks
+By the end of Week 17, you should have:
+
+- completed the exercises
+- run the guarded workflow on multiple request types
+- inspected the request trace
+- reviewed per-request cost estimates
+- written your own short failure-mode checklist
 
 ## Exit Criteria
 
-- you can explain what a request costs at a rough level
-- you can identify key failure and trust boundaries
-- you can observe the system with useful logs or traces
-- you can describe what happens when major subsystems fail
+You should not leave Week 17 until you can:
+
+- identify the main trust boundaries in an AI workflow
+- explain how a simple injection screen or output filter works
+- inspect a trace and explain where a failure occurred
+- explain roughly what a request costs
+- describe what the system does when guardrails or budgets fail
 
 ## Common Mistakes To Avoid
 
@@ -225,6 +331,7 @@ Take one AI project from Weeks 12-16 and improve it with:
 - giving tools more authority than necessary
 - treating logs as optional
 - waiting too long to think about cost
+- hiding failures instead of surfacing them clearly
 
 ## Expert Notes That Matter Early
 
@@ -240,15 +347,15 @@ If you cannot inspect the system, you cannot improve it responsibly.
 
 Economic viability is part of engineering quality for AI systems.
 
-## Suggested Official References
+### Simple guardrails still matter
 
-- provider docs on tool use and hosted tools
-- provider docs on token or usage measurement
-- eval and tracing guidance where available
+Even lightweight screens, allowlists, and approval boundaries can prevent a large class of avoidable failures.
 
 ## Final Standard For This Week
 
-The correct outcome of Week 17 is not "I know AI apps can be risky."
+The correct outcome of Week 17 is not:
+
+"I know AI apps can be risky."
 
 The correct outcome is:
 

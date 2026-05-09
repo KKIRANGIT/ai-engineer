@@ -30,6 +30,16 @@ Current implemented study workspaces:
 - Phase 1 Week 06
 - Phase 1 Week 07
 - Phase 1 Week 08
+- Phase 2 Week 09
+- Phase 2 Week 10
+- Phase 2 Week 11
+- Phase 2 Week 12
+- Phase 2 Week 13
+- Phase 2 Week 14
+- Phase 2 Week 15
+- Phase 2 Week 16
+- Phase 2 Week 17
+- Phase 2 Week 18
 
 Most later weeks currently remain detailed planning modules rather than full code workspaces.
 

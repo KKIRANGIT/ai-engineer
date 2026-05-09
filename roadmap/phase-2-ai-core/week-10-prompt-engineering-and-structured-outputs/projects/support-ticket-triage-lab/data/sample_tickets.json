@@ -1,0 +1,27 @@
+[
+  {
+    "ticket_id": "ticket_001",
+    "text": "I was charged twice for my monthly subscription and I need a refund.",
+    "expected_category": "billing"
+  },
+  {
+    "ticket_id": "ticket_002",
+    "text": "The app crashes every time I try to upload a PDF after the latest update.",
+    "expected_category": "bug"
+  },
+  {
+    "ticket_id": "ticket_003",
+    "text": "I reset my password but I still cannot sign in to my account.",
+    "expected_category": "account_access"
+  },
+  {
+    "ticket_id": "ticket_004",
+    "text": "Could you add dark mode to the dashboard? It would help us a lot.",
+    "expected_category": "feature_request"
+  },
+  {
+    "ticket_id": "ticket_005",
+    "text": "Something is wrong. Please help.",
+    "expected_category": "unclear"
+  }
+]

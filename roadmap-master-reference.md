@@ -526,28 +526,158 @@ Status:
 
 - rewritten into detailed expert-level planning documents
 
-### 14. Phase 3 planning layer expanded
+### 14. Phase 2 Week 09 hands-on workspace created
+
+Completed:
+
+- concepts, payload, and debugging exercises
+- provider-aware LLM API playground
+- tests for clients, cost estimation, and logging
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-2-ai-core/week-09-llm-fundamentals-and-api-literacy/`
+
+### 15. Phase 2 Week 10 hands-on workspace created
+
+Completed:
+
+- prompt clarity, decomposition, and schema exercises
+- structured-output support-ticket triage lab
+- tests for prompt rendering, validation, regression, and payload construction
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-2-ai-core/week-10-prompt-engineering-and-structured-outputs/`
+
+### 16. Phase 2 Week 11 hands-on workspace created
+
+Completed:
+
+- embeddings, chunking, filtering, and search-mode exercises
+- semantic search playground project
+- tests for similarity, chunking, retrieval, and evaluation
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-2-ai-core/week-11-embeddings-semantic-search-and-retrieval-basics/`
+
+### 17. Phase 2 Week 12 hands-on workspace created
+
+Completed:
+
+- RAG pipeline, query rewrite, context packing, and failure-analysis exercises
+- grounded policy assistant project
+- tests for query rewriting, context building, answer generation, and evaluation
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-2-ai-core/week-12-rag-done-properly/`
+
+### 18. Phase 2 Week 13 hands-on workspace created
+
+Completed:
+
+- tool-loop, schema-design, validation, and provider-payload exercises
+- local operations assistant lab
+- tests for validation, deterministic tools, and orchestration
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-2-ai-core/week-13-tool-use-and-function-calling/`
+
+### 19. Phase 2 Week 14 hands-on workspace created
+
+Completed:
+
+- orchestration exercises covering workflows, ReAct loops, state, retries, and framework positioning
+- research brief orchestrator project with direct, graph-style, and agent-loop modes
+- tests for workflow behavior and orchestration modes
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-2-ai-core/week-14-agents-and-workflow-orchestration/`
+
+### 20. Phase 2 Week 15 hands-on workspace created
+
+Completed:
+
+- eval-design exercises covering success criteria, dataset quality, graders, regressions, and fine-tuning decisions
+- ticket triage eval lab with baseline, prompt-improved, and retrieval-aware system variants
+- tests for grading, analysis, and decision memo behavior
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-2-ai-core/week-15-evals-prompt-optimization-and-fine-tuning-decisions/`
+
+### 21. Phase 2 Week 16 hands-on workspace created
+
+Completed:
+
+- multimodal exercises covering modality transitions, voice pipelines, vision task framing, and streaming sessions
+- incident assistant multimodal lab with text-only, multimodal, and session modes
+- tests for session behavior and streaming output
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-2-ai-core/week-16-multimodal-and-realtime-ai/`
+
+### 22. Phase 2 Week 17 hands-on workspace created
+
+Completed:
+
+- safety exercises covering trust boundaries, prompt-injection awareness, observability, retries, and cost control
+- guarded support assistant lab with trace logging, safety screening, retry behavior, and budget checks
+- tests for guardrails, budget estimation, and request processing
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-2-ai-core/week-17-safety-observability-and-cost-control/`
+
+### 23. Phase 2 Week 18 hands-on workspace created
+
+Completed:
+
+- capstone exercises covering pattern selection, retrieval and structure design, evaluation, and case-study framing
+- support ops copilot milestone product with retrieval, structured output, deterministic tools, guardrails, traces, cost estimation, and evals
+- tests for retrieval, integrated ticket analysis, and the milestone evaluation suite
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-2-ai-core/week-18-ai-milestone-product/`
+
+### 24. Phase 3 planning layer expanded
 
 Completed:
 
 - `roadmap/phase-3-full-stack-ai-product-engineering/README.md`
 - Week 19 through Week 28 READMEs
 
-### 15. Phase 4 planning layer expanded
+### 25. Phase 4 planning layer expanded
 
 Completed:
 
 - `roadmap/phase-4-build-3-real-products/README.md`
 - product-track READMEs for Weeks 29 through 38
 
-### 16. Phase 5 planning layer expanded
+### 26. Phase 5 planning layer expanded
 
 Completed:
 
 - `roadmap/phase-5-career-monetization-and-positioning/README.md`
 - Week 39 through Week 48 READMEs
 
-### 17. `90-reference` expanded
+### 27. `90-reference` expanded
 
 Completed:
 
@@ -557,7 +687,7 @@ Status:
 
 - now functions as a full companion operating handbook rather than a short appendix
 
-### 18. Week 01 Python guide deepened further
+### 28. Week 01 Python guide deepened further
 
 Completed:
 
@@ -567,7 +697,7 @@ Status:
 
 - strengthened with stricter learning boundaries, no-doubt study order, stronger source strategy, and better official references
 
-### 19. Repository entry README and course agent created
+### 29. Repository entry README and course agent created
 
 Completed:
 
@@ -579,7 +709,7 @@ Status:
 
 - repository now has a clear entry point and a reusable workspace-specific learning agent prompt
 
-### 20. Workspace prompt guide created
+### 30. Workspace prompt guide created
 
 Completed:
 
@@ -595,7 +725,7 @@ At this point:
 
 - all major phase planning layers are expanded
 - all overview and reference layers are expanded
-- Week 01, Week 02, Week 03, Week 04, Week 05, Week 06, Week 07, and Week 08 have both planning and implementation artifacts
+- Week 01, Week 02, Week 03, Week 04, Week 05, Week 06, Week 07, Week 08, Week 09, Week 10, Week 11, Week 12, Week 13, Week 14, Week 15, Week 16, Week 17, and Week 18 have both planning and implementation artifacts
 - later weeks mostly have planning layers but not yet full source-code workspaces
 
 This means the roadmap is structurally strong, but implementation depth is still uneven across weeks.

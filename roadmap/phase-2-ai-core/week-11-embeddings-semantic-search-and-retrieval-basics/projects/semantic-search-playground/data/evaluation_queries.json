@@ -1,0 +1,18 @@
+[
+  {
+    "query": "How can I get a refund after being charged twice?",
+    "expected_document_id": "doc_001"
+  },
+  {
+    "query": "I reset my password and still cannot log in. What should happen next?",
+    "expected_document_id": "doc_002"
+  },
+  {
+    "query": "Can I download invoice data into a spreadsheet?",
+    "expected_document_id": "doc_003"
+  },
+  {
+    "query": "How should staff escalate a large refund case?",
+    "expected_document_id": "doc_004"
+  }
+]

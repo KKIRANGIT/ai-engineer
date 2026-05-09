@@ -1,0 +1,22 @@
+[
+  {
+    "case_id": "CASE-01",
+    "title": "Server room humidity alert",
+    "text_report": "The monitoring dashboard shows repeated humidity alerts in the server room.",
+    "transcript_excerpt": "Technician says there is a visible leak near rack three and the alarm started ten minutes ago.",
+    "image_observations": [
+      "Photo shows a puddle on the floor near rack three.",
+      "Warning light is active on the wall humidity sensor."
+    ]
+  },
+  {
+    "case_id": "CASE-02",
+    "title": "Warehouse loading dock damage",
+    "text_report": "A loading dock incident was reported after a vehicle reversed into the shutter.",
+    "transcript_excerpt": "Supervisor says the shutter cannot fully close and there are exposed cables near the frame.",
+    "image_observations": [
+      "Image shows bent shutter panels with a visible gap at the bottom.",
+      "Orange safety cone is placed beside exposed wiring."
+    ]
+  }
+]

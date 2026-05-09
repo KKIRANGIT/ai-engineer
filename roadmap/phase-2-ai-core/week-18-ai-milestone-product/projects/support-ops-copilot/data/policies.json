@@ -1,0 +1,20 @@
+[
+  {
+    "note_id": "POL-REFUND-01",
+    "topic": "refund",
+    "title": "Refund Approval Workflow",
+    "summary": "Duplicate charge refunds should follow the documented approval workflow with finance confirmation when needed."
+  },
+  {
+    "note_id": "POL-BILLING-01",
+    "topic": "billing",
+    "title": "Billing Clarification Guidance",
+    "summary": "Billing mismatches should reference invoice history and contract details before a customer response is sent."
+  },
+  {
+    "note_id": "POL-SECURITY-01",
+    "topic": "security",
+    "title": "Account Recovery Security Process",
+    "summary": "MFA reset incidents should use the secure recovery process and may require escalation for enterprise customers."
+  }
+]

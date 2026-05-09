@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What should support do when a customer is charged twice?",
+    "expected_document_id": "policy_001"
+  },
+  {
+    "question": "How do we handle repeated login failures after a password reset?",
+    "expected_document_id": "policy_002"
+  },
+  {
+    "question": "What should support say about feature request timelines?",
+    "expected_document_id": "policy_003"
+  },
+  {
+    "question": "What information should support collect if a customer workflow keeps crashing?",
+    "expected_document_id": "policy_004"
+  }
+]

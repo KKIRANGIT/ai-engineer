@@ -1,0 +1,42 @@
+[
+  {
+    "ticket_id": "ticket_001",
+    "expected": {
+      "category": "billing",
+      "priority": "medium",
+      "needs_human_follow_up": true
+    }
+  },
+  {
+    "ticket_id": "ticket_002",
+    "expected": {
+      "category": "bug",
+      "priority": "high",
+      "needs_human_follow_up": true
+    }
+  },
+  {
+    "ticket_id": "ticket_003",
+    "expected": {
+      "category": "account_access",
+      "priority": "high",
+      "needs_human_follow_up": true
+    }
+  },
+  {
+    "ticket_id": "ticket_004",
+    "expected": {
+      "category": "feature_request",
+      "priority": "low",
+      "needs_human_follow_up": false
+    }
+  },
+  {
+    "ticket_id": "ticket_005",
+    "expected": {
+      "category": "unclear",
+      "priority": "medium",
+      "needs_human_follow_up": true
+    }
+  }
+]

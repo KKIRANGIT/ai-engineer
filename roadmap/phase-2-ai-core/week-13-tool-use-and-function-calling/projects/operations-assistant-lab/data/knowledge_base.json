@@ -1,0 +1,32 @@
+[
+  {
+    "doc_id": "POL-REFUND-01",
+    "title": "Refund Policy Overview",
+    "topic": "refund",
+    "summary": "Refunds must be justified by billing error, service failure, or approved exception. Standard support agents can recommend refunds, but higher-value exceptions may require manager approval."
+  },
+  {
+    "doc_id": "POL-TRAVEL-01",
+    "title": "Travel Reimbursement Basics",
+    "topic": "travel",
+    "summary": "Employees should submit travel receipts within 15 days. Reimbursement applies to approved transport, lodging, and meals within the policy limits."
+  },
+  {
+    "doc_id": "POL-SECURITY-01",
+    "title": "Password and MFA Security Guide",
+    "topic": "security",
+    "summary": "Users must keep MFA enabled and follow the guided password reset flow. Security exceptions should not be handled through normal support shortcuts."
+  },
+  {
+    "doc_id": "POL-EQUIPMENT-01",
+    "title": "Equipment Request Process",
+    "topic": "equipment",
+    "summary": "Laptop and equipment requests require manager approval and inventory confirmation. Replacement devices should include a short business justification."
+  },
+  {
+    "doc_id": "POL-LEAVE-01",
+    "title": "Leave Policy Summary",
+    "topic": "leave",
+    "summary": "Paid leave requests should be submitted in the HR portal. Emergency leave can be logged retroactively with manager notification."
+  }
+]

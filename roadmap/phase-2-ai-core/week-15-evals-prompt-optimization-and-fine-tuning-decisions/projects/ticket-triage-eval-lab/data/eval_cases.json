@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "CASE-01",
+    "ticket_text": "I was charged twice for the same subscription and need a refund today.",
+    "expected_category": "refund",
+    "expected_priority": "medium",
+    "expected_next_action": "refund",
+    "required_policy_phrase": "manager approval",
+    "expected_tone": "acknowledge",
+    "likely_fix": "retrieval"
+  },
+  {
+    "case_id": "CASE-02",
+    "ticket_text": "I am locked out after MFA reset and cannot access my account.",
+    "expected_category": "security",
+    "expected_priority": "high",
+    "expected_next_action": "security",
+    "required_policy_phrase": "security review",
+    "expected_tone": "acknowledge",
+    "likely_fix": "retrieval"
+  },
+  {
+    "case_id": "CASE-03",
+    "ticket_text": "Can you confirm whether my hotel receipt from last week's travel can still be reimbursed?",
+    "expected_category": "travel",
+    "expected_priority": "low",
+    "expected_next_action": "travel",
+    "required_policy_phrase": "receipts within 15 days",
+    "expected_tone": "acknowledge",
+    "likely_fix": "retrieval"
+  },
+  {
+    "case_id": "CASE-04",
+    "ticket_text": "The latest billing invoice seems incorrect and I need clarification soon.",
+    "expected_category": "billing",
+    "expected_priority": "medium",
+    "expected_next_action": "billing",
+    "required_policy_phrase": "invoice history",
+    "expected_tone": "acknowledge",
+    "likely_fix": "prompt"
+  }
+]

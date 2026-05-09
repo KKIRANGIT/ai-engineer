@@ -1,0 +1,44 @@
+[
+  {
+    "document_id": "doc_001",
+    "title": "Refund and Billing FAQ",
+    "category": "billing",
+    "audience": "customers",
+    "content": "Customers can request a refund when they are charged twice or billed incorrectly. Billing disputes should include the invoice number, charge date, and account email. Refund reviews are typically completed within five business days."
+  },
+  {
+    "document_id": "doc_002",
+    "title": "Account Access Troubleshooting",
+    "category": "account_access",
+    "audience": "customers",
+    "content": "If a user cannot sign in after a password reset, ask them to confirm the reset link was used only once and the new password meets the security requirements. If the issue continues, account access support should verify whether the account is locked."
+  },
+  {
+    "document_id": "doc_003",
+    "title": "Invoice Export Feature Guide",
+    "category": "reporting",
+    "audience": "customers",
+    "content": "The invoicing dashboard supports CSV export for invoice lists and monthly summaries. Users can open the reporting section, select an invoice range, and choose export to CSV. Export availability depends on the billing plan."
+  },
+  {
+    "document_id": "doc_004",
+    "title": "Internal Escalation Process for Billing Issues",
+    "category": "billing",
+    "audience": "staff",
+    "content": "Support staff should escalate unresolved billing issues to the finance operations queue when a refund exceeds the self-service threshold or when a chargeback is involved. Include customer history, invoice metadata, and refund reasoning."
+  },
+  {
+    "document_id": "doc_005",
+    "title": "Crash Investigation Runbook",
+    "category": "bug",
+    "audience": "staff",
+    "content": "When the app crashes during uploads, collect the file type, file size, browser, and timestamp. Review upload-service logs for failed processing jobs and attach reproduction steps to the engineering ticket."
+  },
+  {
+    "document_id": "doc_006",
+    "title": "Dark Mode Feature Request Notes",
+    "category": "feature_request",
+    "audience": "customers",
+    "content": "Dark mode is a requested interface improvement. It is not currently available in the dashboard, but product feedback is reviewed monthly. Feature requests should capture the affected page and the user reason for requesting the change."
+  }
+]

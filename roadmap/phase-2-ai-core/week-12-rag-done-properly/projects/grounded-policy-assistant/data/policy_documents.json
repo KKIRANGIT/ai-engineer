@@ -1,0 +1,26 @@
+[
+  {
+    "document_id": "policy_001",
+    "title": "Billing Resolution Policy",
+    "section": "refunds",
+    "content": "When a customer is charged twice, support should confirm the duplicate charge, collect the invoice number and charge date, and open a refund review case. Refund cases should be reviewed within five business days. If the duplicate charge is tied to a disputed renewal, finance operations should be notified."
+  },
+  {
+    "document_id": "policy_002",
+    "title": "Account Access Support Policy",
+    "section": "login_recovery",
+    "content": "When a customer reports repeated login failures after a password reset, support should confirm whether the reset link was reused and whether the account is locked. If the customer still cannot sign in, the case should be escalated to account access support. Support should avoid asking the customer to repeat more than one password reset without checking account status."
+  },
+  {
+    "document_id": "policy_003",
+    "title": "Feature Request Intake Policy",
+    "section": "product_feedback",
+    "content": "Feature requests should be recorded with the requested capability, the affected workflow, and the customer reason for the request. Support may acknowledge the request but should not promise a delivery date. Product feedback is reviewed during the monthly prioritization cycle."
+  },
+  {
+    "document_id": "policy_004",
+    "title": "Incident Escalation Policy",
+    "section": "service_failures",
+    "content": "If a customer-facing workflow repeatedly crashes, support should collect reproduction steps, timestamp information, and the affected browser or environment. If the issue appears to block core usage, it should be treated as high priority and routed to engineering with the relevant logs."
+  }
+]
