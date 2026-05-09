@@ -4,129 +4,234 @@ Back to [Phase 1](../README.md)
 
 ## Goal
 
-Become fluent enough in Python that the language itself stops being the bottleneck. By the end of this week, you should be able to read simple Python comfortably, write small programs without constant syntax lookup, and break basic problems into functions and clear steps.
-
-This week is not about "covering Python." It is about building the minimum level of fluency required for the rest of the roadmap. If this week is weak, every later phase becomes slower and more frustrating.
-
-## Why This Week Matters
-
-Most learners try to learn Python by collecting syntax. That is the wrong target.
-
-The real target is:
-
-- understanding Python's basic mental model
-- getting comfortable with core data types
-- learning how to think in steps, conditions, and transformations
-- writing code that is small, readable, and testable
-
-You do not need advanced Python this week. You need strong control over the basics.
-
-If you do this week properly, later topics become much easier:
-
-- APIs are easier because JSON maps naturally to dicts and lists
-- SQL becomes easier because data transformation thinking improves
-- AI workflows become easier because prompt inputs and tool outputs are just structured data
-- backend work becomes easier because you already know how to decompose logic into functions
-
-## Week 01 Outcomes
+Build enough real Python fluency that the language stops slowing you down.
 
 By the end of this week, you should be able to:
 
-- explain the difference between a list, tuple, set, and dict
-- use conditionals and loops comfortably
-- write and call functions with parameters and return values
-- read from and write to simple files
-- solve small logic problems without writing one giant script
-- debug basic syntax, type, and index errors
-- structure a CLI program into small functions
+- read small Python programs without feeling lost
+- write short scripts from scratch without constant syntax lookup
+- choose the right basic data structure for simple problems
+- break logic into functions instead of writing one giant script
+- debug common beginner errors without panic
+- build two small CLI programs that actually work
 
-## What To Learn
+This week is not about becoming "good at Python" in a broad sense. It is about building the operational base that every later week depends on.
 
-## 1. Python Mental Model
+If this week is weak:
 
-Before learning syntax mechanically, internalize these ideas:
+- Week 02 will feel harder than it should
+- API work in Week 03 will feel confusing
+- SQL and data transformation will feel messier
+- AI engineering later will be slower because structured data handling will still feel unnatural
 
-- Python is dynamically typed, but types still matter.
-- Variables are names bound to objects, not boxes with fixed types.
-- Many beginner bugs come from misunderstanding mutability, indexing, and truthiness.
-- Readability is a core design value in Python, not a nice extra.
+If this week is strong, the rest of the roadmap becomes much more mechanical.
 
-Important beginner mindset:
+## What This Week Is Actually Training
 
-- do not write "clever" code
-- write obvious code
-- name things clearly
-- prefer correctness and clarity over compactness
+At surface level, Week 01 looks like syntax practice. That is not the real training target.
 
-## 2. Core Data Types
+The deeper skills being trained are:
 
-You need working fluency with:
+- translating a vague problem into exact steps
+- recognizing when data should be stored as a list, set, tuple, or dict
+- separating input, processing, and output
+- developing a debugging habit instead of a guessing habit
+- learning to make code readable before trying to make it clever
+
+That is why this week matters so much. Most weak beginners do not fail because they do not know enough syntax. They fail because they do not yet think in clear execution steps.
+
+## Scope Boundaries
+
+To avoid confusion, here is what belongs in Week 01 and what does not.
+
+Study deeply this week:
+
+- variables and values
+- numbers, strings, booleans, `None`
+- lists, tuples, sets, dicts
+- `if`, `elif`, `else`
+- `for`, `while`, `break`, `continue`
+- functions, parameters, return values, scope
+- string processing
+- file reading and writing
+- JSON basics
+- `pathlib`
+- reading tracebacks
+- small CLI projects
+
+Do not spend serious time on these yet:
+
+- classes and object-oriented design
+- decorators
+- generators
+- context manager internals
+- advanced typing
+- concurrency
+- web frameworks
+- data science libraries
+- AI libraries
+
+Those topics are not wrong. They are simply too early. Week 01 should optimize for clarity and control, not breadth.
+
+## Week 01 Outcomes
+
+You are successful this week if you can do most of the following without heavy assistance:
+
+- explain the difference between mutable and immutable values
+- explain when a `list` is better than a `set`
+- write a function that takes inputs, computes a result, and returns it cleanly
+- iterate through a collection and transform or filter values
+- read from a file and write data back safely
+- inspect an error message and identify what assumption failed
+- build a menu-driven CLI program without collapsing into one giant loop
+
+The target is not perfect memory. The target is working fluency.
+
+## Pre-Week Setup Standard
+
+Before you start the exercises, make sure your setup is stable.
+
+Minimum environment:
+
+- current Python 3.x installed
+- editor with Python syntax highlighting
+- terminal access
+- one dedicated Week 01 working folder
+
+Recommended project conventions from Day 1:
+
+- create a `.venv` for project isolation
+- keep one folder for exercises and one for projects
+- use meaningful file names
+- keep your scripts runnable from the terminal
+
+Windows examples:
+
+```powershell
+py -m venv .venv
+.venv\Scripts\activate
+py --version
+```
+
+Cross-platform examples:
+
+```bash
+python -m venv .venv
+python --version
+```
+
+Important practical note:
+
+You do not need third-party packages for Week 01. Staying close to the standard library keeps the mental model clean.
+
+## The Python Mental Model You Must Internalize
+
+### Python is dynamically typed, not typeless
+
+Python lets names point to objects of different types, but types still control behavior. A string is not a number, a list is not a dict, and a bug caused by wrong types is still a type bug.
+
+### Variables are names bound to objects
+
+Beginners often imagine variables as boxes. That mental model breaks down when mutability enters the picture.
+
+This matters early because:
+
+- assigning one list to another name does not create a copy
+- updating mutable data can affect later logic unexpectedly
+- understanding "what changed where" is a core debugging skill
+
+### Control flow is decision logic
+
+An `if` statement is not just syntax. It is an explicit branch in program behavior. A loop is not just repetition. It is a rule for visiting data or repeating work until a condition changes.
+
+### Functions are your first abstraction boundary
+
+Before classes, before frameworks, before architecture diagrams, your first engineering tool is the function.
+
+A good first-week function:
+
+- has one clear job
+- has a name that explains intent
+- returns data instead of only printing
+- is small enough to reason about in one pass
+
+### Readability is part of correctness
+
+Code that is hard to read is harder to debug, harder to reuse, and easier to break later. In practice, unreadable code becomes incorrect code.
+
+## Core Concepts To Master
+
+## 1. Primitive and Core Built-In Types
+
+You need strong working comfort with:
 
 - `int`
 - `float`
 - `str`
 - `bool`
+- `None`
 - `list`
 - `tuple`
 - `set`
 - `dict`
-- `None`
 
-You should understand:
+Required understanding for each type:
 
-- what each type is for
 - how to create it
-- how to read values from it
-- how to modify it if mutable
-- common methods and operations
+- whether it is ordered
+- whether it is mutable
+- how to access values
+- common operations
+- the most typical use case
 
-Key distinctions:
+Practical usage model:
 
-- `list`: ordered, mutable sequence
-- `tuple`: ordered, immutable sequence
-- `set`: unordered collection of unique items
-- `dict`: key-value mapping
+- `int` and `float`: arithmetic and counting
+- `str`: user input, formatting, text parsing
+- `bool`: decisions and conditions
+- `None`: missing value or "no result yet"
+- `list`: ordered collection you may change
+- `tuple`: fixed grouping of values
+- `set`: uniqueness and fast membership checks
+- `dict`: keyed records and structured data
 
 Expert note:
 
-Do not only memorize definitions. Learn the typical use case:
+Many beginner problems are not algorithm problems. They are wrong-data-structure problems.
 
-- use `list` for ordered collections you will grow or update
-- use `tuple` for fixed grouped values
-- use `set` for fast membership checks and uniqueness
-- use `dict` for named or keyed data
+## 2. Expressions, Operators, and Truthiness
 
-## 3. Expressions, Operators, and Truthiness
+Be fluent with:
 
-Be comfortable with:
-
-- arithmetic operators
-- comparison operators
-- logical operators: `and`, `or`, `not`
+- arithmetic: `+`, `-`, `*`, `/`, `//`, `%`, `**`
+- comparisons: `==`, `!=`, `<`, `<=`, `>`, `>=`
+- logic: `and`, `or`, `not`
 - membership: `in`, `not in`
 - identity: `is`, `is not`
 
-Critical note:
+Critical distinction:
 
-- use `==` to compare values
-- use `is` mainly for identity checks like `x is None`
+- use `==` for value comparison
+- use `is` mainly for identity checks such as `value is None`
 
-Truthiness is important. In Python, these commonly behave as false:
+Truthiness is mandatory knowledge, not optional trivia.
 
+Common falsey values:
+
+- `False`
+- `None`
 - `0`
 - `0.0`
 - `""`
 - `[]`
 - `{}`
 - `set()`
-- `None`
-- `False`
 
-If you do not understand truthiness, your conditions will become fragile.
+If you do not understand truthiness, your conditionals become fragile and your bug fixing becomes guesswork.
 
-## 4. Control Flow
+## 3. Control Flow
 
-You need solid comfort with:
+You need confident control over:
 
 - `if`
 - `elif`
@@ -136,106 +241,103 @@ You need solid comfort with:
 - `break`
 - `continue`
 
-You should be able to answer:
+Required judgment:
 
-- when should I use a `for` loop versus `while`
-- when is a condition too complicated and should be moved into a helper function
-- how do I avoid deeply nested code
+- use `for` when iterating over a collection or range
+- use `while` when repetition depends on a changing condition
+- break a complex condition into helper variables or helper functions when readability drops
 
-Expert rule:
+Early engineering rule:
 
-If your control flow starts becoming hard to read, split logic into smaller functions rather than stacking more branches.
+If branching becomes hard to read, the problem is often not Python syntax. The problem is missing decomposition.
 
-## 5. Functions
+## 4. Functions
 
-This is one of the most important parts of the week.
+This is the most important topic of the week.
 
 You must understand:
 
 - function definition
-- parameters
-- arguments
+- parameters and arguments
 - return values
 - local scope
-- basic docstring usage
+- default values at a basic level
+- docstrings at a basic level
 
-Bad beginner habit:
+The biggest beginner mistake here is writing code that only prints and never returns.
 
-- writing huge scripts with no functions
+Why that is a problem:
 
-Good engineering habit:
+- returned values can be tested
+- returned values can be reused
+- returned values make functions composable
+- print-heavy code becomes harder to verify and refactor
 
-- give each function one clear job
-- use return values instead of printing everything
-- keep function names descriptive
+A good first-week function usually:
 
-A strong beginner function is:
+- accepts clear inputs
+- computes one thing
+- returns one clear result
+- has a descriptive name
 
-- short
-- readable
-- predictable
-- easy to reuse
+## 5. Strings and Text Handling
 
-## 6. Strings and Basic Text Processing
+You must be comfortable with:
 
-You should be able to:
-
-- concatenate strings
-- split strings
-- strip whitespace
-- change case
-- search for substrings
-- use f-strings
+- indexing and slicing
+- `.strip()`
+- `.split()`
+- `.join()`
+- `.lower()`, `.upper()`
+- substring checks
+- f-strings
 
 Why this matters:
 
-- CLI programs rely on text handling
-- APIs rely on text and JSON handling
-- AI work often begins with text normalization, formatting, or extraction
+- CLI tools are text-heavy
+- configuration often starts as strings
+- file content is often text
+- later AI work relies on text normalization and formatting discipline
 
-Expert rule:
+Preferred formatting style:
 
-Prefer f-strings for readable formatting.
+- use f-strings by default for readable interpolation
 
-## 7. Collections and Iteration Patterns
+## 6. Iteration Patterns and Collections
 
-Get comfortable with:
+Required patterns:
 
 - iterating through lists
-- iterating through dicts
-- using `enumerate()`
-- using `zip()`
-- basic list comprehensions
+- iterating through dict keys and items
+- counting with a dict
+- accumulation with a variable
+- filtering with `if`
+- `enumerate()`
+- `zip()`
+- simple list comprehensions
 
-Important note:
+Important boundary:
 
-List comprehensions are useful, but do not force them everywhere. If the expression becomes hard to read, use a normal loop.
+Use list comprehensions when they are clearly simpler. If the expression becomes mentally dense, switch back to a normal loop.
 
-## 8. File I/O
+## 7. File I/O and JSON
 
-You need to know:
+By the end of the week, file handling should not feel mysterious.
 
-- how to open a file safely
-- reading text
-- writing text
-- appending text
-- why context managers matter
+You should know:
 
-Use:
+- how `with open(...)` works at the usage level
+- reading text files
+- writing text files
+- appending safely
+- reading and writing JSON with the `json` module
+- why `pathlib.Path` is usually better than hand-building file paths as strings
 
-- `with open(...) as f:`
+This directly supports the todo app and also prepares you for later API work.
 
-Modern path handling:
+## 8. Error Reading and Debugging
 
-- prefer `pathlib.Path` over manual path string manipulation
-
-This matters immediately for the CLI todo app.
-
-## 9. Basic Error Reading and Debugging
-
-This week should already include debugging discipline.
-
-You should learn to inspect:
+You should become comfortable reading:
 
 - `SyntaxError`
 - `NameError`
@@ -243,175 +345,234 @@ You should learn to inspect:
 - `ValueError`
 - `IndexError`
 - `KeyError`
+- `FileNotFoundError`
+- `ZeroDivisionError`
 
-Do not panic when code fails. Read the traceback from bottom to top and identify:
+Debugging method:
 
-- which line failed
-- what object had the wrong type or value
-- what assumption in your code was false
+1. Read the last line of the traceback to identify the error type.
+2. Read the referenced file and line number.
+3. Ask what the code expected to be true.
+4. Ask what value or type actually appeared.
+5. Reproduce the failure with the smallest possible input.
+6. Fix the assumption, not just the symptom.
 
-## 10. Basic Engineering Hygiene
+Strong beginner move:
 
-Even in Week 01, start with good habits:
+Use `print()` strategically and, when needed, learn the absolute basics of `pdb` rather than editing code blindly.
 
-- meaningful variable names
-- small functions
-- no duplicated logic when avoidable
-- comments only when they clarify intent
-- simple README for runnable projects
+## The Best Learning Order For This Week
 
-Readability now will save time later.
+Do not study this week randomly. Use this order:
 
-## Best Learning Sequence For This Week
+1. running Python, variables, values, and expressions
+2. strings, numbers, booleans, and type awareness
+3. lists, tuples, sets, and dicts
+4. conditionals and truthiness
+5. loops and iteration patterns
+6. functions and decomposition
+7. file handling, JSON, and `pathlib`
+8. debugging and cleanup
+9. mini projects
 
-Use this order instead of jumping randomly:
+This order matters because each layer reduces confusion in the next one.
 
-1. variables, values, and printing
-2. strings, numbers, booleans
-3. lists and dicts
-4. conditionals
-5. loops
-6. functions
-7. file input/output
-8. small CLI programs
+## A No-Doubt Execution Plan For The Week
 
-This sequence works because each step depends naturally on the previous one.
+This is the recommended study sequence if you want clarity and momentum.
 
-## Recommended Daily Breakdown
+### Day 1: Setup, values, and basic execution
 
-This is a strong 7-day structure. If you are part-time, stretch it across more days but keep the order.
+Study:
 
-### Day 1: Python setup and primitives
-
-Focus:
-
-- install and run Python
-- use the interpreter
-- variables, types, and printing
+- how to run Python files
+- `print()`
+- variables
+- numbers
+- strings
+- booleans
 - simple expressions
 
-Build:
+Practice:
 
-- tiny script doing arithmetic, string formatting, and input handling
+- unit conversion scripts
+- string formatting examples
+- input/output mini scripts
 
-### Day 2: Collections
+Checkpoint:
 
-Focus:
+- can you explain what `type(value)` is telling you
+- can you create and combine values without syntax friction
 
-- lists, tuples, sets, dicts
-- indexing and slicing
-- adding, removing, updating values
+### Day 2: Core collections
 
-Build:
+Study:
 
-- mini contact-book style data examples
+- lists
+- tuples
+- sets
+- dicts
+- indexing
+- slicing
+- mutation
+
+Practice:
+
+- create a contact list
+- count unique values with a set
+- store named records in dicts
+
+Checkpoint:
+
+- can you explain why a dict is better than parallel lists for named records
+- can you explain when a set is the cleanest tool
 
 ### Day 3: Conditions and loops
 
-Focus:
+Study:
 
-- branching
-- `for` and `while`
-- loop control
+- comparison and logical operators
 - truthiness
+- `if/elif/else`
+- `for`
+- `while`
+- `break`
+- `continue`
 
-Build:
+Practice:
 
-- number guessing logic
-- menu-driven CLI prototype
+- grade calculator
+- menu-driven prompt
+- number guessing flow
+- sum/count/filter exercises
 
-### Day 4: Functions
+Checkpoint:
 
-Focus:
+- can you choose between `for` and `while` intentionally
+- can you trace loop execution by hand
 
+### Day 4: Functions and decomposition
+
+Study:
+
+- defining functions
 - parameters
-- returns
-- local scope
-- decomposition
+- return values
+- local variables
+- reuse
+
+Practice:
+
+- refactor earlier exercises into helper functions
+- write validation functions
+- write functions that transform a list or string
+
+Checkpoint:
+
+- can you explain the difference between returning and printing
+- can you split one messy script into 3-5 useful functions
+
+### Day 5: Files, JSON, and paths
+
+Study:
+
+- `with open(...)`
+- read/write/append
+- `json.load()` and `json.dump()`
+- `Path` basics
+
+Practice:
+
+- save notes to a text file
+- read records from JSON
+- update stored tasks
+
+Checkpoint:
+
+- can you safely load and save persistent data
+- can you explain why `Path("data") / "tasks.json"` is better than hand-built path strings
+
+### Day 6: Problem-solving and debugging
+
+Study:
+
+- tracebacks
+- debugging discipline
+- reducing a problem to steps
+
+Practice:
+
+- solve 10-15 short problems
+- intentionally revisit bugs from earlier files and fix them
+- trace two or three broken examples line by line
+
+Checkpoint:
+
+- can you recover from ordinary errors without copying answers
+- can you restate a problem in plain English first
+
+### Day 7: Project completion and review
 
 Build:
-
-- refactor earlier logic into reusable functions
-
-### Day 5: Strings and file I/O
-
-Focus:
-
-- text cleanup
-- splitting and joining
-- reading and writing files
-- `pathlib`
-
-Build:
-
-- save and load simple records from text or JSON
-
-### Day 6: Problem-solving practice
-
-Focus:
-
-- solve multiple small problems
-- use functions and loops intentionally
-- reduce brute-force messy logic
-
-Build:
-
-- 10-15 focused problems
-
-### Day 7: Mini projects and cleanup
-
-Focus:
 
 - finish CLI calculator
 - finish CLI todo app
-- organize repo
-- write README
+- clean folder structure
+- review notes
 
-## Problem-Solving Method You Should Practice
+Checkpoint:
 
-For each exercise, do not jump directly to code. Use this sequence:
+- can you demo both projects from the terminal
+- can you explain how the code is organized
+
+## Problem-Solving Method To Practice On Every Exercise
+
+Use the same disciplined flow every time:
 
 1. Restate the problem in one sentence.
-2. Define the inputs.
-3. Define the expected output.
-4. Write the steps in plain English.
-5. Translate the steps into code.
-6. Test with normal cases and edge cases.
-7. Refactor only after it works.
+2. Write down the inputs.
+3. Write down the expected output.
+4. Describe the steps in plain English.
+5. Choose the data structure before writing code.
+6. Implement the smallest working version.
+7. Test normal cases and edge cases.
+8. Refactor only after the code works.
 
-This method matters more than solving one extra problem quickly.
+This is the real bridge from "learning syntax" to "learning engineering."
 
-## What Kind of Problems To Solve
+## What To Practice
 
-Aim for 30-50 short problems, but choose them intentionally.
+Target range:
 
-Cover these categories:
+- 30-50 small problems across the week
 
-- arithmetic and conversion
-- string manipulation
+Required categories:
+
+- arithmetic and conversions
+- text normalization
 - list processing
-- dict usage
-- condition-based decisions
-- counting and aggregation
-- looping and pattern generation
-- file read/write basics
-- simple menu-based CLI logic
+- dict lookups and counting
+- membership checks
+- aggregation
+- filtering
+- basic file operations
+- menu-driven CLI flow
 
-Good example tasks:
+Good Week 01 problem types:
 
-- check palindrome
-- count vowels
-- remove duplicates from a list
-- find max or min manually
-- frequency count of words
 - reverse a string
+- count vowels
+- check palindrome
+- remove duplicates
+- find a maximum manually
+- count word frequency
 - sum even numbers in a range
-- merge two dict-like datasets logically
-- read a text file and count lines or words
+- validate menu choices
+- load and update JSON records
 
-## Build Requirements
+## Project Standard For This Week
 
-This week should produce two small but real programs.
+This week should produce two real mini-projects.
 
 ## Project 1: CLI Calculator
 
@@ -421,21 +582,22 @@ Minimum features:
 - subtract
 - multiply
 - divide
-- invalid input handling
-- repeated menu loop until user exits
+- invalid numeric input handling
+- divide-by-zero protection
+- repeat until user exits
 
-What this project should teach:
+What this project is training:
 
-- branching
-- functions
-- user input
-- validation
-- clean control flow
+- input validation
+- control flow
+- decomposition
+- function-level thinking
 
-Expert standard:
+Correct implementation pattern:
 
-- separate math operations into functions
-- do not put the entire program in one loop with tangled logic
+- one function per operation
+- one function to parse or validate input
+- one main loop for menu control
 
 ## Project 2: CLI Todo App With File Storage
 
@@ -446,32 +608,32 @@ Minimum features:
 - mark task complete
 - delete task
 - save tasks to file
-- load tasks when program starts
+- load tasks at startup
 
 Recommended storage:
 
-- JSON file for simplicity and clarity
+- JSON
 
-What this project should teach:
+What this project is training:
 
-- lists of records
-- dict-based task structure
-- file persistence
-- menu-driven CLI flow
-- decomposition into helper functions
+- dict-based records
+- list updates
+- persistence
+- path handling
+- separating storage logic from application logic
 
-Expert standard:
+Correct implementation pattern:
 
-- use one function per action
-- keep storage logic separate from menu logic
-- handle missing file or empty file safely
+- one file or module for storage
+- one for business logic if the project grows
+- one clear main program entry point
 
-## Strong Folder Structure For Week 01
+## Week 01 Folder Standard
 
 Recommended structure:
 
 ```text
-week-01-python-core/
+week-01-python-core-and-problem-solving/
 |-- exercises/
 |   |-- basics/
 |   |-- strings/
@@ -487,93 +649,203 @@ week-01-python-core/
 `-- README.md
 ```
 
-This is enough structure for Week 01. Do not over-engineer it.
+This is enough structure. Do not overbuild your workspace this early.
+
+## Best Sources For Week 01
+
+Use sources in this order. This is the part that prevents confusion later.
+
+### Tier 1: Official Python Sources
+
+These should be your primary references.
+
+1. Python tutorial
+   Use this for the language fundamentals in the exact order most relevant to Week 01.
+   Link: https://docs.python.org/3/tutorial/
+
+2. Python tutorial: control flow tools
+   Best source for `if`, `for`, functions, loop control, and pattern basics.
+   Link: https://docs.python.org/3/tutorial/controlflow.html
+
+3. Python tutorial: data structures
+   Best source for lists, tuples, sets, dicts, and loop helpers.
+   Link: https://docs.python.org/3/tutorial/datastructures.html
+
+4. Python tutorial: input and output
+   Use this for formatting, reading, and writing files.
+   Link: https://docs.python.org/3/tutorial/inputoutput.html
+
+5. Python tutorial: errors and exceptions
+   Use this to understand how Python reports failures and how exceptions behave.
+   Link: https://docs.python.org/3/tutorial/errors.html
+
+6. `json` library docs
+   Important because your todo app persistence should be simple and explicit.
+   Link: https://docs.python.org/3/library/json.html
+
+7. `pathlib` docs
+   The right modern source for path handling.
+   Link: https://docs.python.org/3/library/pathlib.html
+
+8. `venv` docs
+   Use this once, then treat it as normal project setup practice.
+   Link: https://docs.python.org/3/library/venv.html
+
+9. `pdb` docs
+   You do not need all of it, but knowing the basics of stepping through code is valuable.
+   Link: https://docs.python.org/3/library/pdb.html
+
+10. PEP 8
+    Use this as a style sanity check, not as something to memorize line by line.
+    Link: https://peps.python.org/pep-0008/
+
+11. PEP 20
+    Short, but important for developing Python taste early.
+    Link: https://peps.python.org/pep-0020/
+
+### Tier 2: Best Structured Learning Companion
+
+Use one strong teaching-oriented resource alongside the official docs, not ten mixed tutorials.
+
+1. CS50P
+   Best choice if you want a guided sequence with problem sets and solid pedagogy.
+   Links:
+   - https://cs50.harvard.edu/python/
+   - https://pll.harvard.edu/course/cs50s-introduction-programming-python
+
+How to use it for this roadmap:
+
+- use the early CS50P sections to reinforce functions, conditionals, loops, exceptions, and file I/O
+- do not let CS50P replace your own project building inside this roadmap
+- use it as structured reinforcement, not as an excuse to delay implementation
+
+### Tier 3: Practice Sources
+
+Use one practice source consistently.
+
+1. Exercism Python Track
+   Strong for repetition, feedback, and deliberate practice.
+   Links:
+   - https://exercism.org/tracks/python
+   - https://exercism.org/docs/tracks/python
+
+How to use it well:
+
+- solve exercises after you have studied the concept locally
+- rewrite solutions in your own words
+- do not optimize for exercise count
+
+## Source Strategy That Avoids Confusion
+
+If you mix too many random sources, Week 01 becomes noisy. Use this rule:
+
+- official docs for truth
+- one structured course for explanation
+- one practice platform for repetition
+- your own mini-projects for actual understanding
+
+Recommended stack:
+
+1. Python docs
+2. your local exercises
+3. CS50P for reinforcement
+4. Exercism for extra drills
+
+That stack is enough. Do not add five YouTube playlists and three paid courses on top.
+
+## Exact Study Path Through The Sources
+
+If you want zero ambiguity, use this order:
+
+1. Read the relevant sections of the Python tutorial.
+2. Implement the matching local exercises in this Week 01 folder.
+3. Review mistakes and rewrite unclear code.
+4. Use CS50P material to reinforce weak points.
+5. Use Exercism only for extra repetition after the concept feels familiar.
+6. Build the calculator.
+7. Build the todo app.
+8. Review your bugs and note what patterns caused them.
 
 ## Deliverables
 
-By the end of this week, you should have:
+By the end of the week, you should have:
 
-- 30-50 Python practice problems
-- one folder of categorized exercises
+- 30-50 short solved problems
+- categorized exercise files
 - one working CLI calculator
-- one working CLI todo app with file persistence
-- one short README explaining how to run both apps
-- one short note summarizing what you learned and what confused you
+- one working CLI todo app with persistent storage
+- short run instructions for each project
+- a note capturing what felt easy, what felt hard, and what bugs repeated
 
 ## Exit Criteria
 
-You are ready to move to Week 02 only if most of these are true:
+You are ready for Week 02 only if most of these are true:
 
-- you can solve basic problems without constant syntax lookup
-- you can choose between `list`, `set`, `tuple`, and `dict` for simple tasks
-- you can write small functions comfortably
-- you can debug common beginner errors without getting stuck for long
-- you can read and write a simple file
-- you can structure a CLI script into small pieces instead of one long script
+- you can write short scripts without constant syntax lookup
+- you can choose between `list`, `tuple`, `set`, and `dict` with reasonable confidence
+- you can write helper functions naturally
+- you can read and write JSON-backed local data
+- you can understand common traceback messages
+- you can keep a small CLI program organized instead of writing one monolithic script
 
-If these are not true, repeat the week's exercises with better discipline instead of rushing forward.
+If these are not true, do not rush forward. Repeat the exercises and improve the projects.
 
-## Common Beginner Mistakes To Avoid
+## Common Mistakes That Create Doubt Later
 
-- writing everything in one file with no functions
-- using unclear variable names like `x`, `a`, `temp2` everywhere
-- printing instead of returning from helper functions
-- mutating data accidentally without realizing it
-- confusing `=` with `==`
-- using `is` when value comparison should use `==`
-- skipping edge cases like empty input or divide-by-zero
-- copying solutions without rewriting them from your own understanding
+- learning syntax passively without building
+- copying solutions too early
+- studying advanced topics before the basics feel stable
+- using too many tutorial sources at once
+- confusing printing with returning
+- writing long scripts with no decomposition
+- ignoring tracebacks and debugging by random edits
+- skipping file I/O because it feels boring
 
-## Expert Notes That Matter Early
+These mistakes compound. Fix them early.
 
-These are not advanced, but they separate strong beginners from weak ones.
+## Expert Notes
 
-### Clarity beats compactness
+### You are not learning Python to become a Python trivia machine
 
-Shorter code is not automatically better. Readable code is better.
+You are learning Python so later backend, data, and AI tasks become straightforward to express.
 
-### Correctness before elegance
+### Data structure choice is an engineering decision
 
-First make it work. Then make it cleaner.
+Choosing the right container early often matters more than writing fancy logic later.
 
-### Functions are your first abstraction tool
+### Debugging is not a side activity
 
-Before learning classes or frameworks, learn to organize with functions well.
+Debugging is part of the skill itself. A learner who debugs well progresses faster than one who only reads well.
 
-### Data structure choice matters
+### You should leave Week 01 with habits, not just notes
 
-Many beginner solutions become messy simply because the wrong structure was chosen at the start.
+Useful habits:
 
-### Debugging is part of learning
+- restate the problem before coding
+- test small pieces early
+- return values from functions
+- keep files readable
+- use clear names
 
-A week with many debugging cycles can be better than a week with passive reading.
+## How Week 01 Connects To Week 02
 
-## Suggested Official References
+Week 02 assumes you already have:
 
-Use official Python docs first. These are especially useful for this week:
+- language comfort
+- small-function discipline
+- file handling basics
+- basic project structure awareness
 
-- Python Tutorial: introduction and core tutorial sections
-- Control flow tools
-- Data structures
-- Modules
-- `venv`
-- `pathlib`
-- PEP 8 style guidance
+Week 02 will start introducing stronger engineering habits, validation, environments, modules, packaging awareness, and testing discipline. If Python syntax is still shaky, that week will feel much harder.
 
-Official links:
-
-- Python tutorial: https://docs.python.org/3/tutorial/
-- Control flow: https://docs.python.org/3/tutorial/controlflow.html
-- Data structures: https://docs.python.org/3/tutorial/datastructures.html
-- Modules: https://docs.python.org/3/tutorial/modules.html
-- `venv`: https://docs.python.org/3/library/venv.html
-- `pathlib`: https://docs.python.org/3/library/pathlib.html
-- PEP 8: https://peps.python.org/pep-0008/
+That is why Week 01 should be taken seriously.
 
 ## Final Standard For This Week
 
-The correct outcome of Week 01 is not "I finished Python basics."
+The correct outcome is not:
+
+"I finished Python basics."
 
 The correct outcome is:
 
-"I can now think in Python well enough to build small programs, organize logic into functions, and move into the rest of the roadmap without syntax fear."
+"I can think in Python well enough to solve beginner problems, organize code into functions, store simple data, debug ordinary failures, and move into the rest of the roadmap without language fear."

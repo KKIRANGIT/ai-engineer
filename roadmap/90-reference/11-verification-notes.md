@@ -2,7 +2,15 @@
 
 Back to [Roadmap Index](../README.md)
 
-The master guide was updated against official documentation as of May 9, 2026 for:
+## Purpose
+
+This roadmap contains time-sensitive stack and platform guidance. These notes record what was checked when the master guide was updated.
+
+## Verified As Of
+
+May 9, 2026
+
+## Areas Verified
 
 - Python 3.14 release line
 - Node.js LTS status
@@ -12,3 +20,10 @@ The master guide was updated against official documentation as of May 9, 2026 fo
 - Anthropic Messages API and tool use guidance
 - Supabase vector and index guidance
 - Clerk, Inngest, Stripe, and Vercel AI SDK references
+
+## Why This Matters
+
+This makes it easier to separate:
+
+- durable principles
+- from ecosystem assumptions that may change later

@@ -1,10 +1,15 @@
 """
 Task operations for the CLI todo app.
+
+This file contains the business logic:
+- creating tasks
+- validating user-facing task actions
+- listing, completing, and deleting tasks
 """
 
 
 def create_task(task_title):
-    """Build a new task dictionary."""
+    """Build a new task dictionary using a consistent structure."""
     return {
         "title": task_title,
         "completed": False,
@@ -12,13 +17,19 @@ def create_task(task_title):
 
 
 def add_task(tasks, task_title):
-    """Add a new task to the task list."""
+    """Add a new task to the task list after cleaning the title."""
     clean_title = task_title.strip()
 
     if not clean_title:
         raise ValueError("Task title cannot be empty.")
 
     tasks.append(create_task(clean_title))
+
+
+def format_task(task):
+    """Return one task as a readable line for terminal output."""
+    status = "Done" if task["completed"] else "Pending"
+    return f"{task['title']} [{status}]"
 
 
 def list_tasks(tasks):
@@ -29,8 +40,13 @@ def list_tasks(tasks):
 
     print("\n--- Your Tasks ---")
     for index, task in enumerate(tasks, start=1):
-        status = "Done" if task["completed"] else "Pending"
-        print(f"{index}. {task['title']} [{status}]")
+        print(f"{index}. {format_task(task)}")
+
+
+def validate_index(tasks, task_index):
+    """Raise an error if the provided task index is outside the valid range."""
+    if task_index < 0 or task_index >= len(tasks):
+        raise IndexError("Task number is out of range.")
 
 
 def mark_task_completed(tasks, task_index):
@@ -43,9 +59,3 @@ def delete_task(tasks, task_index):
     """Delete one task from the list using a zero-based index."""
     validate_index(tasks, task_index)
     tasks.pop(task_index)
-
-
-def validate_index(tasks, task_index):
-    """Raise an error if the provided task index is outside the valid range."""
-    if task_index < 0 or task_index >= len(tasks):
-        raise IndexError("Task number is out of range.")

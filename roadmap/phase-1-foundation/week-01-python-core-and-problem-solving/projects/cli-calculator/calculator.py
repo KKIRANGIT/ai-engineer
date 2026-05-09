@@ -1,8 +1,10 @@
 """
 Simple CLI calculator for Week 01.
 
-The goal of this file is not to be the shortest calculator possible.
-The goal is to be readable and beginner-friendly.
+Design goals:
+- keep the code readable for a beginner
+- separate each responsibility into a small function
+- show basic validation and error handling
 """
 
 
@@ -51,7 +53,7 @@ def get_number(prompt_text):
 
 
 def perform_calculation(choice, first_number, second_number):
-    """Pick the correct operation based on the user's menu choice."""
+    """Pick the correct math function based on the user's menu choice."""
     if choice == "1":
         return add(first_number, second_number)
     if choice == "2":
@@ -64,8 +66,17 @@ def perform_calculation(choice, first_number, second_number):
     raise ValueError("Unknown menu choice.")
 
 
+def format_result(result):
+    """Show whole numbers cleanly while still supporting decimal answers."""
+    # 8.0 is mathematically a whole number, so displaying it as 8 looks nicer.
+    if result.is_integer():
+        return str(int(result))
+
+    return str(result)
+
+
 def main():
-    """Run the main calculator loop."""
+    """Run the main calculator loop until the user chooses to exit."""
     while True:
         show_menu()
         choice = input("Choose an option (1-5): ").strip()
@@ -83,7 +94,7 @@ def main():
 
         try:
             result = perform_calculation(choice, first_number, second_number)
-            print(f"Result: {result}")
+            print(f"Result: {format_result(result)}")
         except ValueError as error:
             print(f"Error: {error}")
 

@@ -1,0 +1,452 @@
+# AI Engineer Roadmap Master Reference
+
+## Purpose
+
+This document is the single source of truth for how this AI engineer preparation repository is structured, what each major document is for, what standards future updates must follow, and what has already been completed.
+
+Use this file when:
+
+- you want to understand the overall roadmap system quickly
+- you want to request updates without repeating earlier decisions
+- you want to know where content belongs
+- you want to preserve consistency across future expansions
+
+This file is not the study roadmap itself. It is the governing reference for the roadmap.
+
+## Primary Goal
+
+The overall goal of this repository is to provide a complete, detailed, execution-focused preparation system for becoming an AI engineer across a 48-week plan.
+
+The roadmap is intended to support:
+
+- strong technical foundation building
+- AI engineering capability development
+- full-stack AI product engineering
+- product portfolio creation
+- career positioning, monetization, and interview readiness
+
+The roadmap should be detailed enough that you can follow it with minimal ambiguity and without constantly wondering what to study next.
+
+## Core Documents
+
+These are the top-level documents and their roles.
+
+### `AI_Guide.md`
+
+Purpose:
+
+- original or concise reference guide
+- higher-level planning artifact
+
+Rule:
+
+- keep this as the shorter source document
+- do not overload it with all implementation details
+
+### `ai-detailed-preparation-guide.md`
+
+Purpose:
+
+- expanded master roadmap for the full 48-week journey
+- detailed long-form preparation guide
+
+Rule:
+
+- this is the comprehensive roadmap narrative
+- it should remain useful as a standalone long-form guide
+
+### `roadmap/`
+
+Purpose:
+
+- decomposed operational version of the preparation plan
+- phase-by-phase and week-by-week implementation structure
+
+Rule:
+
+- detailed day-to-day or week-level execution belongs here
+
+### `roadmap-master-reference.md`
+
+Purpose:
+
+- the current file
+- central context file for future updates
+- source of truth for structure, standards, and current completion state
+
+## Directory Structure Standard
+
+Current structure:
+
+```text
+ai-engineer/
+|-- AI_Guide.md
+|-- ai-detailed-preparation-guide.md
+|-- roadmap-master-reference.md
+`-- roadmap/
+    |-- README.md
+    |-- 00-overview/
+    |-- phase-1-foundation/
+    |-- phase-2-ai-core/
+    |-- phase-3-full-stack-ai-product-engineering/
+    |-- phase-4-build-3-real-products/
+    |-- phase-5-career-monetization-and-positioning/
+    `-- 90-reference/
+```
+
+## Roadmap Folder Rules
+
+### `roadmap/README.md`
+
+Purpose:
+
+- top-level navigation for the decomposed roadmap
+- should link to every phase and major reference section
+
+### `roadmap/00-overview/`
+
+Purpose:
+
+- global context for the roadmap
+- usage model, stack guidance, expectations, capability framing, and artifacts
+
+### `roadmap/phase-*`
+
+Purpose:
+
+- each phase contains one phase `README.md`
+- each weekly unit has its own folder
+- each weekly folder contains its own `README.md`
+
+Important rule:
+
+- weekly content should live inside week-specific folders, not as loose flat files
+
+### `roadmap/90-reference/`
+
+Purpose:
+
+- reusable cross-phase reference material
+- execution systems, quality standards, interview prep, consulting readiness, portfolio guidance, common mistakes, and official links
+
+## Weekly Folder Standard
+
+Each week folder should follow this minimum structure:
+
+```text
+week-xx-topic/
+`-- README.md
+```
+
+If that week includes implementation artifacts, it can also include:
+
+```text
+week-xx-topic/
+|-- README.md
+|-- exercises/
+|-- projects/
+|-- notes/
+`-- resources/
+```
+
+Rule:
+
+- do not add folders just for visual complexity
+- add subfolders only when they serve real study or implementation value
+
+## Week README Standard
+
+Every weekly `README.md` should be written as an execution document, not a skeleton note.
+
+At minimum, each week should include:
+
+- goal
+- why the week matters
+- what this week is actually training
+- scope boundaries where useful
+- weekly outcomes
+- concept breakdown
+- best learning sequence
+- daily or staged execution plan
+- what to practice
+- what to build
+- deliverables
+- exit criteria
+- common mistakes
+- expert notes
+- final standard for the week
+
+Additional requirement:
+
+- the week should remove ambiguity about what to study next
+- the user should be able to follow it directly
+
+## Phase README Standard
+
+Each phase `README.md` should act as the governing document for the phase.
+
+At minimum, each phase README should include:
+
+- phase goal
+- why the phase matters
+- what the phase should produce
+- deeper skills being trained
+- success criteria
+- how to use the weekly modules
+- links to all week folders
+
+## Content Quality Standard
+
+All expanded roadmap content should follow these principles:
+
+- practical over theoretical
+- detailed over vague
+- structured over scattered
+- expert-level but beginner-usable
+- operational rather than inspirational
+- clear sequencing rather than topic dumping
+
+Avoid:
+
+- thin checklist-style notes with no learning logic
+- generic motivational language
+- shallow summaries without execution details
+- stuffing too many tools or sources into one week
+
+## Source Selection Standard
+
+When recommending learning sources, use this priority:
+
+1. official documentation
+2. one strong structured course if needed
+3. one high-quality practice source if needed
+4. local exercises and projects as the main proving ground
+
+Important source rule:
+
+- avoid recommending too many mixed resources in the same week
+- the roadmap should reduce source confusion, not create it
+
+## Current Source Philosophy
+
+The roadmap has been aligned around modern official sources where time-sensitive topics matter.
+
+Examples of source categories already used:
+
+- Python official documentation
+- Python Packaging User Guide
+- OpenAI official documentation
+- Anthropic official documentation
+- React official documentation
+- Next.js official documentation
+- Supabase official documentation
+- official or primary-source references for stack decisions
+
+## Update Standard For Time-Sensitive Topics
+
+For stack choices, APIs, libraries, and platform guidance:
+
+- prefer current official documentation
+- avoid relying on stale tutorial assumptions
+- include exact versions or concrete names when relevant
+- clarify dates when discussing "latest" technology
+
+This especially applies to:
+
+- Python version guidance
+- Node.js guidance
+- React and Next.js guidance
+- OpenAI API usage
+- Anthropic API usage
+- retrieval, evals, tool use, and agent orchestration guidance
+
+## What Has Already Been Completed
+
+The following major work has already been done.
+
+### 1. Detailed master guide created
+
+Completed:
+
+- `ai-detailed-preparation-guide.md`
+
+Status:
+
+- expanded into a much more complete 48-week preparation guide
+
+### 2. Roadmap decomposed into structured folders
+
+Completed:
+
+- `roadmap/` created
+- phase and weekly structure created
+- each week moved into its own folder with `README.md`
+
+### 3. `00-overview` expanded
+
+Completed:
+
+- `roadmap/00-overview/*`
+
+Status:
+
+- rewritten with much deeper context, stack framing, usage guidance, artifacts, and capability mapping
+
+### 4. Phase 1 planning layer expanded
+
+Completed:
+
+- `roadmap/phase-1-foundation/README.md`
+- Week 01 through Week 08 READMEs
+
+Status:
+
+- detailed execution-focused planning is in place
+
+### 5. Phase 1 Week 01 hands-on workspace created
+
+Completed:
+
+- exercises
+- beginner-friendly source code
+- CLI calculator
+- CLI todo app
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-1-foundation/week-01-python-core-and-problem-solving/`
+
+### 6. Phase 2 planning layer expanded
+
+Completed:
+
+- `roadmap/phase-2-ai-core/README.md`
+- Week 09 through Week 18 READMEs
+
+Status:
+
+- rewritten into detailed expert-level planning documents
+
+### 7. Phase 3 planning layer expanded
+
+Completed:
+
+- `roadmap/phase-3-full-stack-ai-product-engineering/README.md`
+- Week 19 through Week 28 READMEs
+
+### 8. Phase 4 planning layer expanded
+
+Completed:
+
+- `roadmap/phase-4-build-3-real-products/README.md`
+- product-track READMEs for Weeks 29 through 38
+
+### 9. Phase 5 planning layer expanded
+
+Completed:
+
+- `roadmap/phase-5-career-monetization-and-positioning/README.md`
+- Week 39 through Week 48 READMEs
+
+### 10. `90-reference` expanded
+
+Completed:
+
+- all reference documents under `roadmap/90-reference/`
+
+Status:
+
+- now functions as a full companion operating handbook rather than a short appendix
+
+### 11. Week 01 Python guide deepened further
+
+Completed:
+
+- `roadmap/phase-1-foundation/week-01-python-core-and-problem-solving/README.md`
+
+Status:
+
+- strengthened with stricter learning boundaries, no-doubt study order, stronger source strategy, and better official references
+
+## Current Completion State
+
+At this point:
+
+- all major phase planning layers are expanded
+- all overview and reference layers are expanded
+- Week 01 has both planning and implementation artifacts
+- later weeks mostly have planning layers but not yet full source-code workspaces
+
+This means the roadmap is structurally strong, but implementation depth is still uneven across weeks.
+
+## What Future Updates Should Usually Focus On
+
+The highest-value next steps usually fall into one of these categories:
+
+### 1. Build implementation workspaces for later weeks
+
+Examples:
+
+- Week 02 source code and notes
+- Week 03 hands-on API exercises
+- later Phase 2 and Phase 3 project folders
+
+### 2. Improve top-level navigation
+
+Examples:
+
+- keep `roadmap/README.md` synchronized with all expanded sections
+- improve cross-linking between phases and references
+
+### 3. Add study-operating assets
+
+Examples:
+
+- progress tracker
+- weekly review templates
+- project case study templates
+- interview prep templates
+
+### 4. Continue source-hardening
+
+Examples:
+
+- adding stronger official references inside specific weeks
+- removing ambiguity from later technical weeks
+
+## How To Request Future Updates
+
+To keep future updates clean, reference this file and then specify:
+
+1. the target file or folder
+2. whether you want planning, implementation, or both
+3. whether you want source code, notes, templates, or references
+4. whether the update should optimize for beginner clarity, interview preparation, or production realism
+
+Example request:
+
+"Use `roadmap-master-reference.md` as context and expand Week 03 with expert-level planning plus source code workspace."
+
+## Non-Negotiable Standards For Future Work
+
+- preserve existing structure unless there is a clear upgrade path
+- keep week-specific content inside week folders
+- do not replace detailed execution guidance with generic summaries
+- keep explanations beginner-readable even when the content is expert-level
+- prefer official references for technical accuracy
+- update time-sensitive guidance when necessary
+- do not create duplicate roadmap layers unless there is a clear purpose
+
+## Short Operating Summary
+
+If you need the shortest possible summary of the repository:
+
+- `AI_Guide.md` is the concise origin
+- `ai-detailed-preparation-guide.md` is the long-form master roadmap
+- `roadmap/` is the operational decomposed version
+- this file defines the structure, standards, and current state
+
+## Final Note
+
+When future updates are requested, use this file as the default context anchor first, then apply changes to the specific phase, week, or reference area.
