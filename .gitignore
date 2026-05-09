@@ -3,3 +3,6 @@ __pycache__/
 .pytest_cache/
 .venv/
 venv/
+node_modules/
+roadmap/phase-1-foundation/week-07-javascript-typescript-nodejs-and-backend-basics/projects/reading-list-api/data/reading-list.json
+roadmap/phase-1-foundation/week-08-foundation-milestone-project/projects/study-session-tracker/data/study_tracker.db

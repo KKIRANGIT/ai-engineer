@@ -1,0 +1,6 @@
+user_name,event_name,duration_minutes,status
+Asha,watch_intro,15,done
+Ravi,watch_intro,20,done
+Neha,build_demo,45,done
+Om,review_notes,not-a-number,pending
+Ira,watch_intro,12,DONE

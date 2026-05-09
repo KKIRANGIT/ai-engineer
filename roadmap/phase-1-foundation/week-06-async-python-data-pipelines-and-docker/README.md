@@ -4,7 +4,7 @@ Back to [Phase 1](../README.md)
 
 ## Goal
 
-Learn how slightly more realistic backend and data-processing workflows are structured, especially when work involves multiple inputs, external calls, file movement, and repeatable runtime environments.
+Learn how slightly more realistic backend and data-processing workflows are structured, especially when work involves multiple inputs, file movement, I/O waiting, transformations, and repeatable runtime environments.
 
 This week introduces three ideas that show up constantly later:
 
@@ -12,43 +12,110 @@ This week introduces three ideas that show up constantly later:
 - data ingestion and transformation
 - containerized execution
 
-## Why This Week Matters
-
-By now you have learned syntax, structure, integration basics, and databases. The next step is understanding how real engineering tasks often involve:
-
-- fetching data from multiple places
-- transforming it into a useful format
-- storing or exporting it
-- running the same workflow across machines predictably
-
-This week matters because many later AI tasks are pipeline-shaped:
-
-- fetch content
-- parse it
-- transform it
-- enrich it
-- store it
-- serve it
-
-Async thinking and pipeline thinking are the early versions of that skill.
-
-## Week 06 Outcomes
-
 By the end of this week, you should be able to:
 
 - explain the difference between synchronous and asynchronous I/O
-- know when async is helpful and when it is not
-- perform concurrent API requests with `httpx`
-- read and process CSV data
-- use basic Pandas operations for tabular transformation
-- containerize one Python project with Docker
-- explain what problem Docker is solving
+- know when async helps and when it does not
+- use `async`, `await`, and `asyncio.gather()` at a practical level
+- read and transform CSV data
+- understand the stages of a simple data pipeline
+- explain what Docker is solving
+- run one Dockerized Python pipeline project
 
-## What To Learn
+This week is where application code starts looking more like real workflow automation.
+
+## What This Week Is Actually Training
+
+At surface level, Week 06 looks like "learn async, learn CSV processing, and try Docker."
+
+The real training target is deeper:
+
+- recognizing where time is spent waiting vs computing
+- breaking workflow code into clear pipeline stages
+- understanding reproducibility as an engineering requirement
+- moving from one-step scripts to multi-stage processing systems
+- thinking about input, validation, transformation, enrichment, and output as distinct concerns
+
+That is why this week matters so much. Many later AI and product workflows are pipeline-shaped:
+
+- fetch source material
+- parse and validate it
+- transform it
+- enrich it
+- store it
+- export or serve it
+
+Week 06 is the early version of that mindset.
+
+## Scope Boundaries
+
+Study deeply this week:
+
+- sync vs async I/O thinking
+- `async`, `await`, and `asyncio.gather`
+- I/O-bound concurrency
+- CSV reading and writing
+- simple tabular transformation
+- pipeline stages
+- Docker mental model
+- containerizing one small Python project
+
+Do not go deep on these yet:
+
+- advanced event loop internals
+- multiprocessing performance tuning
+- orchestration platforms
+- distributed pipelines
+- advanced Pandas internals
+- Kubernetes
+- production-grade container security hardening
+
+The goal is operational understanding, not platform specialization.
+
+## Important Implementation Note
+
+This hands-on workspace is designed to be runnable with minimal setup.
+
+That means:
+
+- the main project uses the Python standard library
+- async is demonstrated through local file and simulated I/O workflows
+- Docker is applied to a small deterministic pipeline project
+- Pandas is introduced as an optional learning layer, not as a hard dependency for the main project
+
+This keeps the week beginner-usable while still teaching correct engineering ideas.
+
+## Week 06 Outcomes
+
+You are successful this week if you can do most of the following with confidence:
+
+- explain why async helps some tasks and not others
+- identify an I/O-bound workflow
+- describe the stages of a pipeline in the correct order
+- clean and transform tabular data intentionally
+- explain the purpose of Docker in plain English
+- read one Dockerfile and explain what each section is doing
+- run one local pipeline end-to-end and inspect its outputs
+
+## How Week 06 Builds On Week 05
+
+Week 05 taught you how data should be shaped inside a relational system.
+
+Week 06 teaches you how data often arrives and moves before or around that database layer.
+
+Now the questions are:
+
+- where does the data come from
+- what should happen while we wait for it
+- how should it be cleaned
+- how should transformed output be saved
+- how can we make this reproducible on another machine
+
+That is why this week sits naturally after SQL and before more advanced backend work.
+
+## Core Workflow Concepts To Master
 
 ## 1. Sync vs Async Mental Model
-
-Before code, understand the runtime idea.
 
 Synchronous code:
 
@@ -57,57 +124,174 @@ Synchronous code:
 
 Asynchronous code:
 
-- can switch tasks while one task is waiting for I/O
-- is especially useful for many network-bound operations
+- can switch to other work while one task is waiting on I/O
+- is especially useful when many tasks spend time waiting
 
-Expert beginner rule:
+Critical beginner rule:
 
-Async does not automatically mean faster in every case. It is mainly useful when time is spent waiting on external I/O.
+Async is not automatically faster in every situation. It is mainly valuable when the bottleneck is waiting, not pure CPU computation.
 
 ## 2. When Async Helps
 
 Good use cases:
 
-- multiple API requests
-- network scraping
+- multiple HTTP requests
+- many file reads or writes
+- message polling
 - waiting on remote services
 
 Poor use cases:
 
-- tiny scripts with no I/O pressure
-- CPU-heavy workloads where async alone does not solve the bottleneck
+- tiny scripts with no real I/O pressure
+- CPU-heavy number crunching
+- code made more complicated only to "use async"
 
-This distinction matters. Many beginners misuse async because they learn the syntax before the reason.
+Use async because the workload needs it, not because the syntax looks advanced.
 
 ## 3. `async`, `await`, and Coroutines
 
 You should understand:
 
-- what an `async def` function is
-- what `await` means
-- why awaited tasks pause until results are ready
-- how coroutines differ from regular functions conceptually
+- `async def` defines a coroutine function
+- calling an async function gives you a coroutine object
+- `await` pauses until an awaited operation is ready
+- `asyncio.gather()` lets you wait for multiple tasks together
 
-The goal is not to master advanced event loop internals. The goal is to understand enough to use async intentionally.
+You do not need deep event-loop theory this week. You do need enough practical understanding to reason about the code.
 
-## 4. Concurrent HTTP Work With `httpx`
+## 4. Pipeline Thinking
 
-This is the most practical async use case for the week.
+A pipeline is a sequence of stages such as:
 
-Learn:
+- ingest
+- validate
+- normalize
+- enrich
+- save
+- report
 
-- creating an async client
-- sending multiple requests
-- collecting results safely
-- basic error handling in concurrent tasks
+Pipeline thinking is powerful because it forces you to separate concerns. That makes workflows easier to debug and extend later.
 
-Expert note:
+## 5. CSV and Tabular Data
 
-Do not treat concurrency as "send unlimited requests." Responsible concurrency also means being aware of rate limits and load.
+You should become comfortable with:
 
-## 5. Data Pipeline Mental Model
+- reading CSV files
+- inspecting headers
+- cleaning malformed values
+- filtering rows
+- writing cleaned output
 
-A pipeline is just a sequence of transformations:
+This is still very real engineering work. Many integration and support systems start with messy tabular data.
+
+## 6. Pandas as an Optional Analysis Layer
+
+You do not need all of Pandas this week.
+
+You should understand:
+
+- why tabular libraries exist
+- how they can simplify filtering and grouping
+- that they are a tool, not a replacement for relational thinking
+
+The exercise layer includes an optional Pandas demo, but the main project avoids requiring it.
+
+## 7. Docker Mental Model
+
+Before commands, understand the problem Docker solves:
+
+- environment drift
+- dependency mismatch
+- "works on my machine"
+
+You need to know:
+
+- image = build artifact
+- container = running instance
+- `Dockerfile` describes how to build the image
+
+Docker is a reproducibility tool before it is a deployment story.
+
+## 8. Practical Containerization
+
+For this week, containerization should stay simple:
+
+- one Python application
+- one `Dockerfile`
+- one run command
+- one deterministic output flow
+
+This is enough to make the concept real.
+
+## Best Learning Sequence For This Week
+
+Use this order:
+
+1. sync vs async model
+2. `async` / `await` basics
+3. concurrent I/O thinking
+4. pipeline stages
+5. CSV and transformation work
+6. optional Pandas awareness
+7. Docker mental model
+8. containerizing the local pipeline project
+
+## A No-Doubt Execution Plan For The Week
+
+### Day 1: Async mental model
+
+Study:
+
+- waiting vs computing
+- sync vs async flow
+- coroutines
+
+Practice:
+
+- run the async-basics exercise
+- compare the sync and async timing behavior
+
+Checkpoint:
+
+- can you explain why the async example overlaps waiting time
+
+### Day 2: Concurrent orchestration
+
+Study:
+
+- `asyncio.gather`
+- task coordination
+- error awareness
+
+Practice:
+
+- run the concurrency exercise
+- inspect how multiple I/O-style tasks are collected
+
+Checkpoint:
+
+- can you explain what work is happening concurrently
+
+### Day 3: CSV processing
+
+Study:
+
+- headers
+- row cleaning
+- value normalization
+
+Practice:
+
+- run the CSV cleaning exercise
+- inspect the output rows carefully
+
+Checkpoint:
+
+- can you explain which rows needed cleaning and why
+
+### Day 4: Pipeline stages
+
+Study:
 
 - ingest
 - validate
@@ -115,252 +299,235 @@ A pipeline is just a sequence of transformations:
 - enrich
 - save
 
-This week should help you think in those stages clearly.
+Practice:
 
-Good pipeline questions:
+- run the pipeline-thinking exercise
+- map each step in the main project to one stage
 
-- where does the data come from
-- what format is it in
-- what cleaning is needed
-- what output do I want
-- where should the cleaned data go
+Checkpoint:
 
-## 6. CSV Handling
+- can you describe the pipeline as a sequence of stages without talking about code first
 
-You should be comfortable with:
+### Day 5: Optional Pandas awareness
 
-- reading CSV files
-- inspecting headers
-- cleaning missing or malformed values
-- writing cleaned output
+Study:
 
-This is still very practical work. A lot of backend and AI support tasks begin here.
+- why Pandas exists
+- when it helps
 
-## 7. Basic Pandas
+Practice:
 
-Do not try to learn all of Pandas this week.
+- run the optional Pandas demo if Pandas is installed
+- otherwise read the code and compare it to the pure-Python workflow
 
-Focus on:
+Checkpoint:
 
-- loading tabular data
-- filtering rows
-- selecting columns
-- grouping
-- simple transformation
+- can you explain where Pandas would help and where simple Python is enough
 
-Expert beginner rule:
-
-Use Pandas for tabular manipulation when it helps clarity. Do not force it for every tiny task.
-
-## 8. Environment Isolation and Reproducibility
-
-Before Docker, understand the problem:
-
-- different machines have different environments
-- dependencies drift
-- "works on my machine" is a real failure mode
-
-This week should make you value reproducibility as an engineering concern.
-
-## 9. Docker Mental Model
-
-You do not need deep container orchestration. You need the basic model:
-
-- Docker packages your app plus its environment
-- the image is the build artifact
-- the container is the running instance
-
-Understand:
-
-- what a `Dockerfile` does
-- why dependency installation goes into the image
-- why a container helps environment consistency
-
-## 10. Practical Containerization
-
-For this week, containerization should be simple:
-
-- one Python service or script
-- one `Dockerfile`
-- one command to run it
-
-The point is to understand the workflow, not to build a production container platform.
-
-## Best Learning Sequence For This Week
-
-Use this order:
-
-1. sync vs async model
-2. async syntax
-3. concurrent HTTP calls
-4. pipeline stages
-5. CSV and Pandas basics
-6. Docker mental model
-7. containerizing one service
-
-## Recommended Daily Breakdown
-
-### Day 1: Async concept and examples
-
-Focus:
-
-- why async exists
-- where it helps
-- basic syntax
+### Day 6: End-to-end project
 
 Build:
 
-- tiny async example and comparison with sync flow
+- run the event-ingestion pipeline
+- inspect the generated outputs
+- read the repository structure and Dockerfile
 
-### Day 2: Concurrent API requests
+Checkpoint:
 
-Focus:
+- can you explain each file's role in the project
 
-- async HTTP client
-- gathering multiple results
+### Day 7: Docker and review
 
-Build:
+Study:
 
-- small concurrent API fetcher
+- Dockerfile structure
+- image build idea
+- run command
 
-### Day 3: CSV and data transformation
+Practice:
 
-Focus:
+- inspect the Dockerfile and README
+- compare local execution to containerized execution
 
-- reading rows
-- cleaning values
-- transforming fields
+Checkpoint:
 
-Build:
+- can you explain what Docker solved for this project
 
-- one small CSV cleaning script
+## Week 06 Workspace Standard
 
-### Day 4: Pandas basics
+This week now includes a real hands-on pipeline workspace.
 
-Focus:
+Actual structure:
 
-- loading data
-- filtering
-- grouping
-- exporting
+```text
+week-06-async-python-data-pipelines-and-docker/
+|-- exercises/
+|   |-- async-basics/
+|   |-- concurrency/
+|   |-- csv-processing/
+|   |-- pandas-basics/
+|   |-- pipeline-thinking/
+|   |-- docker-reading/
+|   `-- README.md
+|-- projects/
+|   `-- event-ingestion-pipeline/
+|       |-- app/
+|       |-- data/
+|       |-- output/
+|       |-- tests/
+|       |-- .env.example
+|       |-- .dockerignore
+|       |-- Dockerfile
+|       `-- README.md
+|-- notes/
+`-- README.md
+```
 
-Build:
+## Main Build Goals
 
-- simple analysis notebook or script
+This week has one core project plus focused exercises.
 
-### Day 5: Pipeline assembly
+### Layer 1: Async and data-processing drills
 
-Focus:
+The exercises help you isolate:
 
-- connect fetch, clean, and save stages
+- async mental model
+- concurrency patterns
+- CSV cleanup
+- pipeline stage thinking
+- optional Pandas comparison
 
-Build:
+### Layer 2: End-to-end event-ingestion pipeline
 
-- one end-to-end data pipeline
+The main project demonstrates:
 
-### Day 6: Docker fundamentals
-
-Focus:
-
-- image vs container
-- Dockerfile layers
-- run commands
-
-Build:
-
-- Dockerize one Python project
-
-### Day 7: Comparison and review
-
-Focus:
-
-- when async helped
-- when it added unnecessary complexity
-- what Docker solved
-
-## Build Plan
-
-This week should produce three concrete outputs.
-
-### 1. Async API scraper
-
-Requirements:
-
-- call multiple endpoints
-- collect results
-- handle failures reasonably
-- compare behavior with a sync version if possible
-
-### 2. CSV-to-structured-output pipeline
-
-Requirements:
-
-- load CSV
-- clean selected fields
-- transform the data
-- write the result back to a file or database
-
-### 3. Dockerized Python service or script
-
-Requirements:
-
-- working `Dockerfile`
-- documented build and run commands
-- minimal assumptions about host machine setup
+- async orchestration of data loading
+- CSV normalization
+- JSON enrichment
+- output generation
+- containerization with Docker
 
 ## Deliverables
 
-By the end of this week, you should have:
+By the end of the week, you should have:
 
-- one async HTTP project or script
-- one small data pipeline project
-- one Dockerized Python project
-- one short note comparing sync vs async for your use case
-- one README explaining how to run the containerized project
+- completed the async and pipeline exercises
+- run the local pipeline project
+- inspected the generated output files
+- reviewed the Dockerfile and run instructions
+- written a short note on when async helped and when it would be unnecessary
+
+## Best Sources For Week 06
+
+Use sources in this order.
+
+### Tier 1: Official Python Sources
+
+1. Python `asyncio` documentation
+   Link: https://docs.python.org/3/library/asyncio.html
+
+2. Python `csv` documentation
+   Link: https://docs.python.org/3/library/csv.html
+
+3. Python `asyncio.gather` task docs
+   Link: https://docs.python.org/3/library/asyncio-task.html
+
+### Tier 2: Optional Tabular Tooling
+
+1. Pandas 10 minutes to pandas
+   Link: https://pandas.pydata.org/docs/user_guide/10min.html
+
+Use this selectively. It is an optional comparison layer this week, not the center of the main project.
+
+### Tier 3: Official Docker Sources
+
+1. Docker get started
+   Link: https://docs.docker.com/get-started/
+
+2. Dockerfile reference
+   Link: https://docs.docker.com/reference/dockerfile/
+
+Use these to understand how the local pipeline gets packaged into a reproducible runtime.
+
+## Source Strategy That Avoids Confusion
+
+For Week 06, use this source stack:
+
+1. official Python docs for async and CSV truth
+2. local exercises for mental-model reinforcement
+3. optional Pandas docs only after the pure-Python path is clear
+4. official Docker docs for container understanding
+5. the local event-ingestion pipeline for real understanding
+
+That stack is enough.
+
+## Exact Study Path Through The Sources
+
+If you want the least ambiguity, use this sequence:
+
+1. read the `asyncio` overview
+2. run the async-basics and concurrency exercises
+3. read the `csv` docs selectively
+4. run the CSV and pipeline-thinking exercises
+5. inspect the event-ingestion pipeline project
+6. optionally review the Pandas quickstart
+7. read the Docker get-started and Dockerfile reference
+8. inspect the Dockerfile and project README
 
 ## Exit Criteria
 
-You are ready to move on only if:
+You are ready for Week 07 only if most of these are true:
 
 - you know when async is appropriate
-- you can use `async` and `await` without total confusion
-- you can process simple CSV or tabular data
-- you can explain the stages of a basic data pipeline
-- you can build and run one simple Dockerized Python project
+- you can read `async` and `await` code without panic
+- you can describe a simple pipeline in stages
+- you can clean and transform tabular data intentionally
+- you can explain what Docker is solving
+- you can run and explain the local pipeline project
 
-## Common Mistakes To Avoid
+If these are not true, repeat the async and pipeline work before moving on.
 
-- using async for problems that do not benefit from it
+## Common Mistakes That Create Confusion Later
+
+- using async for work that has no real I/O waiting
 - confusing concurrency with parallel CPU execution
 - writing pipeline code with no clear stages
-- using Pandas for everything without understanding the underlying transformation
-- copying Dockerfiles without understanding what each line does
+- forcing Pandas into problems that simple Python can already express clearly
+- copying Dockerfiles without understanding what each line is for
 
-## Expert Notes That Matter Early
+## Expert Notes
 
 ### Async is a tool, not a badge
 
-Use it when the workload is I/O-bound and the coordination benefit is real.
+Use it when waiting is the bottleneck and the coordination benefit is real.
 
-### Pipelines are about shape and flow
+### Pipelines are about flow and boundaries
 
-Clear stages often matter more than clever code.
+Clear stages usually matter more than clever code.
 
 ### Docker solves reproducibility first
 
-Do not frame it only as deployment technology. It is also a consistency tool.
+Do not frame Docker only as deployment technology. It is also a consistency tool.
 
-## Suggested References
+## How Week 06 Connects To Week 07
 
-- Python async documentation
-- `httpx` documentation
-- CSV and Pandas documentation
-- Docker getting-started documentation
+Week 07 introduces JavaScript, TypeScript, Node.js, and backend basics.
+
+That week becomes easier if Week 06 is strong because workflow thinking already improves:
+
+- data flow reasoning
+- project structure
+- environment awareness
+- runtime reproducibility
+
+Week 06 helps you reason about systems, not just files.
 
 ## Final Standard For This Week
 
-The correct outcome of Week 06 is not "I tried async and Docker."
+The correct outcome is not:
+
+"I tried async and Docker."
 
 The correct outcome is:
 
-"I understand the shape of I/O-heavy data workflows, I can use async where it makes sense, and I can package one Python project into a reproducible container."
+"I understand the shape of I/O-heavy data workflows, I can use async where it makes sense, I can reason about pipeline stages clearly, and I can package one Python project into a reproducible container."

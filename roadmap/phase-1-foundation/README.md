@@ -135,9 +135,14 @@ Current status:
 
 - Week 01 includes full exercises, projects, notes, and commented source code
 - Week 02 includes full exercises, a refactored project, tests, notes, and commented source code
-- Weeks 03-08 currently remain planning-first modules and can be expanded into hands-on workspaces next
+- Week 03 includes exercises, exploration scripts, a reusable GitHub API client project, tests, and notes
+- Week 04 includes workflow exercises, a Git practice sandbox, a reusable starter template, and notes
+- Week 05 includes SQL exercises, a query lab, a relational CRUD demo project, tests, and notes
+- Week 06 includes async and pipeline exercises, a Dockerized event-ingestion project, tests, and notes
+- Week 07 includes JavaScript and TypeScript exercises, a Node backend project, tests, and notes
+- Week 08 includes milestone planning exercises, a full-stack study-session tracker, tests, and architecture notes
 
-This matters because you should treat Weeks 01-02 as active coding modules, not only as reading material.
+This matters because you should treat Weeks 01-08 as active hands-on modules, not only as reading material.
 
 ## How To Use The Weekly Modules
 

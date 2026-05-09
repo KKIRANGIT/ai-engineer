@@ -128,6 +128,12 @@ At the current stage of the repository:
 - `90-reference` has been deeply expanded
 - Phase 1 Week 01 has a full hands-on workspace
 - Phase 1 Week 02 has a full hands-on workspace
+- Phase 1 Week 03 has a full hands-on workspace
+- Phase 1 Week 04 has a full hands-on workspace
+- Phase 1 Week 05 has a full hands-on workspace
+- Phase 1 Week 06 has a full hands-on workspace
+- Phase 1 Week 07 has a full hands-on workspace
+- Phase 1 Week 08 has a full hands-on workspace
 - later weeks mostly have detailed planning but not yet full implementation workspaces
 
 This means the roadmap is structurally mature, but implementation depth is still growing week by week.
@@ -195,6 +201,90 @@ Includes:
 - `.env.example`
 - notes
 - stronger module, validation, JSON, and testing patterns
+
+### Week 03
+
+Location:
+
+- [week-03-http-apis-and-integration-thinking](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-03-http-apis-and-integration-thinking>)
+
+Includes:
+
+- HTTP and API exercises
+- public API exploration scripts
+- reusable GitHub API client project
+- unit tests for parsing and helper logic
+- notes for debugging and API workflow
+
+### Week 04
+
+Location:
+
+- [week-04-git-github-linux-cli-and-developer-workflow](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-04-git-github-linux-cli-and-developer-workflow>)
+
+Includes:
+
+- Git and terminal workflow exercises
+- a local Git practice sandbox
+- a reusable Python starter template
+- a working GitHub Actions workflow example
+- notes for command fluency and workflow discipline
+
+### Week 05
+
+Location:
+
+- [week-05-sql-postgres-and-data-modeling](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-05-sql-postgres-and-data-modeling>)
+
+Includes:
+
+- SQL and schema-design exercises
+- a query-lab project with schema, seed, and query files
+- a relational CRUD demo built with Python and SQLite
+- unit tests for the project repository layer
+- notes for query writing and schema review
+
+### Week 06
+
+Location:
+
+- [week-06-async-python-data-pipelines-and-docker](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-06-async-python-data-pipelines-and-docker>)
+
+Includes:
+
+- async and pipeline exercises
+- a Dockerized event-ingestion pipeline project
+- generated-output workflow concepts
+- unit tests for the pipeline logic
+- notes for async, pipeline, and Docker understanding
+
+### Week 07
+
+Location:
+
+- [week-07-javascript-typescript-nodejs-and-backend-basics](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-07-javascript-typescript-nodejs-and-backend-basics>)
+
+Includes:
+
+- JavaScript, async, TypeScript, backend, and validation exercises
+- a dependency-light Node reading-list API
+- unit tests using Node's built-in test runner
+- a TypeScript reference layer for contract thinking
+- notes for Python-vs-JavaScript and backend mental models
+
+### Week 08
+
+Location:
+
+- [week-08-foundation-milestone-project](</d:/Tutorials/InterviewPraparation/ai-engineer/roadmap/phase-1-foundation/week-08-foundation-milestone-project>)
+
+Includes:
+
+- milestone planning and review exercises
+- a full-stack study-session tracker
+- Python backend, SQLite database, and browser frontend integration
+- unit tests for repository and service logic
+- notes for architecture, demo framing, and portfolio discussion
 
 ## Repository Standards
 
@@ -273,7 +363,7 @@ Testing support exists for Week 02, but `pytest` is not currently installed in t
 
 The highest-value next repository upgrades are:
 
-- build full hands-on workspaces for Week 03 onward
+- begin building Phase 2 hands-on workspaces
 - add a progress tracker across all 48 weeks
 - add review templates and project case-study templates
 - keep the top-level roadmap index synchronized with detailed content

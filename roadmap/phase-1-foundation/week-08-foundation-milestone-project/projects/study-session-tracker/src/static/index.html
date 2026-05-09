@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Session Tracker</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Phase 1 Milestone</p>
+      <h1>Study Session Tracker</h1>
+      <p class="subtitle">
+        Track subjects, log study sessions, and review your weekly effort in one small full-stack app.
+      </p>
+    </header>
+
+    <section class="grid summary-grid" id="summaryCards"></section>
+
+    <section class="grid forms-grid">
+      <article class="panel">
+        <h2>Create Subject</h2>
+        <form id="subjectForm">
+          <label>
+            Subject Name
+            <input type="text" name="name" placeholder="Python Foundations" required>
+          </label>
+          <label>
+            Category
+            <input type="text" name="category" placeholder="backend" required>
+          </label>
+          <label>
+            Weekly Target (minutes)
+            <input type="number" name="target_minutes_per_week" min="1" value="300" required>
+          </label>
+          <button type="submit">Add Subject</button>
+        </form>
+      </article>
+
+      <article class="panel">
+        <h2>Log Study Session</h2>
+        <form id="sessionForm">
+          <label>
+            Subject
+            <select name="subject_id" id="subjectSelect" required></select>
+          </label>
+          <label>
+            Session Date
+            <input type="date" name="session_date" required>
+          </label>
+          <label>
+            Duration (minutes)
+            <input type="number" name="duration_minutes" min="1" value="60" required>
+          </label>
+          <label>
+            Focus Score (1-5)
+            <input type="number" name="focus_score" min="1" max="5" value="4" required>
+          </label>
+          <label>
+            Notes
+            <textarea name="notes" rows="3" placeholder="Worked on SQL and API flow."></textarea>
+          </label>
+          <button type="submit">Log Session</button>
+        </form>
+      </article>
+    </section>
+
+    <section class="grid tables-grid">
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Subjects</h2>
+          <span class="hint">Stored in SQLite</span>
+        </div>
+        <div id="subjectsList" class="stack-list"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Recent Sessions</h2>
+          <span class="hint">Delete if logged by mistake</span>
+        </div>
+        <div id="sessionsList" class="stack-list"></div>
+      </article>
+    </section>
+
+    <section id="messageBox" class="message" aria-live="polite"></section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

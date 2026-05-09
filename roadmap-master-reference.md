@@ -432,7 +432,90 @@ Location:
 
 - `roadmap/phase-1-foundation/week-02-python-engineering-basics/`
 
-### 7. Phase 2 planning layer expanded
+### 7. Phase 1 Week 03 hands-on workspace created
+
+Completed:
+
+- HTTP and API exercises
+- public API exploration scripts
+- reusable GitHub API client project
+- unit tests
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-1-foundation/week-03-http-apis-and-integration-thinking/`
+
+### 8. Phase 1 Week 04 hands-on workspace created
+
+Completed:
+
+- Git and terminal workflow exercises
+- local Git practice sandbox
+- reusable Python starter template
+- GitHub Actions workflow example
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-1-foundation/week-04-git-github-linux-cli-and-developer-workflow/`
+
+### 9. Phase 1 Week 05 hands-on workspace created
+
+Completed:
+
+- SQL and schema-design exercises
+- SQL query lab
+- relational CRUD demo project
+- unit tests
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-1-foundation/week-05-sql-postgres-and-data-modeling/`
+
+### 10. Phase 1 Week 06 hands-on workspace created
+
+Completed:
+
+- async and pipeline exercises
+- Dockerized event-ingestion pipeline project
+- unit tests
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-1-foundation/week-06-async-python-data-pipelines-and-docker/`
+
+### 11. Phase 1 Week 07 hands-on workspace created
+
+Completed:
+
+- JavaScript and TypeScript exercises
+- dependency-light Node backend project
+- unit tests using Node's built-in test runner
+- TypeScript reference layer
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-1-foundation/week-07-javascript-typescript-nodejs-and-backend-basics/`
+
+### 12. Phase 1 Week 08 hands-on workspace created
+
+Completed:
+
+- milestone planning exercises
+- full-stack study-session tracker project
+- repository and service tests
+- architecture and portfolio notes
+- supporting documentation
+
+Location:
+
+- `roadmap/phase-1-foundation/week-08-foundation-milestone-project/`
+
+### 13. Phase 2 planning layer expanded
 
 Completed:
 
@@ -443,28 +526,28 @@ Status:
 
 - rewritten into detailed expert-level planning documents
 
-### 8. Phase 3 planning layer expanded
+### 14. Phase 3 planning layer expanded
 
 Completed:
 
 - `roadmap/phase-3-full-stack-ai-product-engineering/README.md`
 - Week 19 through Week 28 READMEs
 
-### 9. Phase 4 planning layer expanded
+### 15. Phase 4 planning layer expanded
 
 Completed:
 
 - `roadmap/phase-4-build-3-real-products/README.md`
 - product-track READMEs for Weeks 29 through 38
 
-### 10. Phase 5 planning layer expanded
+### 16. Phase 5 planning layer expanded
 
 Completed:
 
 - `roadmap/phase-5-career-monetization-and-positioning/README.md`
 - Week 39 through Week 48 READMEs
 
-### 11. `90-reference` expanded
+### 17. `90-reference` expanded
 
 Completed:
 
@@ -474,7 +557,7 @@ Status:
 
 - now functions as a full companion operating handbook rather than a short appendix
 
-### 12. Week 01 Python guide deepened further
+### 18. Week 01 Python guide deepened further
 
 Completed:
 
@@ -484,7 +567,7 @@ Status:
 
 - strengthened with stricter learning boundaries, no-doubt study order, stronger source strategy, and better official references
 
-### 13. Repository entry README and course agent created
+### 19. Repository entry README and course agent created
 
 Completed:
 
@@ -496,7 +579,7 @@ Status:
 
 - repository now has a clear entry point and a reusable workspace-specific learning agent prompt
 
-### 14. Workspace prompt guide created
+### 20. Workspace prompt guide created
 
 Completed:
 
@@ -512,7 +595,7 @@ At this point:
 
 - all major phase planning layers are expanded
 - all overview and reference layers are expanded
-- Week 01 and Week 02 have both planning and implementation artifacts
+- Week 01, Week 02, Week 03, Week 04, Week 05, Week 06, Week 07, and Week 08 have both planning and implementation artifacts
 - later weeks mostly have planning layers but not yet full source-code workspaces
 
 This means the roadmap is structurally strong, but implementation depth is still uneven across weeks.
@@ -525,7 +608,6 @@ The highest-value next steps usually fall into one of these categories:
 
 Examples:
 
-- Week 03 hands-on API exercises
 - later Phase 2 and Phase 3 project folders
 
 ### 2. Improve top-level navigation

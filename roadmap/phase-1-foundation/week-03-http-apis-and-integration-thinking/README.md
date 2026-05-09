@@ -6,45 +6,111 @@ Back to [Phase 1](../README.md)
 
 Understand how software communicates over the network and learn to work with external APIs as an engineer rather than as a copy-paste consumer.
 
-This week is about building a strong mental model of request-response systems, structured data exchange, and integration reliability.
-
-## Why This Week Matters
-
-Most modern engineering work involves integration:
-
-- frontend to backend
-- backend to third-party services
-- one internal service to another
-- product logic to AI providers
-
-If you do not understand HTTP well, later topics become much harder:
-
-- model APIs feel magical instead of predictable
-- auth problems become confusing
-- debugging becomes slow
-- retry, timeout, and pagination issues become painful
-
-Week 03 is the foundation for everything later involving OpenAI, Anthropic, Supabase, Stripe, or any other external system.
-
-## Week 03 Outcomes
+Week 03 is where Python stops being only local scripting and starts becoming integration tooling.
 
 By the end of this week, you should be able to:
 
 - explain the request-response model clearly
-- use `GET`, `POST`, `PUT`, `PATCH`, and `DELETE` correctly at a beginner-professional level
-- inspect status codes, headers, and response bodies when debugging
+- distinguish methods such as `GET`, `POST`, `PUT`, `PATCH`, and `DELETE`
+- inspect status codes, headers, and response bodies during debugging
 - parse JSON responses into Python data structures
-- call public APIs using `requests` or `httpx`
-- handle auth headers and API keys safely
-- design a small wrapper around an external API
+- send HTTP requests safely with explicit timeout thinking
+- understand auth headers and API key handling
+- design a small reusable wrapper around one real API
 
-## What To Learn
+This week is the bridge between local programming and service integration.
+
+## What This Week Is Actually Training
+
+At surface level, Week 03 looks like "learn HTTP and call a few APIs."
+
+The real training target is deeper:
+
+- learning to reason about systems outside your own code
+- understanding the data contract between client and server
+- treating failures as a normal part of integration work
+- separating transport details from business logic
+- designing wrappers so your application code stays clean
+
+This is why Week 03 matters so much for the rest of the roadmap. Later AI engineering work is full of API integrations:
+
+- OpenAI
+- Anthropic
+- Stripe
+- Supabase
+- email providers
+- analytics providers
+- internal service calls
+
+If HTTP feels fuzzy, every one of those systems feels harder than it should.
+
+## Scope Boundaries
+
+Study deeply this week:
+
+- request and response structure
+- status codes
+- headers and auth
+- JSON payloads and response shapes
+- query parameters
+- pagination concepts
+- timeouts
+- retries and backoff thinking
+- small wrapper design
+- debugging integration failures
+
+Do not go deep on these yet:
+
+- OAuth implementation details
+- advanced HTTP caching
+- websocket protocols
+- async HTTP clients
+- production observability stacks
+- API schema generation
+- distributed tracing
+
+The goal is strong integration fundamentals, not protocol specialization.
+
+## Week 03 Outcomes
+
+You are successful this week if you can do most of the following with confidence:
+
+- describe what a request contains
+- describe what a response contains
+- use status codes to narrow down failures quickly
+- send query parameters and headers intentionally
+- parse only the fields you actually need from a JSON response
+- explain why timeouts and retries matter
+- build one small client wrapper instead of scattering raw HTTP calls everywhere
+
+## How Week 03 Builds On Week 02
+
+Week 02 taught you how to organize a small Python project into:
+
+- modules
+- validation boundaries
+- storage layers
+- tests
+
+Week 03 applies those same habits to integrations.
+
+Instead of asking:
+
+- how do I structure local Python logic
+
+you now also ask:
+
+- how do I structure communication with an external system
+
+That means Week 03 is not a separate topic. It is Week 02 engineering discipline applied to networked software.
+
+## Core Integration Concepts To Master
 
 ## 1. HTTP Mental Model
 
-Start with the system model, not the library syntax.
+The first thing to learn is not a library. It is the protocol shape.
 
-You need to understand:
+You must understand:
 
 - a client sends a request
 - a server returns a response
@@ -53,32 +119,32 @@ You need to understand:
 
 Important idea:
 
-HTTP is not "Python calling the internet." It is a protocol with rules and predictable structure.
+HTTP is a contract. Your code is simply one client participating in that contract.
 
-## 2. Methods and Their Meaning
+## 2. Methods and Intent
 
-You should know the intent of:
+You should know the meaning of:
 
-- `GET`: read data
+- `GET`: read or fetch data
 - `POST`: create or submit data
-- `PUT`: replace data
-- `PATCH`: partially update data
-- `DELETE`: remove data
+- `PUT`: replace a resource
+- `PATCH`: partially update a resource
+- `DELETE`: remove a resource
 
 Expert beginner rule:
 
-Do not memorize methods abstractly. Tie each method to an application behavior.
+Do not learn methods as trivia. Always connect them to an application behavior.
 
 ## 3. Status Codes
 
-You should understand the broad categories:
+You must understand the broad families:
 
 - `2xx`: success
 - `3xx`: redirection
-- `4xx`: client-side problem
-- `5xx`: server-side problem
+- `4xx`: client-side issue
+- `5xx`: server-side issue
 
-Important codes to know:
+Important codes:
 
 - `200 OK`
 - `201 Created`
@@ -90,131 +156,77 @@ Important codes to know:
 - `429 Too Many Requests`
 - `500 Internal Server Error`
 
-Expert rule:
+Important debugging rule:
 
-When an API call fails, always inspect:
+Do not treat a failing API call as "the internet is broken." Start with the status code and let it narrow the problem.
 
-- status code
-- response body
-- request headers you sent
-
-## 4. Headers, Tokens, and Auth
+## 4. Headers and Authentication
 
 You need to understand:
 
 - what headers are
-- why `Authorization` matters
-- API keys vs bearer tokens
-- content negotiation basics
-- `Content-Type` and `Accept`
+- how `Authorization` is used
+- why `Accept` matters
+- why `Content-Type` matters
+- why API secrets should live outside source code
 
-Important habit:
+Early habit:
 
-- never hardcode secrets into shared code
-- use environment variables
+- never hardcode secrets into committed files
+- use environment variables or a documented config pattern
 
-## 5. JSON as the Language of APIs
+## 5. JSON and Response Shape
 
-You already touched JSON in Week 02. This week uses it in network communication.
+Most beginner API mistakes are not about sending the request. They are about misunderstanding the response.
 
-You should be comfortable with:
+You should be able to:
 
-- sending JSON payloads
-- reading JSON responses
-- knowing when the response is not JSON
-- thinking about the expected response shape
+- inspect a JSON response
+- identify the top-level type
+- find the exact fields you need
+- validate whether the shape matches your expectation
 
-Expert note:
+Expert beginner rule:
 
-Good API integration starts by understanding the response schema, not just printing the full result blob.
+Good API work means extracting the 3-5 fields you need, not dumping a 500-line JSON blob and calling it done.
 
 ## 6. Query Parameters and Pagination
 
-Many APIs use query parameters for:
+You need to understand:
 
-- filtering
-- sorting
-- searching
-- page navigation
-
-You should understand:
-
-- URL parameters
+- query parameters for filtering and search
 - page-based pagination
 - cursor-based pagination at a concept level
+- that many APIs return partial result sets
 
-Why this matters:
-
-- real APIs often return partial results
-- you need to know how to fetch more than the first page
+This matters because real integrations almost never end at the first page.
 
 ## 7. Timeouts, Retries, and Rate Limits
 
-This is one of the biggest differences between toy code and engineering thinking.
+This is where toy scripts become engineering code.
 
-You need to know:
+You should know:
 
-- network calls can fail temporarily
-- not every failure should be retried
 - timeouts should be explicit
-- rate limits exist and must be respected
+- not every failure should be retried
+- `429` means the API is asking you to slow down
+- backoff is a strategy for spacing retries
 
-Focus on the concepts:
+The project this week uses simple retry-aware thinking, not a heavy retry framework. That is the right level here.
 
-- timeout
-- retry
-- backoff
-- `429` handling
+## 8. Wrapper Design
 
-Even if your first implementations are simple, your mindset should already include these concerns.
-
-## 8. Using `requests` or `httpx`
-
-You can start with either library.
-
-Learn:
-
-- basic request call
-- query parameters
-- headers
-- JSON body
-- response parsing
-- response validation
-
-Practical rule:
-
-- write small wrapper functions
-- do not scatter raw HTTP calls all over your code
-
-## 9. API Wrapper Design
-
-This is the engineering upgrade of the week.
-
-Instead of writing one-off scripts only, learn to build a small API client abstraction.
+The engineering upgrade of the week is learning not to scatter raw HTTP calls.
 
 A small wrapper should:
 
-- accept parameters cleanly
+- accept clean Python parameters
+- build the URL and headers
 - send the request
-- validate success or failure
+- validate or interpret the response
 - return useful Python data
-- hide low-level details from the rest of your code
 
-This skill transfers directly into later AI provider work.
-
-## 10. Debugging Integrations
-
-When an API call is failing, debug in this order:
-
-1. Check the URL.
-2. Check the method.
-3. Check headers.
-4. Check payload shape.
-5. Check response status code.
-6. Check response body.
-7. Check whether auth or rate limits are involved.
-
-This debugging order will save you a lot of time later.
+This pattern transfers directly into every later AI provider client you will build.
 
 ## Best Learning Sequence For This Week
 
@@ -223,177 +235,325 @@ Use this order:
 1. request-response model
 2. methods and status codes
 3. headers and auth
-4. JSON payloads and responses
-5. query params and pagination
-6. retries and timeouts
-7. Python HTTP client usage
-8. API wrapper design
+4. JSON response shape
+5. query parameters
+6. timeouts and retries
+7. reusable wrappers
+8. project-level API client design
 
-## Recommended Daily Breakdown
+## A No-Doubt Execution Plan For The Week
 
 ### Day 1: HTTP fundamentals
 
-Focus:
+Study:
 
-- request-response structure
+- requests and responses
 - methods
 - status code families
 
-Build:
+Practice:
 
-- inspect a few public APIs manually
+- run the HTTP basics exercise
+- inspect the exploration scripts before running them
+
+Checkpoint:
+
+- can you explain what the client sends and what the server sends back
 
 ### Day 2: JSON and headers
 
-Focus:
+Study:
 
-- request headers
 - response bodies
-- JSON parsing
+- headers
+- JSON shape extraction
 
-Build:
+Practice:
 
-- script that fetches and prints selected fields only
+- run the JSON response exercise
+- edit the scripts so they print only selected fields
 
-### Day 3: Auth and environment variables
+Checkpoint:
 
-Focus:
+- can you explain the exact fields you need from a response instead of printing everything
 
-- API key handling
-- auth headers
-- `.env` usage
+### Day 3: Query parameters and URL building
 
-Build:
+Study:
 
-- authenticated call to one safe external API if available
-
-### Day 4: Pagination and filtering
-
-Focus:
-
+- URL encoding
 - query parameters
-- paginated responses
+- filtered requests
+
+Practice:
+
+- run the query-parameter exercise
+- inspect how the GitHub client builds URLs
+
+Checkpoint:
+
+- can you build a URL with query parameters without guessing
+
+### Day 4: Timeouts, retries, and failure thinking
+
+Study:
+
+- timeout
+- retry
+- backoff
+- rate limits
+
+Practice:
+
+- run the resilience exercise
+- read the debugging checklist note
+
+Checkpoint:
+
+- can you explain when retrying is reasonable and when it is not
+
+### Day 5: API wrapper design
+
+Study:
+
+- helper functions
+- low-level transport code
+- response parsing
+- data models
+
+Practice:
+
+- run the wrapper-design exercise
+- inspect the GitHub client package
+
+Checkpoint:
+
+- can you explain why wrapper code is better than scattered request calls
+
+### Day 6: Real project work
 
 Build:
 
-- collect multiple pages of data from one API
+- run the exploration scripts
+- run the GitHub API client example
+- inspect the CLI and data models
 
-### Day 5: Error handling and retries
+Checkpoint:
 
-Focus:
+- can you explain how the project separates config, HTTP utilities, parsing, and application usage
 
-- failure modes
-- timeout setting
-- simple retry strategy
+### Day 7: Review and synthesis
 
-Build:
+Review:
 
-- resilient wrapper function
+- reread the week README
+- walk through the debugging checklist
+- review the project tests
 
-### Day 6: API wrapper module
+Checkpoint:
 
-Focus:
+- can you debug a broken call methodically
+- can you explain why this week makes later AI API work easier
 
-- clean function design
-- reusable client shape
+## Week 03 Workspace Standard
 
-Build:
+This week now includes a real hands-on workspace.
 
-- small SDK-style wrapper for one chosen API
+Actual structure:
 
-### Day 7: Example scripts and documentation
+```text
+week-03-http-apis-and-integration-thinking/
+|-- exercises/
+|   |-- http-basics/
+|   |-- json-and-responses/
+|   |-- query-params/
+|   |-- resilience/
+|   |-- wrappers/
+|   `-- README.md
+|-- projects/
+|   |-- api-exploration-scripts/
+|   `-- github-api-client/
+|       |-- github_api/
+|       |-- tests/
+|       |-- examples/
+|       |-- data/
+|       |-- .env.example
+|       `-- README.md
+|-- notes/
+`-- README.md
+```
 
-Focus:
+## Main Build Goals
 
-- show real usage
-- polish README
-- document known limits and assumptions
-
-## Build Plan
-
-You should complete two layers of build work this week.
+This week has two build layers.
 
 ### Layer 1: Exploration scripts
 
-Consume at least three public APIs.
+You should explore several public APIs through small scripts so you see different response shapes and usage patterns.
 
-Suggested examples:
+This workspace includes:
 
-- weather API
-- GitHub API
-- public placeholder or testing API
+- GitHub API exploration
+- JSONPlaceholder exploration
+- httpbin request/echo exploration
 
-The point is not the brand. The point is seeing different response shapes and integration patterns.
+### Layer 2: One reusable API wrapper
 
-### Layer 2: One small wrapper library
+The main project is a small GitHub API client.
 
-Choose one API and build a small client around it.
+It includes:
 
-Good wrapper features:
-
-- base request helper
-- explicit timeout
+- config handling
+- URL building
+- explicit timeout use
 - header handling
-- query parameter support
-- status validation
 - JSON parsing
-- example usage script
+- dataclass-based response modeling
+- CLI usage
+- unit tests for parsing and helper logic
 
 ## Deliverables
 
-By the end of this week, you should have:
+By the end of the week, you should have:
 
-- scripts for at least three API integrations
-- one small API wrapper module or package
-- example scripts showing common usage
-- one README explaining auth, setup, and sample outputs
-- one short note describing how you debugged at least one failed request
+- completed the local exercises
+- explored at least three API patterns
+- understood one reusable GitHub client package
+- run the example script or CLI successfully in a network-enabled environment
+- reviewed the local tests
+- written a short note about at least one failure pattern you now understand better
+
+## Best Sources For Week 03
+
+Use sources in this order.
+
+### Tier 1: Protocol and Standard Reference
+
+1. MDN HTTP overview
+   Link: https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+
+2. MDN HTTP methods
+   Link: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+
+3. MDN HTTP status codes
+   Link: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+### Tier 2: Python Client Reference
+
+1. Python `urllib` documentation
+   Link: https://docs.python.org/3/library/urllib.request.html
+
+2. Python `urllib.parse` documentation
+   Link: https://docs.python.org/3/library/urllib.parse.html
+
+3. `requests` quickstart
+   Link: https://requests.readthedocs.io/en/latest/user/quickstart/
+
+4. `httpx` quickstart
+   Link: https://www.python-httpx.org/quickstart/
+
+Important note:
+
+This workspace project uses Python's standard library so it stays runnable without extra dependencies, but you should still recognize the `requests` and `httpx` ecosystems because they are common in real-world code.
+
+### Tier 3: Provider-Specific Reference
+
+1. GitHub REST API getting started
+   Link: https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api
+
+2. GitHub rate limits
+   Link: https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api
+
+3. JSONPlaceholder guide
+   Link: https://jsonplaceholder.typicode.com/guide/
+
+4. httpbin
+   Link: https://httpbin.org/
+
+## Source Strategy That Avoids Confusion
+
+For Week 03, use this source stack:
+
+1. MDN for protocol understanding
+2. Python `urllib` docs for first-principles mechanics
+3. `requests` or `httpx` docs for ecosystem awareness
+4. provider docs for the exact API you are touching
+5. this local workspace for actual learning-through-code
+
+That stack is enough.
+
+## Exact Study Path Through The Sources
+
+If you want the least ambiguity, use this sequence:
+
+1. read the MDN HTTP overview
+2. run the HTTP basics exercise
+3. read methods and status code references
+4. run the JSON and query-parameter exercises
+5. read the `urllib` docs selectively
+6. inspect the GitHub API client utilities
+7. run the exploration scripts
+8. read the GitHub REST API getting-started docs
+9. run the project example or CLI
+10. review the tests and notes
 
 ## Exit Criteria
 
-You are ready to move on only if:
+You are ready for Week 04 only if most of these are true:
 
 - you can explain what an HTTP request and response contain
-- you can use status codes to guide debugging
-- you can send headers and parse JSON confidently
-- you can work with query parameters and basic pagination
-- you can build one small reusable API wrapper instead of only one-off scripts
-- you can debug a broken API call methodically
+- you can interpret common status codes quickly
+- you can send query parameters and headers intentionally
+- you can parse useful fields from a JSON response
+- you understand why timeouts and retries matter
+- you can explain one reusable client wrapper from this workspace
+- you can debug a broken integration in a methodical order
 
-## Common Mistakes To Avoid
+If these are not true, repeat the exploration and wrapper review before moving on.
 
-- printing entire responses without understanding the data shape
+## Common Mistakes That Create Confusion Later
+
+- printing entire responses without understanding structure
 - ignoring status codes and assuming success
 - hardcoding secrets into source files
-- writing raw request logic repeatedly instead of wrapping it
-- retrying everything blindly
-- forgetting timeouts
+- writing raw request logic repeatedly
+- forgetting explicit timeouts
+- retrying blindly without thinking about cause
+- assuming every response is JSON
 
-## Expert Notes That Matter Early
+## Expert Notes
 
 ### Integration code should be boring
 
-Good integration code is predictable, explicit, and easy to debug.
+Good API integration code is explicit, predictable, and easy to inspect.
 
 ### Response shape matters more than response size
 
-The most important skill is knowing which fields you actually need.
+What matters is not how much data came back. What matters is whether you know which fields your application actually needs.
 
 ### Failure handling is part of the design
 
 A network call that only works in perfect conditions is incomplete.
 
-## Suggested References
+## How Week 03 Connects To Week 04
 
-- HTTP overview resources
-- `requests` or `httpx` documentation
-- provider-specific API docs for the APIs you use
-- JSON documentation and examples
+Week 04 focuses on Git, GitHub, terminal workflow, and developer operations habits.
+
+That week becomes easier if Week 03 is strong, because integration work quickly leads to:
+
+- managing project files
+- documenting setup
+- thinking about environment variables
+- working with external tools and remote systems
+
+HTTP work is one of the first places where engineering workflow starts feeling real.
 
 ## Final Standard For This Week
 
-The correct outcome of Week 03 is not "I can hit an endpoint."
+The correct outcome is not:
+
+"I can hit an endpoint."
 
 The correct outcome is:
 
-"I understand HTTP well enough to integrate external APIs cleanly, debug failures methodically, and build small reusable client wrappers."
+"I understand HTTP well enough to integrate external APIs cleanly, inspect response structure intelligently, debug failures methodically, and build small reusable client wrappers."

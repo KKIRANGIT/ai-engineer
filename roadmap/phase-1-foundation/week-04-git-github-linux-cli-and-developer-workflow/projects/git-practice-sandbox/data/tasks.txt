@@ -1,0 +1,3 @@
+review git status
+practice small commits
+compare branch changes

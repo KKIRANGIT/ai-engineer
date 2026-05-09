@@ -1,0 +1,16 @@
+[
+  {
+    "id": "book-1",
+    "title": "Clean Architecture",
+    "author": "Robert C. Martin",
+    "tags": ["architecture", "backend"],
+    "isRead": false
+  },
+  {
+    "id": "book-2",
+    "title": "Building Microservices",
+    "author": "Sam Newman",
+    "tags": ["systems", "backend"],
+    "isRead": true
+  }
+]
