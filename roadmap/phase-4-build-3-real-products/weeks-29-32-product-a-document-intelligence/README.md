@@ -6,7 +6,7 @@ Back to [Phase 4](../README.md)
 
 Build a grounded document assistant for a specific real-world use case where trust, source quality, and retrieval behavior matter.
 
-This is the first product in the phase because it tests one of the most important applied-AI product categories: helping users work with complex text corpora they cannot process efficiently on their own.
+This track is about evidence-backed answers, not generic chat over files.
 
 ## Why This Product Category Matters
 
@@ -32,6 +32,39 @@ This category is also unforgiving, which makes it a strong portfolio test:
 - retrieval errors matter
 - citation quality matters
 - upload and parsing reliability matter
+
+## What This Track Is Actually Training
+
+This track is training six deeper skills:
+
+1. choosing a narrow document workflow with believable pain
+2. ingesting and structuring real source material
+3. debugging retrieval rather than blaming the model vaguely
+4. exposing evidence clearly enough that users can trust or challenge an answer
+5. evaluating failure cases with concrete question sets
+6. turning a technically correct assistant into a product case study
+
+The real outcome is not "I built chat with PDFs." The real outcome is "I built a focused document product with evidence, boundaries, and a believable user workflow."
+
+## Scope Boundary For This Track
+
+This track focuses on:
+
+- document ingestion
+- metadata modeling
+- chunking and retrieval
+- grounded answer generation
+- citation and debug UX
+- failure analysis and tester feedback
+
+This track does not require:
+
+- broad multi-tenant SaaS complexity
+- every document format under the sun
+- heavy design-system work
+- advanced agent orchestration for its own sake
+
+The correct goal is a narrow, high-trust product with inspectable retrieval behavior.
 
 ## What This Product Should Prove
 
@@ -95,9 +128,29 @@ This track should sharpen your understanding of:
 - retrieval debugging
 - evaluation design for knowledge tasks
 
+## Best Source Strategy For This Track
+
+Use sources in this order:
+
+1. the local Product A workspace
+2. your earlier Phase 2 retrieval and grounding notes
+3. one or two official docs for the stack or libraries you actually use
+
+Do not overload this track with many vector-database tutorials. The value comes from understanding why grounded retrieval succeeds or fails for this product.
+
+## Recommended Official References
+
+Use these as the small external companion stack:
+
+- OpenAI RAG guide: <https://platform.openai.com/docs/guides/retrieval>
+- Anthropic prompt engineering overview: <https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview>
+- MDN File API: <https://developer.mozilla.org/en-US/docs/Web/API/File_API>
+
+These are enough to support the product build without pushing you into source overload.
+
 ## Execution Plan
 
-## Week 29: Scope and ingestion
+### Week 29: Scope and ingestion
 
 Focus:
 
@@ -117,7 +170,7 @@ Questions to answer:
 - how large are they
 - what metadata will be needed for filtering or trust
 
-## Week 30: Retrieval and grounding
+### Week 30: Retrieval and grounding
 
 Focus:
 
@@ -137,7 +190,7 @@ Questions to answer:
 - what metadata filters improve relevance
 - how will users inspect support for an answer
 
-## Week 31: Quality and trust
+### Week 31: Quality and trust
 
 Focus:
 
@@ -157,7 +210,7 @@ Questions to answer:
 - is the problem retrieval, context packing, or synthesis
 - how do you communicate uncertainty
 
-## Week 32: Product polish and feedback
+### Week 32: Product polish and feedback
 
 Focus:
 
@@ -188,6 +241,57 @@ Recommended additions:
 - debug view for retrieved chunks
 - answer feedback mechanism
 
+## Hands-On Workspace Structure
+
+```text
+weeks-29-32-product-a-document-intelligence/
+|-- README.md
+|-- exercises/
+|   |-- README.md
+|   |-- week-29-scope-and-ingestion/
+|   |-- week-30-retrieval-and-grounding/
+|   |-- week-31-quality-and-trust/
+|   `-- week-32-product-polish-and-feedback/
+|-- notes/
+|   |-- 01-track-plan.md
+|   |-- 02-retrieval-debugging-guide.md
+|   |-- 03-feedback-interview-guide.md
+|   `-- 04-case-study-outline.md
+`-- projects/
+    `-- policy-evidence-assistant/
+```
+
+## Exercises
+
+The exercises are organized by week so the product build stays disciplined instead of turning into a random prototype sprint.
+
+You will practice:
+
+- defining the niche and ingestion constraints
+- designing retrieval and metadata filters
+- logging failure cases and trust gaps
+- collecting feedback and shaping the case study
+
+Start here:
+
+- [Exercises README](exercises/README.md)
+
+## Main Project
+
+Project:
+
+- [policy-evidence-assistant](projects/policy-evidence-assistant/README.md)
+
+This project is a focused document-intelligence product for internal policy and operations answers. It teaches:
+
+- document ingestion from a controlled corpus
+- metadata-aware chunk retrieval
+- grounded answer generation with citations
+- retrieval debug inspection
+- simple eval and query logging
+
+It stays narrow on purpose so you can inspect the trust loop instead of hiding weak retrieval behind a larger app shell.
+
 ## User Validation Expectations
 
 Try to get at least 3-5 real testers, even if informal.
@@ -209,12 +313,23 @@ By the end of this track, you should have:
 - user feedback notes
 - case study
 
+## Exit Criteria
+
+You are ready to move to Product B only if:
+
+- the product answers a meaningful set of questions from the document set
+- the citations are inspectable and relevant
+- you can explain at least one retrieval failure clearly
+- you have a basic eval set and query log
+- you have external or simulated tester feedback recorded
+
 ## Common Mistakes To Avoid
 
 - building generic "chat with PDF" with no domain focus
 - hiding sources or making them hard to inspect
 - assuming all failures are model failures instead of retrieval failures
 - ignoring document ingestion quality
+- trying to support every file type before the niche is proven
 
 ## Expert Notes That Matter Here
 
@@ -232,7 +347,9 @@ Most weak products fail because their builders cannot explain why the system ans
 
 ## Final Standard For This Track
 
-The correct outcome is not "I built a PDF chatbot."
+The correct outcome is not:
+
+"I built a PDF chatbot."
 
 The correct outcome is:
 

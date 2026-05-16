@@ -6,6 +6,8 @@ Back to [Phase 3](../README.md)
 
 Learn how to observe both system health and user behavior so product decisions are informed by evidence rather than guessing.
 
+This week is about decision visibility, not vanity dashboards.
+
 ## Why This Week Matters
 
 Without monitoring and analytics, you cannot answer:
@@ -18,108 +20,189 @@ Without monitoring and analytics, you cannot answer:
 
 This week gives you the visibility layer that real products need.
 
+## What This Week Is Actually Training
+
+Week 25 is training five deeper skills:
+
+1. separating observability from analytics clearly
+2. defining an event taxonomy instead of tracking random clicks
+3. grouping failures into triage-friendly signals
+4. mapping activation flow from event data
+5. turning instrumentation into product judgment
+
+The real outcome is not "I installed analytics." The real outcome is "I can see what the system and users are doing well enough to improve the product."
+
+## Scope Boundary For This Week
+
+This week focuses on:
+
+- error monitoring
+- product events
+- activation funnels
+- feedback synthesis
+- simple product observations from evidence
+
+This week does not require:
+
+- large-scale data warehousing
+- advanced BI tooling
+- exhaustive retention analysis
+- team-specific incident processes
+
+The correct goal is to establish a reliable visibility model for one product flow.
+
 ## Week 25 Outcomes
 
 By the end of this week, you should be able to:
 
 - instrument product analytics events
-- integrate error monitoring
+- integrate error monitoring conceptually
 - define at least one activation funnel
 - reason about user behavior as a product system
 - connect operational data with product decisions
 
-## What To Learn
+## Best Source Strategy For This Week
 
-## 1. Observability vs analytics
+Use sources in this order:
 
-Distinguish:
+1. the local Week 25 workspace
+2. official monitoring and analytics product docs
+3. your own event taxonomy and observation notes
 
-- observability: what the system is doing
-- analytics: what users are doing
+Do not track everything. The goal is signal quality, not metric volume.
 
-You need both.
+## Recommended Official References
 
-## 2. Error monitoring
+Use these companion references when you want a current external anchor:
 
-Learn why products need:
+- Sentry product docs: <https://docs.sentry.io/>
+- PostHog docs: <https://posthog.com/docs>
+- OpenTelemetry concepts: <https://opentelemetry.io/docs/concepts/>
 
-- exception capture
-- stack traces
-- environment awareness
-- triage-friendly grouping
+These are enough to frame the tooling without distracting from the local workspace.
 
-## 3. Product events and funnels
+## Recommended Project Direction For This Workspace
 
-Track events such as:
+This workspace uses one realistic but manageable product scenario:
 
-- signup
-- first upload
-- first generated result
-- upgrade click
+- a support operations observability lab
 
-Then define one funnel:
+Why this direction was chosen:
 
-- signup -> first value -> repeat use
+- it naturally connects user workflow and system behavior
+- it gives AI-specific events a clear place
+- it creates a practical bridge to Week 26 cost and usage logic
+- it keeps the phase product theme coherent
 
-## 4. Feedback loops
+## Project Capabilities This Week Includes
 
-Good products learn from:
+The Week 25 project includes:
 
-- usage
-- failures
-- abandonment
-- explicit user feedback
+- an event taxonomy for activation and AI behavior
+- funnel helpers that summarize progress through a workflow
+- error-grouping helpers for triage
+- observation helpers that connect events, failures, and feedback
+- tests for funnel and monitoring logic
 
-## Best Learning Sequence For This Week
+The project stays tool-agnostic on purpose so the measurement logic remains visible.
 
-1. observability vs analytics
-2. error monitoring
-3. event taxonomy
-4. funnel definition
-5. dashboard review
+## Recommended Build Sequence
+
+1. define observability versus analytics responsibilities
+2. choose the core activation flow
+3. define the event taxonomy for that flow
+4. group failures into useful categories
+5. summarize the funnel
+6. write one product observation from the data
 
 ## Recommended Daily Breakdown
 
-### Day 1: Monitoring setup
+### Day 1: Monitoring setup thinking
 
-### Day 2: Product analytics setup
+### Day 2: Event taxonomy
 
-### Day 3: Event taxonomy
+### Day 3: Error grouping
 
 ### Day 4: Funnel definition
 
-### Day 5: Instrument AI-specific events
+### Day 5: AI-specific instrumentation
 
-### Day 6: Review dashboards
+### Day 6: Review dashboards and blind spots
 
 ### Day 7: Write product observations
 
-## Build Plan
+## Hands-On Workspace Structure
 
-Add to one product:
+```text
+week-25-monitoring-analytics-and-feedback-loops/
+|-- README.md
+|-- exercises/
+|   |-- README.md
+|   |-- event-taxonomy/
+|   |-- feedback-loops/
+|   `-- observability-vs-analytics/
+|-- notes/
+|   |-- 01-week-plan.md
+|   |-- 02-event-taxonomy-template.md
+|   `-- 03-funnel-review.md
+`-- projects/
+    `-- support-ops-observability-lab/
+```
 
-- Sentry or equivalent error monitoring
-- product analytics events
-- one activation funnel
-- one note on insights or blind spots
+## Exercises
+
+The exercises isolate the measurement choices that usually stay implicit.
+
+You will practice:
+
+- separating technical failures from product behavior
+- defining a compact event taxonomy
+- turning data into one concrete improvement hypothesis
+
+Start here:
+
+- [Exercises README](exercises/README.md)
+
+## Main Project
+
+Project:
+
+- [support-ops-observability-lab](projects/support-ops-observability-lab/README.md)
+
+This project is a small visibility lab for a support product. It teaches:
+
+- event modeling
+- funnel summaries
+- error grouping
+- product observation generation
+
+It is intentionally compact so the analytics logic remains easier to inspect than any vendor SDK.
 
 ## Deliverables
 
-- monitoring dashboard screenshots
-- analytics event list
-- one activation funnel definition
+By the end of this week, you should have:
+
+- one complete observability workspace
+- one tested project for events, funnels, and error grouping
+- one event taxonomy note
+- one funnel review note with at least one product observation
 
 ## Exit Criteria
 
-- you can see where users drop off
-- you can identify where errors cluster
-- you can describe at least one product decision informed by data
+You are ready to move to Week 26 only if:
+
+- you can explain observability versus analytics
+- you can describe one activation funnel clearly
+- you can identify where users drop off
+- you can group at least one class of failure meaningfully
+- you can propose one product change based on evidence
 
 ## Common Mistakes To Avoid
 
 - tracking everything without a clear event model
 - tracking nothing meaningful about activation
 - treating analytics as vanity counting instead of behavioral insight
+- collecting errors without organizing them for action
 
 ## Expert Notes That Matter Early
 
@@ -131,9 +214,15 @@ If you do not measure the right things, you will improve the wrong things.
 
 Activation and repeat value matter more than page views.
 
+### Failure data is product data
+
+If AI actions fail for specific users or paths, that is both an engineering and UX problem.
+
 ## Final Standard For This Week
 
-The correct outcome of Week 25 is not "I installed analytics."
+The correct outcome of Week 25 is not:
+
+"I installed analytics."
 
 The correct outcome is:
 

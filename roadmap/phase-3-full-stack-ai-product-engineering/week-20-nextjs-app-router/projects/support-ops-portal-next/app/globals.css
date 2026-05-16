@@ -1,0 +1,384 @@
+:root {
+  color-scheme: light;
+  --bg: #f3efe7;
+  --panel: rgba(255, 255, 255, 0.88);
+  --ink: #182033;
+  --muted: #5e6678;
+  --line: rgba(24, 32, 51, 0.12);
+  --accent: #0f766e;
+  --accent-soft: #d7f1eb;
+  --warm: #9a3412;
+  --high: #b91c1c;
+  --shadow: 0 20px 48px rgba(24, 32, 51, 0.08);
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(154, 52, 18, 0.12), transparent 24%),
+    linear-gradient(180deg, #faf6eb 0%, var(--bg) 100%);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.site-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+
+.site-header {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.site-header__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 0.95;
+}
+
+.site-header p {
+  margin: 0;
+  max-width: 760px;
+  color: var(--muted);
+}
+
+.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.top-nav a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.page-grid,
+.dashboard-grid,
+.compose-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.dashboard-grid {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.page-grid {
+  grid-template-columns: 1fr;
+}
+
+.compose-grid {
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+}
+
+.panel--accent {
+  background: linear-gradient(180deg, rgba(255, 244, 224, 0.98), rgba(255, 255, 255, 0.92));
+}
+
+.panel-heading {
+  margin-bottom: 18px;
+}
+
+.panel-heading h2 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.panel-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.stats-grid,
+.route-grid,
+.filters-grid,
+.detail-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.stats-grid,
+.route-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.filters-grid,
+.detail-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stat-card,
+.route-card {
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(24, 32, 51, 0.1);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.stat-card__label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.stat-card__value {
+  font-size: 2rem;
+}
+
+.route-card p,
+.ticket-table td,
+.ticket-table th,
+.empty-state p,
+.field-hint,
+.preview-box p {
+  color: var(--muted);
+}
+
+.route-card h3,
+.ticket-table h3 {
+  margin: 0 0 10px;
+}
+
+.badge,
+.ticket-id,
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 0.78rem;
+}
+
+.ticket-id,
+.tag {
+  background: rgba(24, 32, 51, 0.08);
+}
+
+.badge--high {
+  background: rgba(185, 28, 28, 0.12);
+  color: var(--high);
+}
+
+.badge--medium {
+  background: rgba(154, 103, 0, 0.14);
+  color: #9a6700;
+}
+
+.badge--low {
+  background: rgba(21, 128, 61, 0.14);
+  color: #166534;
+}
+
+.badge--open {
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--accent);
+}
+
+.badge--in_progress {
+  background: rgba(30, 64, 175, 0.12);
+  color: #1d4ed8;
+}
+
+.badge--closed {
+  background: rgba(71, 85, 105, 0.12);
+  color: #334155;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field span {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid rgba(24, 32, 51, 0.14);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--ink);
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.button-row,
+.meta-row,
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.primary-button,
+.secondary-button {
+  border: none;
+  border-radius: 999px;
+  padding: 13px 18px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #0f766e, #155e75);
+  color: white;
+}
+
+.secondary-button {
+  background: rgba(24, 32, 51, 0.08);
+  color: var(--ink);
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ticket-table th,
+.ticket-table td {
+  text-align: left;
+  padding: 14px 10px;
+  border-top: 1px solid rgba(24, 32, 51, 0.08);
+  vertical-align: top;
+}
+
+.ticket-table th {
+  color: var(--muted);
+  font-size: 0.86rem;
+  border-top: none;
+}
+
+.ticket-table tbody tr:hover {
+  background: rgba(15, 118, 110, 0.04);
+}
+
+.ticket-link {
+  display: inline-grid;
+  gap: 4px;
+}
+
+.ticket-link strong {
+  color: var(--ink);
+}
+
+.empty-state {
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(24, 32, 51, 0.04);
+}
+
+.page-title {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+}
+
+.page-lead {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.loading-skeleton {
+  height: 110px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, rgba(24, 32, 51, 0.08), rgba(24, 32, 51, 0.12), rgba(24, 32, 51, 0.08));
+}
+
+.detail-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.detail-copy {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.preview-box {
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 118, 110, 0.12);
+  background: rgba(215, 241, 235, 0.55);
+}
+
+.preview-box h3 {
+  margin: 0 0 12px;
+}
+
+.error-box {
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(185, 28, 28, 0.1);
+  color: var(--high);
+}
+
+@media (max-width: 980px) {
+  .dashboard-grid,
+  .compose-grid,
+  .stats-grid,
+  .route-grid,
+  .filters-grid,
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}

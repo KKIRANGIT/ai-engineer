@@ -663,21 +663,47 @@ Completed:
 - `roadmap/phase-3-full-stack-ai-product-engineering/README.md`
 - Week 19 through Week 28 READMEs
 
-### 25. Phase 4 planning layer expanded
+### 25. Phase 3 Week 19 hands-on workspace created
+
+Completed:
+
+- React fundamentals exercises for components, state, forms, and effects
+- support workbench React dashboard project
+- helper tests for filtering, validation, stats, activity feeds, and selection logic
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-3-full-stack-ai-product-engineering/week-19-react-fundamentals/`
+
+### 26. Phase 3 Week 20 hands-on workspace created
+
+Completed:
+
+- Next.js App Router exercises for route structure, boundaries, route handlers, search params, and streaming
+- support ops portal Next.js project with layouts, pages, dynamic routes, route handlers, and a streamed dashboard section
+- helper tests for filtering, stats, route-facing data logic, and intake preview behavior
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-3-full-stack-ai-product-engineering/week-20-nextjs-app-router/`
+
+### 27. Phase 4 planning layer expanded
 
 Completed:
 
 - `roadmap/phase-4-build-3-real-products/README.md`
 - product-track READMEs for Weeks 29 through 38
 
-### 26. Phase 5 planning layer expanded
+### 28. Phase 5 planning layer expanded
 
 Completed:
 
 - `roadmap/phase-5-career-monetization-and-positioning/README.md`
 - Week 39 through Week 48 READMEs
 
-### 27. `90-reference` expanded
+### 29. `90-reference` expanded
 
 Completed:
 
@@ -687,7 +713,7 @@ Status:
 
 - now functions as a full companion operating handbook rather than a short appendix
 
-### 28. Week 01 Python guide deepened further
+### 30. Week 01 Python guide deepened further
 
 Completed:
 
@@ -697,7 +723,7 @@ Status:
 
 - strengthened with stricter learning boundaries, no-doubt study order, stronger source strategy, and better official references
 
-### 29. Repository entry README and course agent created
+### 31. Repository entry README and course agent created
 
 Completed:
 
@@ -709,7 +735,7 @@ Status:
 
 - repository now has a clear entry point and a reusable workspace-specific learning agent prompt
 
-### 30. Workspace prompt guide created
+### 32. Workspace prompt guide created
 
 Completed:
 
@@ -719,14 +745,174 @@ Status:
 
 - repository now includes reusable prompt templates for learning, code explanation, debugging, repository updates, and documentation-sync-aware agent usage
 
+### 33. Phase 3 Week 21 hands-on workspace created
+
+Completed:
+
+- auth and access-control exercises
+- support ops access lab with sessions, policy helpers, and mutation checks
+- tests for multi-user visibility and protected behavior
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-3-full-stack-ai-product-engineering/week-21-auth-user-data-and-access-control/`
+
+### 34. Phase 3 Week 22 hands-on workspace created
+
+Completed:
+
+- billing and entitlement exercises
+- support ops billing lab with checkout payloads, webhook state, and plan gating
+- tests for lifecycle transitions and feature access
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-3-full-stack-ai-product-engineering/week-22-payments-and-billing/`
+
+### 35. Phase 3 Week 23 hands-on workspace created
+
+Completed:
+
+- hierarchy, state-feedback, and onboarding exercises
+- support ops polish kit with preview UI, guidance copy, and state helpers
+- tests for UI messaging and state interpretation
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-3-full-stack-ai-product-engineering/week-23-ui-ux-and-product-polish/`
+
+### 36. Phase 3 Week 24 hands-on workspace created
+
+Completed:
+
+- durable-execution and idempotency exercises
+- support ops job runner with workflow states, duplicate protection, and completion email logic
+- tests for background processing behavior
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-3-full-stack-ai-product-engineering/week-24-email-background-jobs-and-durable-execution/`
+
+### 37. Phase 3 Week 25 hands-on workspace created
+
+Completed:
+
+- observability, analytics, and feedback-loop exercises
+- support ops observability lab with event taxonomy, funnel summaries, and error grouping
+- tests for product visibility helpers
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-3-full-stack-ai-product-engineering/week-25-monitoring-analytics-and-feedback-loops/`
+
+### 38. Phase 3 Week 26 hands-on workspace created
+
+Completed:
+
+- streaming, usage-ledger, and quota-design exercises
+- support ops streaming lab with async chunks, usage summaries, quota checks, and cost estimation
+- tests for streamed output and accounting behavior
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-3-full-stack-ai-product-engineering/week-26-streaming-usage-tracking-and-cost-accounting/`
+
+### 39. Phase 3 Week 27 hands-on workspace created
+
+Completed:
+
+- system-boundary, tenant-model, and rollout exercises
+- support ops architecture kit with overview, risk, rollout, and cache documents
+- tests for architecture helper logic
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-3-full-stack-ai-product-engineering/week-27-saas-architecture-and-scaling-patterns/`
+
+### 40. Phase 3 Week 28 hands-on workspace created
+
+Completed:
+
+- milestone brief, integration, and launch-readiness exercises
+- support ops SaaS milestone blueprint with auth, billing, jobs, usage, and launch docs
+- tests for milestone capability coverage
+- notes and supporting documentation
+
+Location:
+
+- `roadmap/phase-3-full-stack-ai-product-engineering/week-28-full-stack-ai-saas-milestone/`
+
+### 41. Phase 4 Product A hands-on workspace created
+
+Completed:
+
+- week-structured exercises for scope, retrieval, quality, and feedback
+- policy evidence assistant project with document ingestion, metadata-aware retrieval, grounded answers, citations, query logging, and evals
+- representative sample policy documents and grounded question set
+- notes and supporting documentation for debugging, tester interviews, and case-study preparation
+
+Location:
+
+- `roadmap/phase-4-build-3-real-products/weeks-29-32-product-a-document-intelligence/`
+
+### 42. Phase 4 Product B hands-on workspace created
+
+Completed:
+
+- week-structured exercises for workflow mapping, structured outputs, and ROI comparison
+- lead outreach workflow copilot project with deterministic tools, structured lead briefs, review gating, audit events, and ROI helpers
+- representative workflow tasks and before-vs-after notes
+- notes and supporting documentation for review boundaries, ROI framing, and case-study preparation
+
+Location:
+
+- `roadmap/phase-4-build-3-real-products/weeks-33-35-product-b-ai-workflow-or-outreach-product/`
+
+### 43. Phase 4 Product C hands-on workspace created
+
+Completed:
+
+- week-structured exercises for niche scoring, minimum-credible workflow definition, and strategic review
+- IELTS writing feedback coach project with rubric-shaped scoring, structured feedback, study-plan guidance, and cost modeling
+- representative student submissions plus pricing and next-step roadmap notes
+- notes and supporting documentation for niche selection, validation, and strategic review
+
+Location:
+
+- `roadmap/phase-4-build-3-real-products/weeks-36-38-product-c-niche-product-of-your-own/`
+
+### 44. Phase 5 Week 39 hands-on workspace created
+
+Completed:
+
+- positioning, project-selection, and profile-consistency exercises
+- positioning workbench project with project-ranking helpers, profile-audit logic, and reusable profile templates
+- sample positioning and project inventory data
+- notes and supporting documentation for profile cleanup and positioning review
+
+Location:
+
+- `roadmap/phase-5-career-monetization-and-positioning/week-39-positioning-and-profile-cleanup/`
+
 ## Current Completion State
 
 At this point:
 
 - all major phase planning layers are expanded
 - all overview and reference layers are expanded
-- Week 01, Week 02, Week 03, Week 04, Week 05, Week 06, Week 07, Week 08, Week 09, Week 10, Week 11, Week 12, Week 13, Week 14, Week 15, Week 16, Week 17, and Week 18 have both planning and implementation artifacts
-- later weeks mostly have planning layers but not yet full source-code workspaces
+- Week 01, Week 02, Week 03, Week 04, Week 05, Week 06, Week 07, Week 08, Week 09, Week 10, Week 11, Week 12, Week 13, Week 14, Week 15, Week 16, Week 17, Week 18, Week 19, Week 20, Week 21, Week 22, Week 23, Week 24, Week 25, Week 26, Week 27, and Week 28 have both planning and implementation artifacts
+- Phase 4 Product A now has both planning and implementation artifacts
+- Phase 4 Product B now has both planning and implementation artifacts
+- Phase 4 Product C now has both planning and implementation artifacts
+- Phase 5 Week 39 now has both planning and implementation artifacts
+- later Phase 5 weeks mostly retain planning layers while implementation depth is still being built
 
 This means the roadmap is structurally strong, but implementation depth is still uneven across weeks.
 
@@ -738,7 +924,7 @@ The highest-value next steps usually fall into one of these categories:
 
 Examples:
 
-- later Phase 2 and Phase 3 project folders
+- remaining Phase 5 positioning, asset, outreach, and interview workspaces
 
 ### 2. Improve top-level navigation
 

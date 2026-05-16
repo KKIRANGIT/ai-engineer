@@ -1,0 +1,20 @@
+[
+  {
+    "taskId": "lead-001",
+    "company": "Northwind Health",
+    "industry": "health-tech",
+    "employeeCount": 220,
+    "painSignal": "support queue delays",
+    "contactName": "Maya Shah",
+    "contactRole": "Head of Support"
+  },
+  {
+    "taskId": "lead-002",
+    "company": "Granite Ledger",
+    "industry": "fintech",
+    "employeeCount": 75,
+    "painSignal": "manual onboarding follow-up",
+    "contactName": "Alex Romero",
+    "contactRole": "Revenue Operations Manager"
+  }
+]

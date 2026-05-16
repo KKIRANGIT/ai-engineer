@@ -144,7 +144,21 @@ At the current stage of the repository:
 - Phase 2 Week 16 has a full hands-on workspace
 - Phase 2 Week 17 has a full hands-on workspace
 - Phase 2 Week 18 has a full hands-on workspace
-- later weeks mostly have detailed planning but not yet full implementation workspaces
+- Phase 3 Week 19 has a full hands-on workspace
+- Phase 3 Week 20 has a full hands-on workspace
+- Phase 3 Week 21 has a full hands-on workspace
+- Phase 3 Week 22 has a full hands-on workspace
+- Phase 3 Week 23 has a full hands-on workspace
+- Phase 3 Week 24 has a full hands-on workspace
+- Phase 3 Week 25 has a full hands-on workspace
+- Phase 3 Week 26 has a full hands-on workspace
+- Phase 3 Week 27 has a full hands-on workspace
+- Phase 3 Week 28 has a full hands-on workspace
+- Phase 4 Product A has a full hands-on workspace
+- Phase 4 Product B has a full hands-on workspace
+- Phase 4 Product C has a full hands-on workspace
+- Phase 5 Week 39 has a full hands-on workspace
+- later Phase 5 weeks mostly have detailed planning but not yet full implementation workspaces
 
 This means the roadmap is structurally mature, but implementation depth is still growing week by week.
 
@@ -426,6 +440,188 @@ Includes:
 - tests for retrieval, integrated ticket analysis, and the milestone eval suite
 - notes for architecture framing, scope discipline, and portfolio storytelling
 
+### Week 19
+
+Location:
+
+- [week-19-react-fundamentals](roadmap/phase-3-full-stack-ai-product-engineering/week-19-react-fundamentals/)
+
+Includes:
+
+- React fundamentals exercises for components, state, forms, and effects
+- a support-workbench dashboard project
+- helper tests for filtering, stats, validation, and selection logic
+- notes for state ownership, review questions, and weekly execution
+
+### Week 20
+
+Location:
+
+- [week-20-nextjs-app-router](roadmap/phase-3-full-stack-ai-product-engineering/week-20-nextjs-app-router/)
+
+Includes:
+
+- Next.js App Router exercises for route structure, boundaries, route handlers, and streaming
+- a support-ops portal project with layouts, pages, dynamic routes, and API route handlers
+- helper tests for filtering, stats, route-facing data logic, and intake preview behavior
+- notes for boundary review, deployment thinking, and weekly execution
+
+### Week 21
+
+Location:
+
+- [week-21-auth-user-data-and-access-control](roadmap/phase-3-full-stack-ai-product-engineering/week-21-auth-user-data-and-access-control/)
+
+Includes:
+
+- auth and access-control exercises
+- a support-ops access lab with session, policy, and mutation rules
+- multi-user tests for workspace visibility and admin behavior
+- notes for access modeling and threat review
+
+### Week 22
+
+Location:
+
+- [week-22-payments-and-billing](roadmap/phase-3-full-stack-ai-product-engineering/week-22-payments-and-billing/)
+
+Includes:
+
+- billing and entitlement exercises
+- a support-ops billing lab with checkout payloads, webhook state, and plan gating
+- tests for subscription transitions and feature access
+- notes for billing-state mapping and plan review
+
+### Week 23
+
+Location:
+
+- [week-23-ui-ux-and-product-polish](roadmap/phase-3-full-stack-ai-product-engineering/week-23-ui-ux-and-product-polish/)
+
+Includes:
+
+- hierarchy, state-feedback, and onboarding exercises
+- a support-ops polish kit with a preview page and UX copy helpers
+- tests for empty-state, latency, and trust messaging
+- notes for product audit and before-after review
+
+### Week 24
+
+Location:
+
+- [week-24-email-background-jobs-and-durable-execution](roadmap/phase-3-full-stack-ai-product-engineering/week-24-email-background-jobs-and-durable-execution/)
+
+Includes:
+
+- durable-execution and idempotency exercises
+- a support-ops job runner with workflow states and completion email logic
+- tests for queued, completed, and duplicate-attempt behavior
+- notes for workflow-state design and retry review
+
+### Week 25
+
+Location:
+
+- [week-25-monitoring-analytics-and-feedback-loops](roadmap/phase-3-full-stack-ai-product-engineering/week-25-monitoring-analytics-and-feedback-loops/)
+
+Includes:
+
+- observability, analytics, and feedback-loop exercises
+- a support-ops observability lab with event taxonomy and funnel helpers
+- tests for event recording, error grouping, and product observations
+- notes for event design and funnel review
+
+### Week 26
+
+Location:
+
+- [week-26-streaming-usage-tracking-and-cost-accounting](roadmap/phase-3-full-stack-ai-product-engineering/week-26-streaming-usage-tracking-and-cost-accounting/)
+
+Includes:
+
+- streaming, usage-ledger, and quota-design exercises
+- a support-ops streaming lab with async chunks, ledgers, and cost helpers
+- tests for streaming behavior, per-user summaries, and quota enforcement
+- notes for usage accounting and cost review
+
+### Week 27
+
+Location:
+
+- [week-27-saas-architecture-and-scaling-patterns](roadmap/phase-3-full-stack-ai-product-engineering/week-27-saas-architecture-and-scaling-patterns/)
+
+Includes:
+
+- architecture, tenant-model, and rollout exercises
+- a support-ops architecture kit with system, risk, and rollout documents
+- tests for cache-policy and feature-flag helpers
+- notes for architecture review and bottleneck analysis
+
+### Week 28
+
+Location:
+
+- [week-28-full-stack-ai-saas-milestone](roadmap/phase-3-full-stack-ai-product-engineering/week-28-full-stack-ai-saas-milestone/)
+
+Includes:
+
+- milestone brief, integration, and launch-readiness exercises
+- a support-ops SaaS milestone blueprint with integrated domain modules
+- tests for milestone capability coverage
+- notes for milestone review and case-study framing
+
+### Phase 4 Product A
+
+Location:
+
+- [weeks-29-32-product-a-document-intelligence](roadmap/phase-4-build-3-real-products/weeks-29-32-product-a-document-intelligence/)
+
+Includes:
+
+- week-structured exercises for scope, retrieval, quality, and feedback work
+- a policy-evidence assistant with document ingestion, chunking, retrieval, grounded answers, and citations
+- representative sample documents, grounded eval questions, and query-log helpers
+- notes for retrieval debugging, tester interviews, and case-study framing
+
+### Phase 4 Product B
+
+Location:
+
+- [weeks-33-35-product-b-ai-workflow-or-outreach-product](roadmap/phase-4-build-3-real-products/weeks-33-35-product-b-ai-workflow-or-outreach-product/)
+
+Includes:
+
+- week-structured exercises for workflow mapping, workflow-engine design, and ROI comparison
+- a lead-outreach workflow copilot with deterministic tools, structured lead briefs, review gating, and audit events
+- representative workflow tasks plus before-vs-after ROI notes
+- notes for review boundaries, ROI framing, and case-study preparation
+
+### Phase 4 Product C
+
+Location:
+
+- [weeks-36-38-product-c-niche-product-of-your-own](roadmap/phase-4-build-3-real-products/weeks-36-38-product-c-niche-product-of-your-own/)
+
+Includes:
+
+- week-structured exercises for niche scoring, minimum-credible workflow definition, and strategic review
+- an IELTS writing feedback coach with rubric-shaped scoring, structured feedback, study-plan guidance, and cost helpers
+- representative student submissions plus pricing and next-step roadmap notes
+- notes for niche selection, validation interviews, and go-or-stop strategic review
+
+### Week 39
+
+Location:
+
+- [week-39-positioning-and-profile-cleanup](roadmap/phase-5-career-monetization-and-positioning/week-39-positioning-and-profile-cleanup/)
+
+Includes:
+
+- positioning, project-selection, and profile-consistency exercises
+- a positioning workbench with project-ranking helpers, profile-audit logic, and reusable profile templates
+- sample positioning and project data for ranking and consistency review
+- notes for headline writing, project ranking, and profile cleanup
+
 ## Repository Standards
 
 This workspace follows a few important rules:
@@ -503,7 +699,7 @@ Testing support exists for Week 02, but `pytest` is not currently installed in t
 
 The highest-value next repository upgrades are:
 
-- continue building the remaining Phase 2 hands-on workspaces from Week 13 onward
+- continue building the remaining Phase 5 workspaces starting with Week 40 asset packs
 - add a progress tracker across all 48 weeks
 - add review templates and project case-study templates
 - keep the top-level roadmap index synchronized with detailed content

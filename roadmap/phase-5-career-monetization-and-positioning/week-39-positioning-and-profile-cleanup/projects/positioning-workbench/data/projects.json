@@ -1,0 +1,30 @@
+[
+  {
+    "name": "policy-evidence-assistant",
+    "relevance": 5,
+    "proof": 5,
+    "differentiation": 4,
+    "valueClarity": 5
+  },
+  {
+    "name": "lead-outreach-workflow-copilot",
+    "relevance": 5,
+    "proof": 4,
+    "differentiation": 4,
+    "valueClarity": 4
+  },
+  {
+    "name": "ielts-writing-feedback-coach",
+    "relevance": 4,
+    "proof": 4,
+    "differentiation": 5,
+    "valueClarity": 4
+  },
+  {
+    "name": "cli-calculator",
+    "relevance": 1,
+    "proof": 2,
+    "differentiation": 1,
+    "valueClarity": 1
+  }
+]

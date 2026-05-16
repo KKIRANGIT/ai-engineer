@@ -40,8 +40,22 @@ Current implemented study workspaces:
 - Phase 2 Week 16
 - Phase 2 Week 17
 - Phase 2 Week 18
+- Phase 3 Week 19
+- Phase 3 Week 20
+- Phase 3 Week 21
+- Phase 3 Week 22
+- Phase 3 Week 23
+- Phase 3 Week 24
+- Phase 3 Week 25
+- Phase 3 Week 26
+- Phase 3 Week 27
+- Phase 3 Week 28
+- Phase 4 Product A
+- Phase 4 Product B
+- Phase 4 Product C
+- Phase 5 Week 39
 
-Most later weeks currently remain detailed planning modules rather than full code workspaces.
+Phase 3 is fully backed by hands-on study workspaces, Phase 4 is fully backed by hands-on product workspaces, and Phase 5 has now started with a concrete Week 39 implementation workspace.
 
 ## Shared References
 

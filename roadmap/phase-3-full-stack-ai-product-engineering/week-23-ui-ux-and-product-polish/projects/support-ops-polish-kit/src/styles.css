@@ -1,0 +1,88 @@
+:root {
+  color-scheme: light;
+  --bg: #f5efe4;
+  --panel: #fffaf2;
+  --ink: #1f2933;
+  --muted: #596779;
+  --line: #d7ccb8;
+  --accent: #b84f2a;
+  --accent-soft: #f6dccf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at top left, #fff4d8 0, transparent 32%),
+    linear-gradient(180deg, #f8f1e6 0%, var(--bg) 100%);
+  color: var(--ink);
+}
+
+.shell {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 48px 20px 72px;
+}
+
+.hero {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.lede {
+  max-width: 60ch;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+  box-shadow: 0 10px 30px rgba(45, 34, 20, 0.08);
+}
+
+.accent {
+  background: linear-gradient(180deg, var(--accent-soft), #fff7f2);
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  padding: 10px 16px;
+  font: inherit;
+}
+
+.progress {
+  margin-top: 14px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(184, 79, 42, 0.14);
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  width: 58%;
+  height: 100%;
+  background: linear-gradient(90deg, #e08a5b 0%, var(--accent) 100%);
+}

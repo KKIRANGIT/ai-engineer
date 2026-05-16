@@ -4,207 +4,316 @@ Back to [Phase 3](../README.md)
 
 ## Goal
 
-Learn the default modern architecture for AI product web apps using Next.js App Router, server/client boundaries, route handlers, and streaming-friendly full-stack patterns.
+Learn the default modern architecture for AI product web apps using Next.js App Router, server/client boundaries, layouts, route handlers, and streaming-friendly rendering patterns.
+
+This week is about product structure, not just framework syntax.
 
 ## Why This Week Matters
 
-If React teaches you component thinking, Next.js teaches you product-system thinking for the web.
+If Week 19 taught you component thinking, Week 20 teaches you application-boundary thinking.
 
-This week matters because product engineering decisions now include:
+This week matters because product engineering now includes questions such as:
 
-- what runs on the server
-- what runs on the client
-- what should be streamed
-- where data fetching belongs
+- what should render on the server
+- what actually needs to run in the browser
+- where URL state should live
 - how route handlers fit the app
+- how loading and streaming behavior affect UX
+- where sensitive logic should stay server-side
 
 Weak understanding here leads to:
 
-- unnecessary client complexity
-- poor data-loading patterns
-- confused rendering boundaries
-- harder deployment and performance tuning
+- too much client-side code
+- confused data-loading patterns
+- accidental exposure of server concerns to the browser
+- route-handler sprawl
+- poor streaming and loading behavior
+
+Week 20 should give you a working mental model for building a real product shell in modern Next.js.
+
+## What This Week Is Actually Training
+
+Week 20 is training six deeper skills:
+
+1. thinking in route segments instead of single-page trees
+2. distinguishing server composition from client interactivity
+3. using layouts and nested routes to shape product structure
+4. using route handlers as application endpoints without overcomplicating the architecture
+5. using URL search params as product state where appropriate
+6. designing loading and streaming behavior intentionally
+
+The real outcome is not "I made a Next.js app." The real outcome is "I understand how a modern product should be structured in App Router."
+
+## Scope Boundary For This Week
+
+This week focuses on:
+
+- App Router structure
+- layouts and nested routes
+- server and client component boundaries
+- route handlers
+- URL-based filtering state
+- loading and streaming-friendly UI
+- server-safe data and request logic
+
+This week does not require:
+
+- authentication providers
+- database integration
+- production billing
+- advanced cache invalidation
+- edge runtime specialization
+- full deployment automation
+
+The correct goal is not to cover every Next.js feature. The correct goal is to understand the App Router model well enough that later SaaS features have a solid home.
 
 ## Week 20 Outcomes
 
 By the end of this week, you should be able to:
 
-- explain the App Router mental model
-- distinguish server and client components
-- use route handlers for backend logic where appropriate
-- understand rendering and caching decisions at a practical level
-- stream a useful AI interaction or loading path
-- deploy a small Next.js app cleanly
+- explain the App Router mental model clearly
+- distinguish server and client components with confidence
+- use layouts, pages, and dynamic segments correctly
+- build a route handler that performs server-side request logic
+- use URL search params as a clean source of truth for filters
+- design one streaming-friendly path without confusing the user
 
-## What To Learn
+## Best Source Strategy For This Week
 
-## 1. App Router mental model
+Use sources in this order:
 
-You should understand:
+1. the local Week 20 workspace
+2. official Next.js App Router documentation
+3. your own boundary notes on server vs client decisions
 
-- file-system routing
-- layouts
-- pages
-- route handlers
-- server-first architecture
+Do not learn this week by mixing old Pages Router tutorials with modern App Router docs. That creates avoidable confusion.
 
-Important mindset:
+## Recommended Official References
 
-Do not import old Pages Router assumptions into App Router design.
+Use these official sources as the primary external reference stack:
 
-## 2. Server vs client components
+- Next.js App Router overview: <https://nextjs.org/docs/app>
+- Installation and project structure: <https://nextjs.org/docs/app/getting-started/installation>
+- Layouts and pages: <https://nextjs.org/docs/app/getting-started/layouts-and-pages>
+- Linking and navigating: <https://nextjs.org/docs/app/getting-started/linking-and-navigating>
+- Server and Client Components: <https://nextjs.org/docs/app/getting-started/server-and-client-components>
+- Route handlers: <https://nextjs.org/docs/app/getting-started/route-handlers>
+- Fetching data: <https://nextjs.org/docs/app/getting-started/fetching-data>
+- `loading.js` and streaming: <https://nextjs.org/docs/app/getting-started/linking-and-navigating#streaming>
+- `useSearchParams`: <https://nextjs.org/docs/app/api-reference/functions/use-search-params>
+- `notFound`: <https://nextjs.org/docs/app/api-reference/functions/not-found>
+- Next.js 16 release: <https://nextjs.org/blog/next-16>
 
-This is one of the central concepts of the week.
+These were chosen because this week depends on current App Router behavior, not older framework assumptions.
 
-Learn:
+## Recommended Project Direction For This Workspace
 
-- server components for data and non-interactive composition
-- client components for interactivity, local state, and browser APIs
-- how the boundary affects bundle size and architecture
+This workspace uses one realistic but manageable product shell:
 
-Good question to ask:
+- a support operations portal built with App Router
 
-- does this logic truly need to run in the browser
+Why this direction was chosen:
 
-## 3. Data flow and route handlers
+- it naturally benefits from nested routes
+- it needs both server-rendered and client-interactive sections
+- it gives route handlers a clear purpose
+- it supports URL-based filters well
+- it provides a realistic place to demonstrate streaming-friendly UI
 
-You should understand when to:
+## Project Capabilities This Week Includes
 
-- fetch on the server
-- use route handlers
-- separate product routes from standalone backend services
+The Week 20 project includes:
 
-Important rule:
+- a shared layout and navigation shell
+- a server-rendered dashboard page
+- a streamed server insight panel
+- a searchable tickets page that uses URL search params
+- a dynamic ticket detail route
+- route handlers for listing tickets, looking up ticket details, and previewing intake triage
+- a client-side intake form that calls a route handler
+- global loading and not-found experiences
+- pure utility modules with Node-based tests
 
-Keep the architecture as simple as the product allows.
+The project stays dependency-light and data-local on purpose so the App Router concepts stay visible.
 
-## 4. Rendering, caching, and freshness
+## Recommended Build Sequence
 
-At a practical level, learn:
-
-- static vs dynamic behavior
-- where caching helps
-- when AI-backed routes should avoid stale assumptions
-
-You do not need to master every caching edge case this week, but you do need a working model of why rendering strategy matters.
-
-## 5. Streaming patterns
-
-AI product UX often benefits from:
-
-- streamed text output
-- progressive UI states
-- partial rendering
-
-Next.js is a strong environment for learning how streamed experiences affect the app shell.
-
-## 6. Deployment model
-
-You should understand:
-
-- build step
-- environment variables
-- production route behavior
-- why some code belongs server-side only
-
-## Best Learning Sequence For This Week
-
-1. App Router structure
-2. server/client boundary
-3. route handlers
-4. rendering and caching
-5. streaming interaction
-6. deployment
+1. map the route structure
+2. define the server/client boundary for each feature
+3. build the shared layout and static navigation
+4. add the tickets route with URL-driven filtering
+5. add dynamic ticket detail routing
+6. add route handlers for data and preview logic
+7. add one streamed or delayed server-rendered insight panel
 
 ## Recommended Daily Breakdown
 
-### Day 1: App Router basics
+### Day 1: App Router structure
 
 Focus:
 
-- layouts
+- route segments
 - pages
-- route structure
+- layouts
+- nested navigation
 
-### Day 2: Server and client components
-
-Focus:
-
-- interaction boundaries
-- state boundaries
-
-### Day 3: Route handlers and data flow
+### Day 2: Server and client boundaries
 
 Focus:
 
-- internal API path
-- request-response design inside the app
+- what stays server-side
+- what must become interactive
+- why client components should stay narrow
 
-### Day 4: Streaming pattern
-
-Focus:
-
-- loading and partial output
-- AI interaction shell
-
-### Day 5: Rendering and caching decisions
+### Day 3: URL state and route handlers
 
 Focus:
 
-- freshness vs performance
+- search params
+- route handlers
+- request/response boundaries
 
-### Day 6: Build the full app shell
+### Day 4: Dynamic routes and product detail pages
 
-### Day 7: Deploy and document boundaries
+Focus:
 
-## Build Plan
+- `[ticketId]`
+- not-found behavior
+- route-specific data lookup
 
-Build one small Next.js app with:
+### Day 5: Loading and streaming behavior
 
-- layout shell
-- server-rendered sections
-- at least one client-interactive section
-- one route handler
-- one AI-related or streamed interaction path
+Focus:
+
+- loading UI
+- suspense boundaries
+- progressive information delivery
+
+### Day 6: Full app assembly
+
+Focus:
+
+- project structure
+- UI shell consistency
+- data and route flow
+
+### Day 7: Boundary review and documentation
+
+Focus:
+
+- server/client decisions
+- route-handler rationale
+- what should change in Week 21 when auth arrives
+
+## Hands-On Workspace Structure
+
+```text
+week-20-nextjs-app-router/
+|-- README.md
+|-- exercises/
+|   |-- README.md
+|   |-- app-router-structure/
+|   |-- route-handlers-and-data-flow/
+|   |-- server-client-boundaries/
+|   `-- streaming-and-rendering/
+|-- notes/
+|   |-- 01-week-plan.md
+|   |-- 02-boundary-review-guide.md
+|   `-- 03-deployment-and-config-notes.md
+`-- projects/
+    `-- support-ops-portal-next/
+```
+
+## Exercises
+
+The exercises isolate the parts of Next.js that usually get blurred together by beginners.
+
+You will practice:
+
+- mapping route segments
+- choosing server vs client components
+- defining route-handler contracts
+- using search params as product state
+- understanding loading and streaming behavior
+
+Start here:
+
+- [Exercises README](exercises/README.md)
+
+## Main Project
+
+Project:
+
+- [support-ops-portal-next](projects/support-ops-portal-next/README.md)
+
+This project is a small support operations portal built with App Router. It teaches:
+
+- layouts and page structure
+- server-first rendering
+- narrow client islands
+- dynamic routes
+- route handlers
+- loading and streamed insight behavior
+
+It is intentionally realistic enough to feel like product work, but small enough that the framework decisions stay understandable.
 
 ## Deliverables
 
-- deployed Next.js app
-- one note explaining server vs client boundaries
-- one note explaining route-handler usage
+By the end of this week, you should have:
+
+- one complete Next.js App Router workspace
+- one project with layouts, routes, and route handlers
+- one note explaining server/client boundary decisions
+- one note explaining URL state and route-handler usage
+- one small set of tested pure helpers
 
 ## Exit Criteria
 
-- you can explain App Router architecture clearly
-- you know what should stay server-side vs client-side
-- you can add a route handler without confusion
-- you can build one streaming-friendly interaction path
+You are ready to move to Week 21 only if:
+
+- you can explain the difference between a page, layout, and route handler
+- you can justify why a component is server-side or client-side
+- you can explain how filters flow through URL search params
+- you can describe why sensitive request logic stays in route handlers
+- you can explain how loading and streaming improve product behavior
+- you can navigate the project structure without confusion
 
 ## Common Mistakes To Avoid
 
-- marking too much of the tree as client components
-- treating route handlers as a substitute for architectural thinking
-- importing server-only assumptions into client code
-- building streaming UX without clear loading states
+- turning large parts of the tree into client components by default
+- treating route handlers as a replacement for all architecture decisions
+- storing product state in local client state when the URL should own it
+- mixing server-only logic into client components
+- using streaming and loading UI without a clear user-facing purpose
 
 ## Expert Notes That Matter Early
 
-### Server-first thinking reduces complexity
+### Server-first thinking reduces frontend complexity
 
-Not every piece of app logic needs to live in the browser.
+If data lookup and composition can stay on the server, keep them there.
 
-### Boundaries shape maintainability
+### Client components should be narrow and intentional
 
-Clear server/client boundaries make AI product code easier to reason about.
+A client component is not a badge of sophistication. It is a cost. Use it only when the browser truly needs to own the interaction.
 
-### Streaming is a product behavior, not just a transport feature
+### URL state is product state
 
-Users feel the difference when information arrives progressively and clearly.
+Filters, tabs, and views often belong in the URL because they should be shareable, reload-safe, and server-readable.
+
+### Route handlers should have a job
+
+Use them when the app needs request/response logic. Do not create them just because they exist.
+
+### Loading behavior is part of the product
+
+App Router is not only about routes. It is also about how the product feels while data is arriving.
 
 ## Final Standard For This Week
 
-The correct outcome of Week 20 is not "I made a Next.js app."
+The correct outcome of Week 20 is not:
+
+"I know the App Router folder names."
 
 The correct outcome is:
 
-"I understand how to structure a modern Next.js product so that rendering, routing, streaming, and server/client boundaries support a real AI application."
+"I can structure a modern Next.js product so that routing, rendering, request handling, and server/client boundaries support a real application cleanly."

@@ -6,6 +6,8 @@ Back to [Phase 3](../README.md)
 
 Turn your application from a single-user prototype into a real multi-user product with meaningful account boundaries and user-specific data ownership.
 
+This week is about trust boundaries, not only login screens.
+
 ## Why This Week Matters
 
 Many portfolio apps are secretly single-user demos wearing a login screen. This week fixes that.
@@ -15,140 +17,207 @@ A real product needs:
 - authentication
 - session handling
 - user-specific data boundaries
-- access checks
+- route and action protection
 - clear ownership of created content
 
-This week is important because AI products often handle:
+AI products amplify the importance of this because they often store:
 
 - private documents
 - usage history
-- billing state
 - generated artifacts
+- billing state
+- operator activity
 
-Weak access control makes the product untrustworthy fast.
+Weak access control makes the whole product untrustworthy fast.
+
+## What This Week Is Actually Training
+
+Week 21 is training five deeper skills:
+
+1. separating authentication from authorization
+2. designing a user or workspace ownership model intentionally
+3. scoping reads and writes to the correct account boundary
+4. protecting routes and server-side actions together
+5. testing multi-user behavior instead of trusting visual hiding
+
+The real outcome is not "I added auth." The real outcome is "I can enforce who can access what and explain why."
+
+## Scope Boundary For This Week
+
+This week focuses on:
+
+- identity terminology
+- sessions and request context
+- protected routes and actions
+- per-user and per-workspace ownership rules
+- data scoping
+- threat review for common access mistakes
+
+This week does not require:
+
+- enterprise SSO
+- complex organization admin tooling
+- fine-grained attribute-based policy engines
+- production-ready secrets rotation
+
+The correct goal is to become reliable at multi-user fundamentals before the product adds billing, jobs, and usage accounting.
 
 ## Week 21 Outcomes
 
 By the end of this week, you should be able to:
 
-- implement a working auth flow
+- implement a working auth flow mentally and structurally
 - understand session and identity basics
-- attach app data to the correct user
+- attach app data to the correct user or workspace
 - protect routes and server actions appropriately
 - reason about access control beyond "user is logged in"
-- explain where row-level or record-level restrictions belong
+- explain where record-level restrictions belong
 
-## What To Learn
+## Best Source Strategy For This Week
 
-## 1. Identity, session, and authorization
+Use sources in this order:
 
-Distinguish clearly:
+1. the local Week 21 workspace
+2. official auth and platform documentation for the stack you use
+3. your own access-control model notes
 
-- authentication: who are you
-- authorization: what are you allowed to access
-- session: how does the system remember you across requests
+Do not learn this week from UI-only auth tutorials. They usually hide the actual authorization problem.
 
-Confusing these concepts causes weak product design.
+## Recommended Official References
 
-## 2. Auth flows
+Use these official sources as the primary external reference stack:
 
-You should understand:
+- Next.js authentication guide: <https://nextjs.org/docs/app/guides/authentication>
+- Supabase auth overview: <https://supabase.com/docs/guides/auth>
+- Clerk docs overview: <https://clerk.com/docs>
+- OWASP authorization cheat sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html>
 
-- email/password or passwordless basics
-- OAuth basics
-- login, signup, logout flow
-- protected routes or views
+These are enough to reinforce the concepts without creating source overload.
 
-The goal is not to implement every possible auth method. It is to understand the product and backend implications of identity.
+## Recommended Project Direction For This Workspace
 
-## 3. User data ownership
+This workspace uses one realistic but manageable product scenario:
 
-Every important record should have a clear ownership model:
+- a support operations access lab
 
-- who created it
-- who can read it
-- who can modify it
-- who can delete it
+Why this direction was chosen:
 
-For AI products, this usually includes:
+- it naturally exposes user vs workspace ownership
+- it creates both read and write permissions
+- it gives protected route rules a concrete purpose
+- it sets up later billing, usage, and admin concerns cleanly
 
-- uploaded documents
-- chat history
-- generated outputs
-- usage or billing records
+## Project Capabilities This Week Includes
 
-## 4. Organizations and team models
+The Week 21 project includes:
 
-You do not need full multi-org SaaS complexity this week, but you should understand the concept:
+- sample users, workspaces, and tickets
+- session creation and request-context helpers
+- route-level access checks
+- record-level ticket visibility rules
+- mutation permissions for assignees and admins
+- Node-based tests for multi-user behavior
 
-- some products are user-centric
-- some are workspace-centric
+The project stays provider-agnostic on purpose so the ownership logic remains visible.
 
-That architectural choice changes your data model later.
+## Recommended Build Sequence
 
-## 5. Access control enforcement
-
-You should think about protection at:
-
-- UI layer
-- route or API layer
-- data layer
-
-Important rule:
-
-Hiding a button is not access control.
-
-## Best Learning Sequence For This Week
-
-1. auth terminology
-2. login/signup flow
-3. protected routes
-4. user-owned data
-5. access enforcement
+1. define the identity and session vocabulary
+2. map who owns each record
+3. write route-level access rules
+4. write record-level visibility rules
+5. write mutation rules for admin vs member behavior
+6. test cross-user and cross-workspace scenarios
 
 ## Recommended Daily Breakdown
 
 ### Day 1: Identity and session model
 
-### Day 2: Auth integration
+### Day 2: Protected route thinking
 
-### Day 3: Protected UI and route boundaries
+### Day 3: User-owned data and scoping rules
 
-### Day 4: User-specific records
+### Day 4: Mutation permissions and threat review
 
-### Day 5: Access checks and threat review
+### Day 5: Multi-user tests
 
-### Day 6: Multi-user test scenarios
+### Day 6: Refactor the policy layer
 
-### Day 7: Documentation and edge-case review
+### Day 7: Document the access model
 
-## Build Plan
+## Hands-On Workspace Structure
 
-Add auth to an existing app and ensure:
+```text
+week-21-auth-user-data-and-access-control/
+|-- README.md
+|-- exercises/
+|   |-- README.md
+|   |-- access-review/
+|   |-- identity-and-sessions/
+|   `-- user-data-boundaries/
+|-- notes/
+|   |-- 01-week-plan.md
+|   |-- 02-access-control-model.md
+|   `-- 03-multi-user-test-scenarios.md
+`-- projects/
+    `-- support-ops-auth-lab/
+```
 
-- users can sign in and out
-- protected routes are enforced
-- each user sees only their own data
-- server-side checks back up UI-level behavior
+## Exercises
+
+The exercises isolate the decisions that developers usually blur together.
+
+You will practice:
+
+- separating identity, session, and authorization language
+- scoping data to the current user or workspace
+- reviewing a feature for hidden access-control failure paths
+
+Start here:
+
+- [Exercises README](exercises/README.md)
+
+## Main Project
+
+Project:
+
+- [support-ops-auth-lab](projects/support-ops-auth-lab/README.md)
+
+This project is a small access-control lab for a support product. It teaches:
+
+- session-aware request handling
+- workspace-scoped data visibility
+- mutation permissions by role
+- the difference between route access and data access
+
+It is intentionally small enough that the policy rules stay easy to inspect.
 
 ## Deliverables
 
-- working auth flow
-- per-user data isolation
-- one note documenting your access-control model
+By the end of this week, you should have:
+
+- one complete auth and access-control workspace
+- one tested project showing user and workspace scoping
+- one access-control model note
+- one multi-user test checklist you can reuse later
 
 ## Exit Criteria
 
-- different users cannot see each other's data
-- you can explain where auth ends and authorization begins
-- your app enforces access beyond visual hiding alone
+You are ready to move to Week 22 only if:
+
+- different users cannot see each other's restricted data
+- you can explain where authentication ends and authorization begins
+- you can justify your ownership model
+- server-side checks back up any UI-level protection
+- you have tested at least one cross-user failure scenario
 
 ## Common Mistakes To Avoid
 
 - treating login status as the only security concern
-- forgetting to scope queries to the current user
+- forgetting to scope queries to the current user or workspace
 - relying only on frontend checks
-- storing sensitive user context in the wrong place
+- hiding a button and calling it access control
+- mixing route guards and record permissions into one vague rule
 
 ## Expert Notes That Matter Early
 
@@ -160,9 +229,15 @@ Once billing, analytics, and AI usage exist, poor user modeling becomes expensiv
 
 It must be true across UI, backend, and data.
 
+### Multi-user tests reveal reality
+
+If your product has never been exercised with conflicting users, you do not yet know whether access is correct.
+
 ## Final Standard For This Week
 
-The correct outcome of Week 21 is not "I added auth."
+The correct outcome of Week 21 is not:
+
+"I added auth."
 
 The correct outcome is:
 

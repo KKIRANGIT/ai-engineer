@@ -1,0 +1,14 @@
+[
+  {
+    "query": "How often do managers need to review privileged access?",
+    "expectedDocumentId": "security-access-policy"
+  },
+  {
+    "query": "When do employees need itemized receipts for travel expenses?",
+    "expectedDocumentId": "travel-expense-policy"
+  },
+  {
+    "query": "Can a new employee work remotely in their first month?",
+    "expectedDocumentId": "hr-remote-work-policy"
+  }
+]
