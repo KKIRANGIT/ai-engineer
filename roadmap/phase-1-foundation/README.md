@@ -129,7 +129,7 @@ You should consider Phase 1 successful only if most of these are true:
 
 ## Current Workspace Status
 
-Phase 1 is partially implemented as a hands-on workspace and partially still in planning form.
+The Phase 1 planning layer is fully expanded.
 
 Current status:
 
@@ -142,7 +142,7 @@ Current status:
 - Week 07 includes JavaScript and TypeScript exercises, a Node backend project, tests, and notes
 - Week 08 includes milestone planning exercises, a full-stack study-session tracker, tests, and architecture notes
 
-This matters because you should treat Weeks 01-08 as active hands-on modules, not only as reading material.
+This means Phase 1 is now fully backed by hands-on implementation workspaces from Week 01 through Week 08.
 
 ## How To Use The Weekly Modules
 
