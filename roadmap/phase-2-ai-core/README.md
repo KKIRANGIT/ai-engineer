@@ -167,7 +167,7 @@ You should consider Phase 2 successful only if most of these are true:
 
 ## Current Workspace Status
 
-Phase 2 is now starting to move from planning-only material into hands-on implementation workspaces.
+The Phase 2 planning layer is fully expanded.
 
 Current status:
 
@@ -182,7 +182,7 @@ Current status:
 - Week 17 includes safety exercises, a guarded support assistant lab, tests, and notes
 - Week 18 includes capstone exercises, a support ops copilot milestone project, tests, and notes
 
-This matters because Weeks 09-18 should now be treated as active implementation modules, not only as reading material.
+This means Phase 2 is now fully backed by hands-on implementation workspaces from Week 09 through Week 18.
 
 ## How To Use The Weekly Modules
 

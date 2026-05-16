@@ -18,7 +18,7 @@ This folder contains the decomposed version of [ai-detailed-preparation-guide.md
 
 ## Current Hands-On Status
 
-The roadmap is fully expanded at the planning layer, but hands-on implementation depth is still being built week by week.
+The roadmap is fully expanded at the planning layer and now has hands-on implementation coverage across all five phases.
 
 Current implemented study workspaces:
 
@@ -54,6 +54,15 @@ Current implemented study workspaces:
 - Phase 4 Product B
 - Phase 4 Product C
 - Phase 5 Week 39
+- Phase 5 Week 40
+- Phase 5 Week 41
+- Phase 5 Week 42
+- Phase 5 Week 43
+- Phase 5 Week 44
+- Phase 5 Week 45
+- Phase 5 Week 46
+- Phase 5 Week 47
+- Phase 5 Week 48
 
 Phase 3 is fully backed by hands-on study workspaces, Phase 4 is fully backed by hands-on product workspaces, and Phase 5 is now fully backed by hands-on career-conversion workspaces from Week 39 through Week 48.
 
