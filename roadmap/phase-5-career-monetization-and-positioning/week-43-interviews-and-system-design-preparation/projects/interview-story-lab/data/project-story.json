@@ -1,0 +1,8 @@
+{
+  "name": "policy-evidence-assistant",
+  "user": "compliance and operations teams",
+  "problem": "slow policy lookup with weak answer trust",
+  "architecture": "ingestion, chunking, retrieval, grounded answer assembly, and query logging",
+  "tradeoff": "favored grounded answers with citations over broad but unverifiable generation",
+  "result": "made policy review faster while keeping trust visible"
+}

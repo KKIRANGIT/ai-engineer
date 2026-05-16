@@ -1,0 +1,14 @@
+{
+  "product": "policy-evidence-assistant",
+  "readinessChecks": {
+    "promiseClarity": true,
+    "onboardingClarity": true,
+    "errorHandlingVisible": false,
+    "firstValueMomentReachable": true
+  },
+  "channels": [
+    { "name": "compliance community", "userFit": 3, "feedbackQuality": 3, "effort": 2 },
+    { "name": "generic launch board", "userFit": 1, "feedbackQuality": 1, "effort": 1 },
+    { "name": "operations founder outreach", "userFit": 2, "feedbackQuality": 3, "effort": 3 }
+  ]
+}

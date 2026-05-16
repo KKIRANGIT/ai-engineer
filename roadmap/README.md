@@ -55,7 +55,7 @@ Current implemented study workspaces:
 - Phase 4 Product C
 - Phase 5 Week 39
 
-Phase 3 is fully backed by hands-on study workspaces, Phase 4 is fully backed by hands-on product workspaces, and Phase 5 has now started with a concrete Week 39 implementation workspace.
+Phase 3 is fully backed by hands-on study workspaces, Phase 4 is fully backed by hands-on product workspaces, and Phase 5 is now fully backed by hands-on career-conversion workspaces from Week 39 through Week 48.
 
 ## Shared References
 

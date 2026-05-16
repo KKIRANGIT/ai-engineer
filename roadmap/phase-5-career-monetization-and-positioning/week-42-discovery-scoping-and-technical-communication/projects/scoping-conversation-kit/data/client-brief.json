@@ -1,0 +1,13 @@
+{
+  "client": "mid-market support operations team",
+  "workflow": "triaging policy and billing tickets",
+  "goal": "reduce repetitive support review work without increasing compliance risk",
+  "constraints": [
+    "must cite the source policy",
+    "works alongside existing helpdesk tooling"
+  ],
+  "unknowns": [
+    "how clean the historic knowledge base is",
+    "which integrations are actually required in phase one"
+  ]
+}

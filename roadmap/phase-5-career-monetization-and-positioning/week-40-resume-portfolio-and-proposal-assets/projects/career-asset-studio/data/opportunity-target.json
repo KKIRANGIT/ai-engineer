@@ -1,0 +1,9 @@
+{
+  "targetRole": "AI product engineer",
+  "targetBuyer": "operations-focused SaaS teams",
+  "priorityThemes": [
+    "retrieval quality",
+    "workflow automation",
+    "production tradeoffs"
+  ]
+}

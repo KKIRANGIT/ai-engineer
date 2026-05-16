@@ -158,9 +158,17 @@ At the current stage of the repository:
 - Phase 4 Product B has a full hands-on workspace
 - Phase 4 Product C has a full hands-on workspace
 - Phase 5 Week 39 has a full hands-on workspace
-- later Phase 5 weeks mostly have detailed planning but not yet full implementation workspaces
+- Phase 5 Week 40 has a full hands-on workspace
+- Phase 5 Week 41 has a full hands-on workspace
+- Phase 5 Week 42 has a full hands-on workspace
+- Phase 5 Week 43 has a full hands-on workspace
+- Phase 5 Week 44 has a full hands-on workspace
+- Phase 5 Week 45 has a full hands-on workspace
+- Phase 5 Week 46 has a full hands-on workspace
+- Phase 5 Week 47 has a full hands-on workspace
+- Phase 5 Week 48 has a full hands-on workspace
 
-This means the roadmap is structurally mature, but implementation depth is still growing week by week.
+This means the 48-week roadmap now has hands-on implementation coverage all the way through Phase 5.
 
 ## Best Starting Points
 
@@ -622,6 +630,24 @@ Includes:
 - sample positioning and project data for ranking and consistency review
 - notes for headline writing, project ranking, and profile cleanup
 
+### Weeks 40-48
+
+Location:
+
+- [phase-5-career-monetization-and-positioning](roadmap/phase-5-career-monetization-and-positioning/)
+
+Includes:
+
+- Week 40 asset-building workspace for resumes, portfolio summaries, proposals, and project walkthroughs
+- Week 41 outreach workspace with opportunity tracking, message personalization, and weekly rhythm helpers
+- Week 42 scoping workspace with discovery, risk, and statement-of-work assets
+- Week 43 interview workspace with story compression, tradeoff drills, and design explanation helpers
+- Week 44 launch workspace with readiness scoring, channel prioritization, and early-signal review
+- Week 45 proof-distribution workspace with content theme planning, repurposing, and proof checks
+- Week 46 delivery workspace with workflow audits, reusable checklists, and leverage helpers
+- Week 47 selection workspace with fit scoring, pricing logic, and negotiation support
+- Week 48 strategic review workspace with yearly-signal review and next-quarter planning helpers
+
 ## Repository Standards
 
 This workspace follows a few important rules:
@@ -699,9 +725,9 @@ Testing support exists for Week 02, but `pytest` is not currently installed in t
 
 The highest-value next repository upgrades are:
 
-- continue building the remaining Phase 5 workspaces starting with Week 40 asset packs
 - add a progress tracker across all 48 weeks
-- add review templates and project case-study templates
+- add cross-phase review templates and project case-study templates
+- continue hardening later-week references where stronger official sources would reduce ambiguity
 - keep the top-level roadmap index synchronized with detailed content
 
 ## Summary

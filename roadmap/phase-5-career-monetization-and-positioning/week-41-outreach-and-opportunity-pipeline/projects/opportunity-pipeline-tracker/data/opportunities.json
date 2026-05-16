@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Operations AI Engineer role",
+    "channel": "job-application",
+    "stage": "applied",
+    "relevance": "high",
+    "proof": "policy-evidence-assistant"
+  },
+  {
+    "name": "Founder outreach for support automation",
+    "channel": "founder-outreach",
+    "stage": "reply",
+    "relevance": "high",
+    "proof": "lead-outreach-workflow-copilot"
+  },
+  {
+    "name": "Freelance workflow automation brief",
+    "channel": "marketplace-proposal",
+    "stage": "conversation",
+    "relevance": "medium",
+    "proof": "support-ops-saas-milestone"
+  }
+]

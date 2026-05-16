@@ -1,0 +1,18 @@
+[
+  {
+    "name": "support automation pilot",
+    "budget": 3,
+    "scopeClarity": 3,
+    "dataReadiness": 2,
+    "timelineRealism": 3,
+    "strategicValue": 3
+  },
+  {
+    "name": "rush chatbot rebuild",
+    "budget": 1,
+    "scopeClarity": 1,
+    "dataReadiness": 1,
+    "timelineRealism": 1,
+    "strategicValue": 1
+  }
+]

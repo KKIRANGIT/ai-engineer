@@ -1,0 +1,18 @@
+[
+  {
+    "name": "policy-evidence-assistant",
+    "user": "compliance teams",
+    "problem": "slow policy lookup and weak answer traceability",
+    "system": "retrieval-backed document intelligence assistant",
+    "tradeoff": "favored grounded answers with citations over broad but unverifiable generation",
+    "result": "improved trust and made policy review faster"
+  },
+  {
+    "name": "lead-outreach-workflow-copilot",
+    "user": "revenue operations teams",
+    "problem": "manual prospect research and inconsistent outreach preparation",
+    "system": "approval-gated workflow copilot with structured outputs",
+    "tradeoff": "kept human approval in the loop to protect message quality and compliance",
+    "result": "reduced repetitive prep work while preserving operator control"
+  }
+]

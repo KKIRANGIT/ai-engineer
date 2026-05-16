@@ -901,6 +901,123 @@ Location:
 
 - `roadmap/phase-5-career-monetization-and-positioning/week-39-positioning-and-profile-cleanup/`
 
+### 45. Phase 5 Week 40 hands-on workspace created
+
+Completed:
+
+- resume-framing, proposal-architecture, and project-walkthrough exercises
+- career asset studio project with resume bullet, portfolio summary, and proposal helpers
+- reusable asset templates for resume bullets, portfolio summaries, proposals, and walkthroughs
+- notes and supporting documentation for bullet quality, case-study framing, and asset consistency
+
+Location:
+
+- `roadmap/phase-5-career-monetization-and-positioning/week-40-resume-portfolio-and-proposal-assets/`
+
+### 46. Phase 5 Week 41 hands-on workspace created
+
+Completed:
+
+- channel-selection, message-personalization, and follow-up-rhythm exercises
+- opportunity pipeline tracker project with stage summaries, personalization helpers, and weekly rhythm logic
+- reusable outreach templates for LinkedIn, founder outreach, and follow-up messaging
+- notes and supporting documentation for channel selection, message quality, and pipeline review
+
+Location:
+
+- `roadmap/phase-5-career-monetization-and-positioning/week-41-outreach-and-opportunity-pipeline/`
+
+### 47. Phase 5 Week 42 hands-on workspace created
+
+Completed:
+
+- discovery-question-bank, risk-language, and statement-of-work exercises
+- scoping conversation kit project with discovery questions, risk extraction, and scope-draft helpers
+- reusable templates for discovery calls, AI audits, and compact statements of work
+- notes and supporting documentation for scope boundaries, risk wording, and ambiguity reduction
+
+Location:
+
+- `roadmap/phase-5-career-monetization-and-positioning/week-42-discovery-scoping-and-technical-communication/`
+
+### 48. Phase 5 Week 43 hands-on workspace created
+
+Completed:
+
+- story-compression, tradeoff-drill, and design-walkthrough exercises
+- interview story lab project with intro, walkthrough, and design-outline helpers
+- reusable templates for self-intros, project walkthroughs, and design answers
+- notes and supporting documentation for tradeoff framing, story compression, and mock-interview review
+
+Location:
+
+- `roadmap/phase-5-career-monetization-and-positioning/week-43-interviews-and-system-design-preparation/`
+
+### 49. Phase 5 Week 44 hands-on workspace created
+
+Completed:
+
+- launch-readiness, channel-prioritization, and launch-retrospective exercises
+- launch readiness console project with readiness scoring, channel ranking, and activation metrics
+- reusable templates for launch checklists, channel plans, and launch retrospectives
+- notes and supporting documentation for distribution fit, readiness audits, and signal review
+
+Location:
+
+- `roadmap/phase-5-career-monetization-and-positioning/week-44-product-launch-and-distribution/`
+
+### 50. Phase 5 Week 45 hands-on workspace created
+
+Completed:
+
+- proof-theme-selection, post-structure, and repurposing exercises
+- proof content studio project with theme planning, proof checks, and repurposing helpers
+- reusable templates for build logs, architecture posts, and lesson-oriented content
+- notes and supporting documentation for content quality, proof distribution, and repurposing discipline
+
+Location:
+
+- `roadmap/phase-5-career-monetization-and-positioning/week-45-content-and-proof-distribution/`
+
+### 51. Phase 5 Week 46 hands-on workspace created
+
+Completed:
+
+- workflow-audit, checklist-design, and template-reuse exercises
+- delivery leverage kit project with workflow summaries, reuse ranking, and checklist helpers
+- reusable templates for kickoff, QA, and handoff assets
+- notes and supporting documentation for process clarity, leverage boundaries, and repeated-work review
+
+Location:
+
+- `roadmap/phase-5-career-monetization-and-positioning/week-46-delivery-process-and-leverage/`
+
+### 52. Phase 5 Week 47 hands-on workspace created
+
+Completed:
+
+- opportunity-filters, boundary-language, and negotiation-scenario exercises
+- opportunity selection desk project with fit scoring, pricing logic, and bad-fit flag helpers
+- reusable templates for scope clarification, negotiation structure, and boundary language
+- notes and supporting documentation for selection quality, rate logic, and opportunity filters
+
+Location:
+
+- `roadmap/phase-5-career-monetization-and-positioning/week-47-rate-raising-negotiation-and-selection/`
+
+### 53. Phase 5 Week 48 hands-on workspace created
+
+Completed:
+
+- year-review, path-selection, and quarter-priority exercises
+- next-year planning workbench project with yearly review, path selection, and quarter-plan helpers
+- reusable templates for yearly review, path-decision memos, and quarter planning
+- notes and supporting documentation for strategic review, path clarity, and next-year planning
+
+Location:
+
+- `roadmap/phase-5-career-monetization-and-positioning/week-48-final-review-and-next-12-month-plan/`
+
 ## Current Completion State
 
 At this point:
@@ -911,20 +1028,21 @@ At this point:
 - Phase 4 Product A now has both planning and implementation artifacts
 - Phase 4 Product B now has both planning and implementation artifacts
 - Phase 4 Product C now has both planning and implementation artifacts
-- Phase 5 Week 39 now has both planning and implementation artifacts
-- later Phase 5 weeks mostly retain planning layers while implementation depth is still being built
+- Phase 5 Week 39, Week 40, Week 41, Week 42, Week 43, Week 44, Week 45, Week 46, Week 47, and Week 48 now have both planning and implementation artifacts
 
-This means the roadmap is structurally strong, but implementation depth is still uneven across weeks.
+This means the roadmap now has full hands-on implementation coverage across all five phases.
 
 ## What Future Updates Should Usually Focus On
 
 The highest-value next steps usually fall into one of these categories:
 
-### 1. Build implementation workspaces for later weeks
+### 1. Add study-operating assets
 
 Examples:
 
-- remaining Phase 5 positioning, asset, outreach, and interview workspaces
+- progress tracker
+- cross-phase review templates
+- project case-study templates
 
 ### 2. Improve top-level navigation
 
@@ -933,16 +1051,7 @@ Examples:
 - keep `roadmap/README.md` synchronized with all expanded sections
 - improve cross-linking between phases and references
 
-### 3. Add study-operating assets
-
-Examples:
-
-- progress tracker
-- weekly review templates
-- project case study templates
-- interview prep templates
-
-### 4. Continue source-hardening
+### 3. Continue source-hardening
 
 Examples:
 

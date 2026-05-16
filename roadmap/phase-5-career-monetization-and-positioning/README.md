@@ -130,10 +130,18 @@ The Phase 5 planning layer is fully expanded.
 
 Hands-on implementation status:
 
-- Week 39 is now a full workspace with positioning exercises, notes, a profile asset workbench, and tests
-- Weeks 40-48 currently remain planning-first modules until their implementation workspaces are built
+- Week 39 is a full workspace with positioning exercises, notes, a profile asset workbench, and tests
+- Week 40 is a full workspace with resume, portfolio, proposal, and walkthrough assets plus a reusable career asset studio
+- Week 41 is a full workspace with outreach exercises, pipeline tracking assets, and an opportunity pipeline project
+- Week 42 is a full workspace with discovery, scoping, risk-language, and statement-of-work assets plus a scoping conversation kit
+- Week 43 is a full workspace with interview-story drills, tradeoff practice, and a system-design preparation lab
+- Week 44 is a full workspace with launch-readiness exercises, channel planning, and a launch signal review project
+- Week 45 is a full workspace with proof-content planning, repurposing assets, and a content distribution studio
+- Week 46 is a full workspace with delivery workflow audits, reusable templates, and a delivery leverage kit
+- Week 47 is a full workspace with opportunity filters, pricing logic, and negotiation support assets
+- Week 48 is a full workspace with yearly review, path-decision, and next-quarter planning assets
 
-This means Phase 5 now has a concrete starting point instead of being planning-only across the full career-conversion layer.
+This means Phase 5 is now fully backed by hands-on implementation workspaces across the full career-conversion layer.
 
 ## How To Use The Weekly Modules
 

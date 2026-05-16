@@ -1,0 +1,8 @@
+{
+  "stages": ["discovery", "scope", "implementation", "qa", "deployment", "handoff"],
+  "repeatedTasks": [
+    { "name": "project kickoff", "frequency": 3, "risk": 2 },
+    { "name": "qa checklist", "frequency": 4, "risk": 3 },
+    { "name": "handoff summary", "frequency": 2, "risk": 2 }
+  ]
+}

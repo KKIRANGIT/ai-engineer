@@ -1,0 +1,5 @@
+[
+  { "type": "signup", "count": 14 },
+  { "type": "activation", "count": 6 },
+  { "type": "confusion", "count": 3 }
+]

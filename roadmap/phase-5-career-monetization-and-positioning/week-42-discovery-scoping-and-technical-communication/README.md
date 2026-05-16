@@ -19,6 +19,35 @@ Common weak patterns:
 
 This week is about becoming the kind of engineer who improves clarity during the conversation itself.
 
+## What This Week Is Actually Training
+
+Week 42 is training five deeper skills:
+
+1. asking discovery questions that reduce ambiguity
+2. turning fuzzy requests into bounded scopes
+3. communicating uncertainty without sounding weak
+4. identifying risk before implementation starts
+5. translating technical judgment into buyer-facing language
+
+The real outcome is not "I prepared for client calls." The real outcome is "I can run technical conversations that produce better decisions and more credible scopes."
+
+## Scope Boundary For This Week
+
+This week focuses on:
+
+- discovery question design
+- scope boundaries
+- risk communication
+- statement-of-work drafting
+
+This week does not require:
+
+- legal contract drafting
+- full solution architecture for every prospect
+- pretending certainty where major unknowns remain
+
+The correct goal is practical clarity, not impressive jargon.
+
 ## Week 42 Outcomes
 
 By the end of this week, you should be able to:
@@ -63,6 +92,16 @@ Strong technical communication includes:
 - timeline risk
 - integration complexity
 
+## Best Source Strategy For This Week
+
+Use sources in this order:
+
+1. the local Week 42 workspace
+2. scopes or briefs from opportunities you would actually consider
+3. your strongest relevant product proof from Phases 3 and 4
+
+Avoid answering discovery questions with imagined certainty.
+
 ## Recommended Daily Breakdown
 
 ### Day 1: Discovery question design
@@ -88,6 +127,54 @@ Create:
 - simple AI audit template
 - one statement of work draft
 
+## Hands-On Workspace Structure
+
+```text
+week-42-discovery-scoping-and-technical-communication/
+|-- README.md
+|-- exercises/
+|   |-- README.md
+|   |-- discovery-question-bank/
+|   |-- risk-language/
+|   `-- statement-of-work/
+|-- notes/
+|   |-- 01-week-plan.md
+|   |-- 02-discovery-guide.md
+|   |-- 03-risk-language-guide.md
+|   `-- 04-scope-review-checklist.md
+`-- projects/
+    `-- scoping-conversation-kit/
+```
+
+## Exercises
+
+The exercises force you to replace vague enthusiasm with structured clarity.
+
+You will practice:
+
+- building discovery question sets
+- writing risk language that stays credible
+- turning needs into scoped artifacts
+
+Start here:
+
+- [Exercises README](exercises/README.md)
+
+## Main Project
+
+Project:
+
+- [scoping-conversation-kit](projects/scoping-conversation-kit/README.md)
+
+This project is a lightweight communication workspace for:
+
+- clustering discovery questions
+- turning briefs into scope drafts
+- surfacing risk early
+- drafting a compact statement of work
+
+It stays intentionally lightweight because the goal is conversation quality, not contract tooling.
+
 ## Deliverables
 
 - discovery questions list
@@ -105,6 +192,7 @@ Create:
 - talking about tools before understanding the workflow
 - scoping based on optimism instead of constraints
 - hiding uncertainty to seem more confident
+- calling assumptions "requirements" before they are confirmed
 
 ## Expert Notes That Matter Here
 
@@ -116,9 +204,15 @@ The person who reduces ambiguity becomes more trustworthy quickly.
 
 A good statement of work is often a simplified system design with boundaries and assumptions.
 
+### Risk language should increase trust
+
+Naming uncertainty clearly is often a stronger signal than bluffing.
+
 ## Final Standard For This Week
 
-The correct outcome is not "I prepared for client calls."
+The correct outcome is not:
+
+"I prepared for client calls."
 
 The correct outcome is:
 

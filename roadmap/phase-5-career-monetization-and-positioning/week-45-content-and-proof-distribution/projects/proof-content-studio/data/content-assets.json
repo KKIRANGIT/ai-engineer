@@ -1,0 +1,16 @@
+[
+  {
+    "theme": "grounded policy answers",
+    "project": "policy-evidence-assistant",
+    "audience": "AI product teams",
+    "proof": "retrieval and citation design",
+    "lesson": "trust depends on visible grounding"
+  },
+  {
+    "theme": "approval-gated workflow automation",
+    "project": "lead-outreach-workflow-copilot",
+    "audience": "operations and automation teams",
+    "proof": "human approval checkpoints",
+    "lesson": "automation quality often improves when approval is explicit"
+  }
+]
